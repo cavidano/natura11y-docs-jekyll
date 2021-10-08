@@ -1,0 +1,76 @@
+---
+layout: documentation
+title: "Shadows"
+backdrop_credit_name: "Josefin"
+backdrop_credit_url: https://unsplash.com/@josefin"
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Apply a beautiful <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow" target="_blank">box shadow</a> to any block-level element.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="boxShadowUtilities">
+
+<div class="container narrow margin-y-4">
+    <h2>Box Shadow Utilities</h2>
+    <p>
+        Natura11y's box shadow utilities come in three sizes. Each size is represented by a number: <em>1</em> for <strong><em>small</em></strong>, <em>2</em> for <strong><em>medium</em></strong>, and <em>3</em> for <strong><em>large</em></strong>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="container padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow font-size-md text-align-center">
+                   
+                <div class="padding-x-2 padding-y-3 box-shadow-1 theme-white margin-bottom-5">
+                    <p><code>.box-shadow-1</code></p>
+                </div>
+                <div class="padding-x-2 padding-y-3 box-shadow-2 theme-white margin-bottom-5">
+                    <p><code>.box-shadow-2</code></p>
+                </div>
+                <div class="padding-x-2 padding-y-3 box-shadow-3 theme-white">
+                    <p><code>.box-shadow-3</code></p>
+                </div>
+
+            </div>
+                    
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="box-shadow-1"&gt;...&lt;/div&gt;
+                &lt;div class="box-shadow-2"&gt;...&lt;/div&gt;
+                &lt;div class="box-shadow-3"&gt;...&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        Box shadow utilities accept <a href="{{ site.url }}/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;!-- With breakpoint modifier --&gt;
+
+            &lt;div class="box-shadow-1--lg"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 2
+    </figcaption>
+</figure>

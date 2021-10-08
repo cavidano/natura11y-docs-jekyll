@@ -1,0 +1,759 @@
+---
+layout: documentation
+title: "Tables"
+backdrop_credit_name: "Jonathan Larson"
+backdrop_credit_url: "https://unsplash.com/@jrlars"
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Natura11y provides an assortment of style options for data tables. Including two different approaches for presenting tables on smaller viewports.
+    </p>
+</div>
+<!-- .container -->
+
+{% capture as_body %}
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque maiores nostrum vero.
+</p>
+{% endcapture %}
+
+{% include accessibility-spotlight.html content=as_body %}
+
+<hr class="section-start" id="basicTable">
+
+<div class="container narrow margin-y-4">
+    <h2>Basic Table</h2>
+    <p>
+        All that is needed for a basic <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank">data table</a> is the <code>.table</code> selector present on the <code>&lt;table&gt;</code> tag.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+
+                <table class="table">
+
+                    <caption class="screen-reader-only">
+                        Places with columnar jointed volcanics
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Country</th>
+                            <th class="text-align-right" scope="col">
+                                Map View
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Giant’s Causeway</td>
+                            <td>Northern Ireland</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fingal's Cave</td>
+                            <td>Scotland</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Garni Gorge</td>
+                            <td>Armenia</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cape Raoul</td>
+                            <td>Tasmania</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Svartifoss</td>
+                            <td>Iceland</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+        <pre data-line="1,3-5">
+            <code class="language-html">
+                &lt;table class="table"&gt;
+
+                    &lt;caption class="screen-reader-only"&gt;
+                        Places with columnar jointed volcanics
+                    &lt;/caption&gt;
+
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th scope="col"&gt;Name&lt;/th&gt;
+                            &lt;th scope="col"&gt;Country&lt;/th&gt;
+                            &lt;th scope="col" class="text-align-right"&gt;Map View&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Giant’s Causeway&lt;/td&gt;
+                            &lt;td&gt;Northern Ireland&lt;/td&gt;
+                            &lt;td class="text-align-right"&gt;
+                                &lt;a href="#1"&gt;Map View&lt;/a&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Fingal's Cave&lt;/td&gt;
+                            &lt;td&gt;Scotland&lt;/td&gt;
+                            &lt;td class="text-align-right"&gt;
+                                &lt;a href="#1"&gt;Map View&lt;/a&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Garni Gorge&lt;/td&gt;
+                            &lt;td&gt;Armenia&lt;/td&gt;
+                            &lt;td class="text-align-right"&gt;
+                                &lt;a href="#1"&gt;Map View&lt;/a&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Cape Raoul&lt;/td&gt;
+                            &lt;td&gt;Tasmania&lt;/td&gt;
+                            &lt;td class="text-align-right"&gt;
+                                &lt;a href="#1"&gt;Map View&lt;/a&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;Svartifoss&lt;/td&gt;
+                            &lt;td&gt;Iceland&lt;/td&gt;
+                            &lt;td class="text-align-right"&gt;
+                                &lt;a href="#1"&gt;Map View&lt;/a&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+
+                &lt;/table&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<figure class="container narrow margin-y-4">
+    <table class="table table--edge">
+        <thead>
+            <tr>
+                <th class="width-30" scope="col">Line #</th>
+                <th class="width-70" scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="#figure_1.1" data-line-anchor>
+                        1
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The parent <code>.table</code> selector is required.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.7-12" data-line-anchor>
+                        3-5
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>caption</code> tag is recommended for accessibility. With the example, the caption is present, but visually hidden with the <code>.screen-reader-only</code> utility.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</figure>
+
+<hr class="section-start" id="tableEdge">
+
+<div class="container narrow margin-y-4">
+    <h2>Edge to Edge</h2>
+    <p>
+        For an edge to edge look, include the <code>.table--edge</code> modifier class. This removes the left padding of the first row, and the right padding of the last row.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <table class="table table--edge">
+
+                    <caption class="screen-reader-only">
+                        Places with columnar jointed volcanics
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Country</th>
+                            <th class="text-align-right" scope="col">
+                                Map View
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Giant’s Causeway</td>
+                            <td>Northern Ireland</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fingal's Cave</td>
+                            <td>Scotland</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Garni Gorge</td>
+                            <td>Armenia</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cape Raoul</td>
+                            <td>Tasmania</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Svartifoss</td>
+                            <td>Iceland</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+    
+            </div>
+
+        </div>
+        <pre data-line="">
+            <code class="language-html">
+                &lt;table class="table" id="basic-table-example"&gt;
+                    ...
+                &lt;/table&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 2
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="tableStriped">
+
+<div class="container narrow margin-y-4">
+    <h2>Striped Rows</h2>
+    <p>
+        For striped rows within <code>&lt;tbody&gt;</code>, include the <code>.table--striped</code> modifier class.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <table class="table table--striped">
+
+                    <caption class="screen-reader-only">
+                        Places with columnar jointed volcanics
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Country</th>
+                            <th class="text-align-right" scope="col">
+                                Map View
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Giant’s Causeway</td>
+                            <td>Northern Ireland</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fingal's Cave</td>
+                            <td>Scotland</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Garni Gorge</td>
+                            <td>Armenia</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cape Raoul</td>
+                            <td>Tasmania</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Svartifoss</td>
+                            <td>Iceland</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+    
+            </div>
+
+        </div>
+        <pre data-line="">
+            <code class="language-html">
+                &lt;table class="table table--striped"&gt;
+                    ...
+                &lt;/table&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 3
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="tableDivider">
+
+<div class="container narrow margin-y-4">
+    <h2>Table Divider</h2>
+    <p>
+        Need horizontal and vertical borders? Include the <code>.table--divider </code> modifier class.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <table class="table table--divider box-shadow-1">
+
+                    <caption class="screen-reader-only">
+                        Places with columnar jointed volcanics
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Country</th>
+                            <th class="text-align-center" scope="col">
+                                Map View
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Giant’s Causeway</td>
+                            <td>Northern Ireland</td>
+                            <td class="text-align-center">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fingal's Cave</td>
+                            <td>Scotland</td>
+                            <td class="text-align-center">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Garni Gorge</td>
+                            <td>Armenia</td>
+                            <td class="text-align-center">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cape Raoul</td>
+                            <td>Tasmania</td>
+                            <td class="text-align-center">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Svartifoss</td>
+                            <td>Iceland</td>
+                            <td class="text-align-center">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+    
+            </div>
+
+        </div>
+        <pre data-line="">
+            <code class="language-html">
+                &lt;table class="table table--divider"&gt;
+                    ...
+                &lt;/table&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 4
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="scrollingTables">
+
+<div class="container narrow margin-y-4">
+    <h2>Scrolling Tables</h2>
+    <p>
+        For smaller viewports, nest tables inside the <code>.table-scroll</code> component. This allows tables to scroll horizontally when the table is wider than the viewport.  
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-5">
+    <div {{ site.custom-properties-example }}>
+
+        <div class="table-scroll">
+
+            <small class="table-scroll__help">
+                Scroll to see whole table
+            </small>
+
+            <div class="table-scroll__container box-shadow-1">
+
+                <table class="table">
+
+                    <caption>
+                        Places with columnar jointed volcanics
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Country</th>
+                            <th scope="col">Coordinates</th>
+                            <th class="text-align-right" scope="col">
+                                Map View
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Giant’s Causeway</td>
+                            <td>Northern Ireland</td>
+                            <td>55°14′27″N 6°30′42″W
+                            </td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fingal's Cave</td>
+                            <td>Scotland</td>
+                            <td>56°26′02″N 6°20′10″W</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Garni Gorge</td>
+                            <td>Armenia</td>
+                            <td>40°11′N 44°31′E</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cape Raoul</td>
+                            <td>Tasmania</td>
+                            <td>43°12′04″S 147°45′48″E</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Svartifoss</td>
+                            <td>Iceland</td>
+                            <td>64.023°N 16.975°W</td>
+                            <td class="text-align-right">
+                                <a href="#1">Map View</a>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+            <!-- table-scroll__container -->
+
+        </div>
+
+    </div>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Consider the above table. When the viewport is smaller than assigned minimum width (800px), horizontal scrolling is activated. The assigned minimum is set with this <a href="#1">CSS variable</a>: <code>--table-scroll-min-width: 800px;</code>. This value gives you full control of when the scrolling should occur.  
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+
+    <pre data-line="1">
+        <code class="language-html">
+            &lt;div class="table-scroll"&gt;
+
+                &lt;small class="table-scroll__help"&gt;
+                    Scroll to see whole table
+                &lt;/small&gt;
+
+                &lt;div class="table-scroll__container"&gt;
+
+                    &lt;table class="table"&gt;
+
+                        &lt;caption&gt;
+                            Places with columnar jointed volcanics
+                        &lt;/caption&gt;
+
+                        &lt;thead&gt;
+                            &lt;tr&gt;
+                                &lt;th scope="col"&gt;Name&lt;/th&gt;
+                                &lt;th scope="col"&gt;Country&lt;/th&gt;
+                                &lt;th scope="col"&gt;Coordinates&lt;/th&gt;
+                                &lt;th class="text-align-right" scope="col"&gt;
+                                    Map View
+                                &lt;/th&gt;
+                            &lt;/tr&gt;
+                        &lt;/thead&gt;
+
+                        &lt;tbody&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;Giant’s Causeway&lt;/td&gt;
+                                &lt;td&gt;Northern Ireland&lt;/td&gt;
+                                &lt;td&gt;55°14′27″N 6°30′42″W
+                                &lt;/td&gt;
+                                &lt;td class="text-align-right"&gt;
+                                    &lt;a href="#1"&gt;Map View&lt;/a&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;Fingal's Cave&lt;/td&gt;
+                                &lt;td&gt;Scotland&lt;/td&gt;
+                                &lt;td&gt;56°26′02″N 6°20′10″W&lt;/td&gt;
+                                &lt;td class="text-align-right"&gt;
+                                    &lt;a href="#1"&gt;Map View&lt;/a&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;Garni Gorge&lt;/td&gt;
+                                &lt;td&gt;Armenia&lt;/td&gt;
+                                &lt;td&gt;40°11′N 44°31′E&lt;/td&gt;
+                                &lt;td class="text-align-right"&gt;
+                                    &lt;a href="#1"&gt;Map View&lt;/a&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;Cape Raoul&lt;/td&gt;
+                                &lt;td&gt;Tasmania&lt;/td&gt;
+                                &lt;td&gt;43°12′04″S 147°45′48″E&lt;/td&gt;
+                                &lt;td class="text-align-right"&gt;
+                                    &lt;a href="#1"&gt;Map View&lt;/a&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;Svartifoss&lt;/td&gt;
+                                &lt;td&gt;Iceland&lt;/td&gt;
+                                &lt;td&gt;64.023°N 16.975°W&lt;/td&gt;
+                                &lt;td class="text-align-right"&gt;
+                                    &lt;a href="#1"&gt;Map View&lt;/a&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+
+                    &lt;/table&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 5
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="stackingColumns">
+
+<div class="container narrow margin-y-4">
+    <h2>Stacking Columns</h2>
+    <p>
+        Another option for smaller viewports: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas saepe dignissimos, dolor iusto similique inventore corporis.  
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="box-shadow-1">
+
+        <table class="table">
+
+            <caption class="screen-reader-only">
+                Places with columnar jointed volcanics
+            </caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">Coordinates</th>
+                    <th class="text-align-right" scope="col">
+                        Map View
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Giant’s Causeway</td>
+                    <td>Northern Ireland</td>
+                    <td>55°14′27″N 6°30′42″W
+                    </td>
+                    <td class="text-align-right">
+                        <a href="#1">Map View</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fingal's Cave</td>
+                    <td>Scotland</td>
+                    <td>56°26′02″N 6°20′10″W</td>
+                    <td class="text-align-right">
+                        <a href="#1">Map View</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Garni Gorge</td>
+                    <td>Armenia</td>
+                    <td>40°11′N 44°31′E</td>
+                    <td class="text-align-right">
+                        <a href="#1">Map View</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cape Raoul</td>
+                    <td>Tasmania</td>
+                    <td>43°12′04″S 147°45′48″E</td>
+                    <td class="text-align-right">
+                        <a href="#1">Map View</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Svartifoss</td>
+                    <td>Iceland</td>
+                    <td>64.023°N 16.975°W</td>
+                    <td class="text-align-right">
+                        <a href="#1">Map View</a>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam delectus natus, recusandae nihil fugiat.  
+    </p>
+</div>
+<!-- .container -->
+
+
+{% include browser-iframe.html iframe_url="/examples/table-stack.html" iframe_width="narrow" %}
+
+<figure class="container medium margin-y-4">
+
+    <pre>
+        <code class="language-html">
+            &lt;table class="table table--stack--lg"&gt;
+                ...
+            &lt;/table&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 5
+    </figcaption>
+</figure>
+
+
+{% include related-css-variables.html anchor="tables" figure="6" %}
+
+
+
+
+
+
+
+

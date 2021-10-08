@@ -1,0 +1,343 @@
+---
+layout: documentation
+title: "Accents"
+backdrop_credit_name: "Zdeněk Macháček"
+backdrop_credit_url: "https://unsplash.com/@zmachacek"
+tags:
+    gradient veneer
+    subtle fill
+---
+
+<div class="container narrow margin-y-4">
+	<p>
+	    Natura11y provides the following mechanisms to add visual interest to your layouts. 
+	</p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="gradientVeneer">
+
+<div class="container narrow margin-y-4">
+	<h2>Gradient Veneer</h2>
+	<p>
+	    Apply a directional gradient to any selector using the <code>.gradient-veneer-{x}</code>
+	    utilities. Where <strong><em>x</em></strong> specifies the gradient's direction: <em>top</em>, <em>right</em>, <em>bottom</em>, or
+	    <em>left</em> (Figure 1).
+	</p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+	<pre class="hide-toolbar">
+        <code class="language-html">
+            &lt;div class="gradient-veneer-top"&gt;...&lt;/div&gt;
+            &lt;div class="gradient-veneer-right"&gt;...&lt;/div&gt;
+            &lt;div class="gradient-veneer-bottom"&gt;...&lt;/div&gt;
+            &lt;div class="gradient-veneer-left"&gt;...&lt;/div&gt; 
+        </code>
+    </pre>
+	<figcaption>
+		<p>Figure 1</p>
+	</figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p> For a gradient that is transparent at the top, and opaque at the bottom, use <code>.gradient-veneer-bottom</code>.
+        Consider the following visual representation of the four directional gradient veneer utilities.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+
+    <div class="grid grid--gap-3 grid--cell-6--md font-size-md text-align-center" {{ site.custom-properties-example }}>
+
+        <div class="grid__cell">
+
+            <div class="backdrop">
+                <div class="backdrop__image gradient-veneer-top" style="--gradient-veneer-start: 25%;">
+                    <img src="{{ site.url }}/images/examples/gradient-veneer-top.jpg" alt="Placeholder">
+                </div>
+                <div class="backdrop__cover">
+                    <div class="margin-bottom-auto padding-3">
+                        <p>
+                            <strong>
+                                .gradient-veneer-top
+                            </strong>
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="grid__cell">
+
+            <div class="backdrop">
+                <div class="backdrop__image gradient-veneer-right" style="--gradient-veneer-start: 25%;">
+                    <img src="{{ site.url }}/images/examples/gradient-veneer-right.jpg" alt="Placeholder">
+                </div>
+                <div class="backdrop__cover">
+                    <div class="margin-left-auto padding-3">
+                        <p>
+                            <strong>
+                                .gradient-veneer-right
+                            </strong>
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="grid__cell">
+
+            <div class="backdrop">
+                <div class="backdrop__image gradient-veneer-bottom" style="--gradient-veneer-start: 25%;">
+                    <img src="{{ site.url }}/images/examples/gradient-veneer-bottom.jpg" alt="Placeholder">
+                </div>
+                <div class="backdrop__cover">
+                    <div class="margin-top-auto padding-3">
+                        <p>
+                            <strong>
+                                .gradient-veneer-bottom
+                            </strong>
+                        </p> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="grid__cell">
+
+            <div class="backdrop">
+                <div class="backdrop__image gradient-veneer-left" style="--gradient-veneer-start: 25%;">
+                    <img src="{{ site.url }}/images/examples/gradient-veneer-left.jpg" alt="Placeholder">
+                </div>
+                <div class="backdrop__cover">
+                    <div class="margin-right-auto padding-3">
+                        <p>
+                            <strong>
+                                .gradient-veneer-left
+                            </strong>
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    
+    </div>
+
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Gradient veneers use a single color, fully transparent to fully opaque. They inherit their color from the nearest
+        ancestrial background color (usually applied with <a href="#1">theme colors</a>).
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+
+    <div class="grid grid--gap-3 grid--cell-6--md font-size-md text-align-center" {{ site.custom-properties-example }}>
+
+        <div class="grid__cell">
+
+            <div class="backdrop theme-primary border-radius">
+                <div class="backdrop__image gradient-veneer-bottom" style="--gradient-veneer-start: 25%;">
+                    <img class="opacity-50" src="{{ site.url }}/images/examples/gradient-veneer-bottom-primary.jpg" alt="Placeholder">
+                </div>
+                <div class="backdrop__cover">
+                    <div class="margin-top-auto padding-3">
+                        <p>
+                            <strong>
+                                .gradient-veneer-bottom
+                            </strong>
+                            <span class="display-block">
+                                Theme: Primary
+                            </span>
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="grid__cell">
+
+            <div class="backdrop theme-secondary border-radius">
+                <div class="backdrop__image gradient-veneer-bottom" style="--gradient-veneer-start: 25%;">
+                    <img class="opacity-50" src="{{ site.url }}/images/examples/gradient-veneer-bottom-secondary.jpg" alt="Placeholder">
+                </div>
+                <div class="backdrop__cover">
+                    <div class="margin-top-auto padding-3">
+                        <p>
+                            <strong>
+                                .gradient-veneer-bottom
+                            </strong>
+                            <span class="display-block">
+                                Theme: Secondary
+                            </span>
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    
+    </div>
+
+</figure>
+
+<div class="container narrow margin-y-4">
+	<p>
+	    Gradient veneer utilities place the gradient (as a psuedo element) above all child selectors on the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index" target="_blank">z index</a>.
+	    With the above examples, we applied a gradient veneer utility to the <code>.backdrop-image</code> selector. This
+	    allows the gradient to appear above its child <code>&lt;img&gt;</code> tag (Figure 2, lines 3-5).
+	</p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+	<pre data-line="3-5">
+        <code class="language-html">
+            &lt;div class="backdrop theme-primary"&gt;
+
+                &lt;div class="backdrop__image gradient-veneer-bottom"&gt;
+                    &lt;img src="..." alt="Placeholder"&gt;
+                &lt;/div&gt;
+            
+                &lt;div class="backdrop__cover"&gt;
+                    ...
+                &lt;/div&gt;
+            
+            &lt;/div>
+        </code>
+    </pre>
+	<figcaption>
+		<p>Figure 2</p>
+	</figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+	<h3>Related CSS Variables</h3>
+	<p>
+		Further <a href="{{ site.url }}/docs/customization/#customizableCDN">customization</a>
+		options are available with <a href="{{ site.url }}/docs/customization/#cp_gradient-veneer">CSS variables</a>.
+	</p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="subtle-fill">
+
+<div class="container narrow margin-y-4">
+	<h2>Subtle Fill</h2>
+	<p>
+	    The <code>.subtle-fill</code> utility class adds a light tint background to any selector. Subtle
+	    fills inherit their color from the text color of the element on which they are placed.
+	</p>
+    <p>
+	    With the card examples below, we can add soft emphasis to the action buttons within the <code>.card__footer</code> selector.
+	</p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+
+    <div class="grid grid--gap-3 grid--cell-fill--md" {{ site.custom-properties-example }}>
+
+        <div class="grid__cell">
+
+            <div class="card border">
+
+                <div class="card__body">
+                    <h3 class="h4">Card Title</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
+                        ex facilis labore reiciendis.
+                    </p>
+                </div>
+
+                <div class="card__foot font-size-md subtle-fill">
+                    <ul class="nav nav--horizontal justify-content-between">
+                        <li>
+                            <a href="#1">Secondary Action</a>
+                        </li>
+                        <li>
+                            <a class="button button--outline border-radius-pill" href="#1">Primary Action</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="grid__cell">
+
+            <div class="card theme-dark">
+
+                <div class="card__body">
+                    <h3 class="h4">Card Title</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
+                        ex facilis labore reiciendis.
+                    </p>
+                </div>
+
+                <div class="card__foot font-size-md subtle-fill">
+                    <ul class="nav nav--horizontal justify-content-between">
+                        <li>
+                            <a href="#1">Secondary Action</a>
+                        </li>
+                        <li>
+                            <a class="button button--outline border-radius-pill" href="#1">Primary Action</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+	    Notice the subtle fill appears darker within the <em>white theme</em> card, while appearing lighter on the <em>dark theme</em> card.
+	</p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+	<pre class="hide-toolbar" data-line="7">
+        <code class="language-html">
+            &lt;div class="card theme-dark"&gt;
+
+                &lt;div class="card__body"&gt;
+                    ...
+                &lt;/div&gt;
+
+                &lt;div class="card__foot subtle-fill"&gt;
+                    ...
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        </code>
+    </pre>
+	<figcaption>
+		<p>Figure 4</p>
+	</figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+	<h3>Related CSS Variables</h3>
+	<p>
+		Further <a href="{{ site.url }}/docs/customization/#customizableCDN">customization</a>
+		options are available with <a href="{{ site.url }}/docs/customization/#cp_subtle-fill">CSS variables</a>.
+	</p>
+</div>
+<!-- .container -->

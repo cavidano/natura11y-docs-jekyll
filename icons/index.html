@@ -1,0 +1,119 @@
+---
+layout: supplementary
+title: "Icons"
+backdrop: icons
+backdrop_credit_name: "Zdeněk Macháček"
+backdrop_credit_url: "https://unsplash.com/@zmachacek"
+---
+
+<div class="container narrow margin-y-5">
+    <h2 class="h1">
+        Natura11y's own icon library.
+    </h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique excepturi laudantium eius est vero ipsam
+        amet, ullam voluptatum expedita dolores, accusantium delectus cupiditate aliquam.
+    </p>
+</div>
+<!-- .container -->
+
+<div class="container narrow margin-y-4">
+    <h3 class="h5">
+        Cool Data
+    </h3>
+    
+    <ul>
+        {% for icon in site.data.natura11yIcons %}
+        <li>
+            <a href="{{ site.url }}/icons/{{ icon.class-name }}">
+            {{ icon.icon }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<!-- .container -->
+
+<div class="container narrow margin-y-4">
+    <h3 class="h5">
+        Icon Data
+    </h3>
+    
+    <ul>
+        {% for icon in site.data.iconFont.icons %}
+        {% assign iconName = icon.properties.name %}
+        <li>
+            <a href="#1">
+            {{ iconName }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<!-- .container -->
+
+<div class="medium margin-y-5">
+
+    <div class="container">
+        <ul class="tabs-nav tabs-nav--horizontal">
+            <li>
+                <a class="display-block" href="{{ site.url }}/icons/" aria-current="page">
+                    Icons
+                </a>
+            </li>
+            <li>
+                <a class="display-block" href="{{ site.url }}/icons/usage">
+                    Usage
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tabs container padding-y-4" role="tablist">
+
+        <h2 class="screen-reader-only">The Icons</h2>
+
+        <div class="form-entry margin-bottom-4">
+
+            <div class="form-entry__field">
+                <label class="form-entry__field__label screen-reader-only" for="core-icon-search">Search</label>
+                <span class="form-entry__field__input">
+                    <span class="icon_search opacity-40" aria-hidden="true"></span>
+                    <input type="text" name="core-icon-search" id="core-icon-search" placeholder="Filter Icons" autocomplete="off">
+                    <div class="button-group font-size-md margin-x-2" id="icon-view-toggle">
+                        <button
+                            class="button button--icon-only"
+                            aria-selected="true"
+                            id="tab-button-group-d-01"
+                            aria-controls="tab-panel-group-d-01"
+                            role="tab">
+                                <span class="icon_grid" aria-hidden="true"></span>
+                        </button>
+                        <button
+                            class="button button--icon-only"
+                            aria-selected="false"
+                            id="tab-button-group-d-02"
+                            aria-controls="tab-panel-group-d-02"
+                            role="tab">
+                                <span class="icon_list" aria-hidden="true"></span>
+                        </button>
+
+                    </div>
+                </span>
+            </div>
+
+        </div>
+        <!-- .form-entry -->
+
+        <div class="tabs__panel shown" id="tab-panel-group-d-01" aria-labelledby="tab-button-group-d-01" role="tabpanel">
+            <div class="grid grid--gap-1 grid--cell-4 grid--cell-2--md text-align-center" id="natura11yIconGrid"></div>
+        </div>
+
+        <div class="tabs__panel" id="tab-panel-group-d-02" aria-labelledby="tab-button-group-d-02" role="tabpanel">
+            <div id="natura11yIconList"></div>
+        </div>
+
+    </div>
+    <!-- .container -->
+
+</div>

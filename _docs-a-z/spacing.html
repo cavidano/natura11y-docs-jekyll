@@ -1,0 +1,281 @@
+---
+layout: documentation
+title: "Spacing"
+backdrop_credit_name: "Lemuel Butler"
+backdrop_credit_url: "https://unsplash.com/@lemuelbutler"
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Natura11y provides five spacers used to generate the <a href="#1">padding and margin utilites.</a>   
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="flex-row justify-content-start align-items-end text-align-center font-size-sm">
+        <div class="width-25">
+            <div class="theme-primary border width-100" style="height:var(--spacer-1)"></div>
+            <span class="display-block margin-top-1">1</span>
+        </div>
+        <div class="width-25">
+            <div class="theme-primary border width-100" style="height:var(--spacer-2)"></div>
+            <span class="display-block margin-top-1">2</span>
+        </div>
+        <div class="width-25">
+            <div class="theme-primary border width-100" style="height:var(--spacer-3)"></div>
+            <span class="display-block margin-top-1">3</span>
+        </div>
+        <div class="width-25">
+            <div class="theme-primary border width-100" style="height:var(--spacer-4)"></div>
+            <span class="display-block margin-top-1">4</span>
+        </div>
+        <div class="width-25">
+            <div class="theme-primary border width-100" style="height:var(--spacer-5)"></div>
+            <span class="display-block margin-top-1">5</span>
+        </div>
+        
+    </div>
+</figure>
+
+<hr class="section-start" id="paddingAndMarginUtilites">
+
+<div class="container narrow margin-y-4">
+    <h2>Padding and Margin Utilites</h2>
+    <p>
+        Apply the <a href="#1">padding</a> and <a href="#1">margin</a> utilites (<code>.padding-{x}</code> and <code>.margin-{x}</code>) to any selector. Here <strong><em>x</em> </strong> equals the spacer amount (values 1-5). In Figure 1, each box has a different padding value applied.  
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow font-size-md text-align-center">
+
+                <div style="--subtle-fill-opacity: .0375;--white-border: hsla(0, 0%, 50%, 0.375);">
+
+                    <div class="padding-1 subtle-fill border margin-bottom-2">
+                        <p class="margin-bottom-1">
+                            Padding value 1 (all sides)
+                        </p>
+                        <p><code>.padding-1</code></p>
+                    </div>
+                    
+                    <div class="padding-2 subtle-fill border margin-bottom-2">
+                        <p class="margin-bottom-1">
+                            Padding value 2 (all sides)
+                        </p>
+                        <p><code>.padding-2</code></p>
+                    </div>
+
+                    <div class="padding-3 subtle-fill border margin-bottom-2">
+                        <p class="margin-bottom-1">
+                            Padding value 3 (all sides)
+                        </p>
+                        <p><code>.padding-3</code></p>
+                    </div>
+
+                    <div class="padding-4 subtle-fill border margin-bottom-2">
+                        <p class="margin-bottom-1">
+                            Padding value 4 (all sides)
+                        </p>
+                        <p><code>.padding-4</code></p>
+                    </div>
+
+                    <div class="padding-5 subtle-fill border margin-bottom-2">
+                        <p class="margin-bottom-1">
+                            Padding value 5 (all sides)
+                        </p>
+                        <p><code>.padding-5</code></p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="padding-1"&gt;...&lt;/div&gt;
+                &lt;div class="padding-2"&gt;...&lt;/div&gt;
+                &lt;div class="padding-3"&gt;...&lt;/div&gt;
+                &lt;div class="padding-4"&gt;...&lt;/div&gt;
+                &lt;div class="padding-5"&gt;...&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        In Figure 2, each box has a different margin value applied.  
+    </p>
+</div>
+<!-- .container -->
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow padding-2 font-size-md text-align-center">
+
+                <div class="grid grid--gap-1" style="--subtle-fill-opacity: .0375;">
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill overflow-hidden">
+                            <div class="theme-white border padding-2 margin-1">
+                                <p class="margin-bottom-1">
+                                    Margin value (all sides)
+                                </p>
+                                <p><code>.margin-1</code></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill overflow-hidden">
+                            <div class="theme-white border padding-2 margin-2">
+                                <p class="margin-bottom-1">
+                                    Margin value (all sides)
+                                </p>
+                                <p><code>.margin-2</code></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill overflow-hidden">
+                            <div class="theme-white border padding-2 margin-3">
+                                <p class="margin-bottom-1">
+                                    Margin value (all sides)
+                                </p>
+                                <p><code>.margin-3</code></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill overflow-hidden">
+                            <div class="theme-white border padding-2 margin-4">
+                                <p class="margin-bottom-1">
+                                    Margin value (all sides)
+                                </p>
+                                <p><code>.margin-4</code></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="subtle-fill overflow-hidden">
+                            <div class="theme-white border padding-2 margin-5">
+                                <p class="margin-bottom-1">
+                                    Margin value (all sides)
+                                </p>
+                                <p><code>.margin-5</code></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="margin-1"&gt;...&lt;/div&gt;
+                &lt;div class="margin-2"&gt;...&lt;/div&gt;
+                &lt;div class="margin-3"&gt;...&lt;/div&gt;
+                &lt;div class="margin-4"&gt;...&lt;/div&gt;
+                &lt;div class="margin-5"&gt;...&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 2
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Direction Specific</h3>
+    <p>
+        Apply padding or margin to a specific side, top and bottom, or left and right. Figure 3 below provides these directional utilities using spacer value of <em>2</em>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;!-- Single side only (top, right, bottom, left) --&gt;
+
+            &lt;div class="padding-top-2"&gt;...&lt;/div&gt;
+            &lt;div class="padding-right-2"&gt;...&lt;/div&gt;
+            &lt;div class="padding-bottom-2"&gt;...&lt;/div&gt;
+            &lt;div class="padding-left-2"&gt;...&lt;/div&gt;
+
+            &lt;div class="margin-top-2"&gt;...&lt;/div&gt;
+            &lt;div class="margin-right-2"&gt;...&lt;/div&gt;
+            &lt;div class="margin-bottom-2"&gt;...&lt;/div&gt;
+            &lt;div class="margin-left-2"&gt;...&lt;/div&gt;
+
+            &lt;!-- Top and bottom only --&gt;
+            &lt;div class="padding-y-2"&gt;...&lt;/div&gt;
+            &lt;div class="margin-y-2"&gt;...&lt;/div&gt;
+
+            &lt;!-- Left and right only --&gt;
+            &lt;div class="padding-x-2"&gt;...&lt;/div&gt;
+            &lt;div class="margin-x-2"&gt;...&lt;/div&gt;
+
+            &lt;!-- Centering with margin --&gt;
+            &lt;div class="margin-x-auto"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 3
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        Padding and margin utilities accept <a href="{{ site.url }}/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+    </p>
+    <p>
+        With the HTML in Figure 4, the container starts with a padding value of <em>1</em>. It then changes to a padding value of <em>5</em> at the large breakpoint.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow font-size-md text-align-center">
+
+                <div style="--subtle-fill-opacity: .0375;--white-border: hsla(0, 0%, 50%, 0.375);">
+
+                    <div class="padding-1 padding-5--lg subtle-fill border margin-bottom-2">
+                        <p class="margin-bottom-1">
+                           Padding value 1 and 5.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;!-- With breakpoint modifiers --&gt;
+
+                &lt;div class="padding-1 padding-5--lg"&gt;...&lt;/div&gt;
+                &lt;div class="margin-1 margin-5--lg"&gt;...&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 4
+    </figcaption>
+</figure>
+
+{% include related-css-variables.html anchor="spacing" figure="5" %}

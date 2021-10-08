@@ -1,0 +1,91 @@
+---
+layout: documentation
+title: "Z index"
+backdrop_credit_name: "Vincent van Zalinge"
+backdrop_credit_url: "https://unsplash.com/@vincentvanzalinge"
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Change the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index">z-index property</a> of an element with Natura11y's z-index utilities. 
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="zindexUtilities">
+
+<div class="container narrow margin-y-4">
+    <h2>Z-index Utilities</h2>
+    <p>
+        Natura11y provides the following z-index utilities. Z-index works only with positioned elements, so these utilities apply <code>position: relative;</code> to its selector.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow font-size-md text-align-center">
+
+                    <div
+                        class="padding-3 theme-white border border-color-dark box-shadow-1 z-index-300"
+                        style="width: 90%;"
+                    >
+                        <p class="margin-bottom-1">
+                            Z-index value 300
+                        </p>
+                        <p><code>.z-index-300</code></p>
+                    </div>
+                    <div
+                        class="padding-3 theme-white border border-color-dark box-shadow-1 z-index-200"
+                        style="
+                            width: 90%;
+                            padding: 2em 0.5em 0.5em 0.5em;
+                            margin-left: 5%;
+                            margin-top: -0.75em;
+                        "
+                    >
+                        <p class="margin-bottom-1">
+                            Z-index value 200
+                        </p>
+                        <p><code>.z-index-200</code></p>
+                    </div>
+                    <div
+                        class="padding-3 theme-white border border-color-dark box-shadow-1 z-index-100"
+                        style="
+                            width: 90%;
+                            padding: 2em 0.5em 0.5em 0.5em;
+                            margin-left: 10%;
+                            margin-top: -0.75em;
+                        "
+                    >
+                        <p class="margin-bottom-1">
+                            Z-index value 100
+                        </p>
+                        <p><code>.z-index-100</code></p>
+                    </div>
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+            &lt;div class="z-index-100"&gt;...&lt;/div&gt;
+            &lt;div class="z-index-200"&gt;...&lt;/div&gt;
+            &lt;div class="z-index-300"&gt;...&lt;/div&gt;
+            &lt;div class="z-index-400"&gt;...&lt;/div&gt;
+            &lt;div class="z-index-500"&gt;...&lt;/div&gt;
+            &lt;div class="z-index-600"&gt;...&lt;/div&gt;
+            &lt;div class="z-index-700"&gt;...&lt;/div&gt;
+            &lt;div class="z-index-800"&gt;...&lt;/div&gt;
+            &lt;div class="z-index-900"&gt;...&lt;/div&gt;
+            &lt;div class="z-index-1000"&gt;...&lt;/div&gt;
+            &lt;div class="z-index-1500"&gt;...&lt;/div&gt;
+            &lt;div class="z-index-2000"&gt;...&lt;/div&gt;
+            &lt;div class="z-index-2500"&gt;...&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>

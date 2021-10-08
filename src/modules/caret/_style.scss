@@ -1,0 +1,65 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Placeholders
+// C. Caret Utility
+
+*/
+
+////////////////////////////////////////
+// A. Variables
+////////////////////////////////////////
+
+// Scoped to Block
+
+%caret-vars{
+    --caret-size: 0.25em;
+
+    --caret-margin: 0.375em;
+}
+
+////////////////////////////////////////
+// B. Placeholders
+////////////////////////////////////////
+
+%caret-icon {
+    border-top: var(--caret-size) solid;
+    border-right: var(--caret-size) solid transparent;
+    border-bottom: 0;
+    border-left: var(--caret-size) solid transparent;
+}
+
+////////////////////////////////////////
+// C. Caret Utility
+////////////////////////////////////////
+
+.caret {
+    @extend %caret-vars;
+    
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    
+    &::before {
+        @extend %caret-icon;
+
+        position: relative;
+        content: "";
+        
+        display: inline-block;
+        
+        margin-left: var(--caret-margin);
+        
+        color: inherit;
+    }
+
+    [dir="rtl"] & {
+        &:not(.form-entry__field__select)::before {
+            margin-left: unset;
+            margin-right: var(--caret-margin);
+        }
+    }
+}

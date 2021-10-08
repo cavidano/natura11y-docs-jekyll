@@ -1,0 +1,956 @@
+---
+layout: documentation
+title: "Navigation"
+backdrop_credit_name: "Richard Lee"
+backdrop_credit_url: "https://unsplash.com/@brock222"
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Natura11y offers an assortment of responsive navigation and menu choices.
+    </p>
+</div>
+<!-- .container -->
+
+{% capture as_body %}
+<p>
+    All navigation components provide visible hover and focus states for all actionable items.
+</p>
+<p>
+    Learn more about <a href="https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus" target="_blank">visible hover and focus</a>.
+</p>
+{% endcapture %}
+
+{% include accessibility-spotlight.html content=as_body %}
+
+<hr class="section-start" id="primaryNavComponent">
+
+<div class="container narrow margin-y-4">
+    <h2>Primary Navigation Component</h2>
+    <p>
+        The <em>primary navigation</em> component is a complete header menu system. It's made up of three preassigned areas: the logo, global action buttons, and the main menu. The main menu container includes an optional search field.
+    </p>
+    <p>
+        There are two distinct placements available for the main menu. The first menu placement is <em>below</em> the logo, spanning the full width of the page:
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container wide margin-y-4">
+
+    <div {{ site.custom-properties-example }}>
+
+        <div class="primary-nav--below--lg box-shadow-1 z-index-1500" style="--primary-nav-search-width:25%;">
+
+            <div class="primary-nav__logo">
+                <a href="#1" title="Home" data-logo="brand">
+                    {% include logo-svg-placeholder.html %}
+                </a>
+            </div>
+
+            <nav class="primary-nav__menu" aria-label="Main Menu" id="primary-menu-below">
+
+                <ul>
+                    <li>
+                        <button data-toggle="dropdown">Dropdown</button>
+                        <ul class="nav__dropdown box-shadow-1--lg">
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+
+                <form class="form-entry" aria-label="Search" role="search">
+
+                    <div class="form-entry__field">
+    
+                        <span class="form-entry__field__input">
+                            <span class="icon_search opacity-50" aria-hidden="true"></span>
+                            <input type="text" name="global-search" placeholder="Search">
+                        </span>
+
+                    </div>
+                
+                </form>
+
+            </nav>
+
+            <div class="primary-nav__actions">
+
+                <button
+                    class="button button--icon-only mobile-menu-toggle"
+                    aria-label="Menu"
+                    data-toggle="collapse"
+                    data-target-toggle="#primary-menu-below">
+                        <span class="icon_menu"></span>
+                </button>
+                
+                <div class="button-group">
+
+                    <a href="#1" class="button">
+                        Sign In
+                    </a>
+
+                    <button
+                        class="button button--icon-only"
+                        aria-label="Language"
+                        data-modal-open="global-language">
+                            <span class="icon_language"></span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    
+    </div>
+
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        The second menu placement is <em>inline</em> with the logo, creating a slimmer navigation: 
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container wide margin-y-4">
+
+    <div {{ site.custom-properties-example }}>
+
+        <div class="primary-nav--inline--lg box-shadow-1 z-index-1500">
+
+            <div class="primary-nav__logo">
+                <a href="#1" title="Home" data-logo="brand">
+                    {% include logo-svg-placeholder.html %}
+                </a>
+            </div>
+
+            <nav class="primary-nav__menu" aria-label="navigation" id="primary-menu-inline">
+
+                <ul>
+                    <li>
+                        <button data-toggle="dropdown">Dropdown</button>
+                        <ul class="nav__dropdown box-shadow-1--lg">
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+
+                <form class="form-entry" role="search">
+
+                    <div class="form-entry__field">
+                        
+                        <span class="form-entry__field__input">
+                            <span class="icon_search opacity-50" aria-hidden="true"></span>
+                            <input type="text" name="search--in-nav-example-02" placeholder="Search">
+                        </span>
+
+                    </div>
+                
+                </form>
+
+            </nav>
+
+            <div class="primary-nav__actions">
+
+                <button
+                    class="button button--icon-only mobile-menu-toggle"
+                    aria-label="Menu"
+                    data-toggle="collapse"
+                    data-target-toggle="#primary-menu-inline">
+                        <span class="icon_menu"></span>
+                </button>
+                
+                <div class="button-group">
+
+                    <a href="#1" class="button">
+                        Sign In
+                    </a>
+                
+                    <button class="button button--icon-only" aria-label="Language" data-modal-open="global-language">
+                        <span class="icon_language"></span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Both menus use the same markup but include a different <em>modifier</em> on their parent selector.
+    </p>
+    <p>
+        In particular, <code>.primary-nav--below--{x}</code> places the menu below the logo. In contrast, <code>.primary-nav--inline--{x}</code> places the menu inline with the logo. Here, <strong><em>x</em></strong> equals its breakpoint modifier (e.g., <em>lg</em> for large). At this point the component changes layout from mobile to desktop.
+    </p>
+    <p>
+        Figure 1 (below) provides the entire HTML for the primary navigation component.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <pre data-line="1,3-17,19,47-54,58,60-65,67-79">
+        <code class="language-html">
+            &lt;div class="primary-nav--below--lg"&gt;
+
+                &lt;div class="primary-nav__logo"&gt;
+
+                    &lt;a href="#1" title="Home" data-logo="brand"&gt;
+                        &lt;!-- Placeholder logo, replace the following &lt;svg&gt; tag with your own --&gt;
+                        &lt;svg xmlns="http://www.w3.org/2000/svg" width="126" height="34" viewBox="0 0 126 34"&gt;
+                            &lt;g&gt;
+                                &lt;polygon points="8 25 8 1 0 1 0 33 3 33 8 33 16 33 16 25 8 25"/&gt;
+                                &lt;path d="M35,0A17,17,0,1,0,52,17,17,17,0,0,0,35,0Zm0,26a9,9,0,1,1,9-9A9,9,0,0,1,35,26Z"/&gt;
+                                &lt;path d="M109,0a17,17,0,1,0,17,17A17,17,0,0,0,109,0Zm0,26a9,9,0,1,1,9-9A9,9,0,0,1,109,26Z"/&gt;
+                                &lt;path d="M88.95,16H72v6h7.4824a9,9,0,1,1,0-10H88.25A17.0052,17.0052,0,1,0,89,17C89,16.6624,88.9689,16.3327,88.95,16Z"/&gt;
+                            &lt;/g&gt;
+                        &lt;/svg&gt;
+                    &lt;/a&gt;
+                
+                &lt;/div&gt;
+
+                &lt;nav class="primary-nav__menu" aria-label="Main Menu" id="main-menu"&gt;
+
+                    &lt;ul&gt;
+                        &lt;li&gt;
+                            &lt;button data-toggle="dropdown"&gt;Dropdown&lt;/button&gt;
+                            &lt;ul class="nav__dropdown box-shadow-1--lg"&gt;
+                                &lt;li&gt;
+                                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href="#1"&gt;Link&lt;/a&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#1"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#1"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#1"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+
+                    &lt;form class="form-entry" aria-label="Search" role="search"&gt;
+                        &lt;div class="form-entry__field"&gt;
+                            &lt;span class="form-entry__field__input"&gt;
+                                &lt;span class="icon_search opacity-50" aria-hidden="true"&gt;&lt;/span&gt;
+                                &lt;input type="text" name="global-search" placeholder="Search"&gt;
+                            &lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/form&gt;
+
+                &lt;/nav&gt;
+
+                &lt;div class="primary-nav__actions"&gt;
+
+                    &lt;button class="mobile-menu-toggle button button--icon-only"
+                        aria-label="Menu"
+                        data-toggle="collapse"
+                        data-target-toggle="#main-menu"&gt;
+                            &lt;span class="icon_menu"&gt;&lt;/span&gt;
+                    &lt;/button&gt;
+                    
+                    &lt;div class="button-group"&gt;
+
+                        &lt;a href="#1" class="button"&gt;
+                            Sign In
+                        &lt;/a&gt;
+
+                        &lt;button class="button button--icon-only" aria-label="Language"&gt;
+                            &lt;span class="icon_language"&gt;&lt;/span&gt;
+                        &lt;/button&gt;
+
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<figure class="container narrow margin-y-4">
+    <table class="table table--edge">
+        <caption class="screen-reader-only">
+            Primary Nav Code Description
+        </caption>
+        <thead>
+            <tr>
+                <th class="width-30" scope="col">Line #</th>
+                <th class="width-70" scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>
+                    <a href="#figure_1.1" data-line-anchor>
+                        1
+                    </a>
+                </td>
+                
+                <td>
+                    <p>
+                        The <code>.primary-nav--{x}--{y}</code> block-level selector is required.
+                    </p>
+                    <p>
+                        It's completed with two modifiers: where <strong><em>x</em></strong> indicates the menu position (<em>below</em> or <em>inline</em>), while <strong><em>y</em></strong> indicates the component's responsive breakpoint.
+                    </p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <a href="#figure_1.3-17" data-line-anchor>
+                        3-17
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.primary-nav__logo</code> selector is required. 
+                    </p>
+                    <p>
+                        It contains the website's logo and <em>home</em> link.
+                    </p>
+                    <p>
+                        When using a single color <code>svg</code> for the logo, the <code>data-logo="brand"</code> attribute placed on the <code>&lt;a&gt;</code> tag sets the <code>svg</code> fill color to <em>currentColor</em>.
+                        This is useful when a theme color utility is present on a parent element.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.19" data-line-anchor>
+                        19
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.primary-nav__menu</code> selector is required.    
+                    </p>
+                    <p>
+                        The <code>id</code> attribute equals the value of <code>aria-controls</code> from the associated <em>menu</em> button (found within the <code>.primary-nav__buttons</code> selector).
+                    </p>
+                    
+                    <p> 
+                        It is recommended to include <code>aria-label="{y}"</code>, where <em>y</em> provides a descriptive name for assistive technology. 
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.47-54" data-line-anchor>
+                        47-54
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.form-entry</code> selector is optional.
+                    </p>
+                    <p>
+                        The <code>role="search"</code> attribute is present for assistive technology.
+                    </p>
+                    <p> 
+                        It is recommended to include <code>aria-label="Search"</code>, which provides a descriptive name for assistive technology. 
+                    </p>
+                    <p>
+                        Learn about <a href="#1">form entries</a>.
+                    </p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <a href="#figure_1.58" data-line-anchor>
+                        58
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.primary-nav__actions</code> selector is required.
+                    </p>
+                    <p>
+                        It contains the website's global action buttons.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.60-65" data-line-anchor>
+                        60-65
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.mobile-menu-toggle</code> button is required.
+                    </p>
+                    <p>
+                        It toggles the main menu on mobile viewports. This button is a direct child of <code>.primary-nav__actions.</code>
+                    </p>
+                    <p>
+                        The <code>aria-label="Toggle Menu"</code> attribute provides a descriptive name for assistive technology.
+                    </p>
+                    <p>
+                        The <code>data-toggle="collapse"</code> attribute is required.
+                    </p>
+                    <p>
+                        The <code>data-target-toggle</code> attribute equals the value of the main menu's <code>id</code> attribute.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.67-79" data-line-anchor>
+                        67-79
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.button-group</code> selector is optional.
+                    </p>
+                    <p>
+                        It contains actions buttons that should be available on every page (e.g. <em>sign in</em>, <em>translate</em>).
+                    </p>
+                    <p>
+                        The <code>data-target-toggle</code> attribute equals the value of the main menu's <code>id</code> attribute.
+                    </p>
+                    <p>
+                        Learn about the <a href="#1">button group</a>.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</figure>
+
+<hr class="section-start" id="breadcrumb">
+
+<div class="container narrow margin-y-4">
+    <h2>Breadcrumb</h2>
+    <p>
+        A simple breadcrumb navigation to support wayfinding.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <ul class="nav-breadcrumb">
+                    <li>
+                        <a class="button button--icon-only" href="#1">
+                            <span class="icon_home" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#1">About</a>
+                    </li>
+                    <li class="text-color-primary">
+                        Services
+                    </li>
+                </ul>
+    
+            </div>
+
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;ul class="nav-breadcrumb"&gt;
+                    &lt;li&gt;
+                        &lt;a class="button button--icon-only" href="#1"&gt;
+                            &lt;span class="icon_home" aria-hidden="true"&gt;&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="#1"&gt;About&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class="text-color-primary"&gt;
+                        Services
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 2
+    </figcaption>
+</figure>
+<hr class="section-start" id="genericNavigation">
+
+<div class="container narrow margin-y-4">
+    <h2>Generic Navigation</h2>
+    <p>
+        Create a simple vertical navigation with the <code>.nav</code> component class added to a <code>ul</code> tag (Figure 2).
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <ul class="nav" role="menu">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+    
+            </div>
+
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;ul class="nav"&gt;
+                    &lt;li&gt;
+                        &lt;a href="#1"&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="#1"&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="#1"&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 2
+    </figcaption>
+</figure>
+
+
+<div class="container narrow margin-y-4">
+    <p>
+        For a horizontal menu, apply the <code>.nav--horizontal</code> modifier class (Figure 3).
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <ul class="nav nav--horizontal" role="menu">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+    
+            </div>
+
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;ul class="nav nav--horizontal"&gt;
+                    &lt;li&gt;
+                        &lt;a href="#1"&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="#1"&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="#1"&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 3
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        The <code>.nav--horizontal</code> modifier accepts <a href="{{ site.url }}/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+    </p>
+    <p>
+        With the HTML in Figure 4, the nav starts in the <em>vertical</em> direction. It then changes to the <em>horizontal</em> direction at the large breakpoint.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <ul class="nav nav--horizontal--lg">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+    
+            </div>
+
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;ul class="nav nav--horizontal--lg"&gt;
+                    ...
+                &lt;/ul&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 4
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Justification</h3>
+    <p>
+        Use the flex <a href="{{ site.url }}/docs/flex/#justifyContentUtilites">justify content utilities</a> for centered or right-justified navigation (Figure 5).
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <ul class="nav nav--horizontal justify-content-center margin-bottom-4">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+                <ul class="nav nav--horizontal justify-content-end">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+    
+            </div>
+
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;ul class="nav nav--horizontal justify-content-center"&gt;
+                    ...
+                &lt;/ul&gt;
+
+                &lt;ul class="nav nav--horizontal justify-content-end"&gt;
+                    ...
+                &lt;/ul&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 5
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="borderedNavigation">
+
+<div class="container narrow margin-y-4">
+    <h2>Bordered Navigation</h2>
+    <p>Add the <code>.nav--divider</code> modifier class to a <code>.nav</code> selector for a vertical, bordered navigation (Figure 6).</p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <ul class="nav nav--divider">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+    
+            </div>
+
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;ul class="nav nav--divider" role="menu"&gt;
+                    &lt;li&gt;
+                        &lt;a href="#1"&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="#1"&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="#1"&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 6
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Include the aformentioned <code>.nav--horizontal</code> and
+        <code>.nav--horizontal--{bp}</code> modifier classes to <code>.nav-divider</code> selectors. This produces a horizontal (and responsive) bordered menu.
+    </p>
+</div>
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <ul class="nav nav--divider nav--horizontal" role="menu">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+    
+            </div>
+
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;ul class="nav nav--divider nav--horizontal--lg"&gt;
+                    ...
+                &lt;/ul&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 7
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="dropdowns">
+
+<div class="container narrow margin-y-4">
+    <h2>Dropdown Items</h2>
+    <p>
+        Include dropdown items within <code>.nav</code>, and <code>.nav--divider</code> selectors. As well as within the <code>.primary-nav__menu</code> selector inside the <em>primary navigation</em> component.
+    </p>
+    <p>
+        To create a dropdown, include the <code>data-toggle="dropdown"</code> attribute on a <code>&lt;button&gt;</code> (Figure 8, line 3). Add a sibling <code>&lt;ul&gt;</code> with the <code>.nav__dropdown</code> class (Figure 8, line 4).
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow subtle-fill" style="--subtle-fill-opacity: 0.0375;">
+            
+                <div class="aspect-ratio aspect-ratio--3by2">
+                    <div class="aspect-ratio__content display-flex">
+                        <div class="width-100 padding-4 align-self-center">
+                            <ul class="nav nav--horizontal nav--divider border theme-white" role="navigation">
+                                <li>
+                                    <button data-toggle="dropdown">Dropdown</button>
+                                    <ul class="nav__dropdown">
+                                        <li>
+                                            <a href="#1">Link</a>
+                                        </li>
+                                        <li>
+                                            <a href="#1">Link</a>
+                                        </li>
+                                        <li>
+                                            <a href="#1">Link</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#1">Link</a>
+                                </li>
+                                <li>
+                                    <a href="#1">Link</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+
+        </div>
+        <pre data-line="3,4">
+            <code class="language-html">
+                &lt;ul class="nav nav--horizontal"&gt;
+                    &lt;li&gt;
+                        &lt;button data-toggle="dropdown"&gt;Dropdown&lt;/button&gt;
+                        &lt;ul class="nav__dropdown"&gt;
+                            &lt;li&gt;
+                                &lt;a href="#1"&gt;Link&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href="#1"&gt;Link&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href="#1"&gt;Link&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="#1"&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="#1"&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 8
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Dropdowns work as you might expect within vertical navigation:
+    </p>
+</div>
+
+<figure class="container narrow margin-y-4">
+    <div {{ site.custom-properties-example }}>
+        <div class="subtle-fill" style="--subtle-fill-opacity: 0.0375;" >
+
+            <div class="aspect-ratio aspect-ratio--3by2">
+                <div class="aspect-ratio__content display-flex">
+                    <div class="width-100 padding-4 align-self-sart">
+                        <ul class="nav nav--divider border theme-white" role="navigation">
+                            <li>
+                                <button data-toggle="dropdown">Dropdown</button>
+                                <ul class="nav__dropdown">
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button data-toggle="dropdown">Dropdown</button>
+                                <ul class="nav__dropdown">
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</figure>
+
+{% include related-css-variables.html anchor="navigation" figure="9" %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- IE Compatibility Mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{{ page.title }} • Natura11y</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Natura11y CSS and Icons -->
+    <link rel="stylesheet" href="{{ site.cdn_url_css }}">
+    <link rel="stylesheet" href="{{ site.cdn_url_icons }}">
+    
+    {% if page.example == "NYC" %}
+    
+    <!-- NYC Font from Adobe -->
+    <link rel="stylesheet" href="https://use.typekit.net/rst3zzz.css">
+
+    <style>
+        :root {
+            --body-font-size: 20px;
+            --body-font-family: "neue-haas-grotesk-text";
+        }
+    </style>
+    
+    {% endif %}
+
+</head>
+
+<body>
+    
+    {{ content }}
+
+    <!-- Natura11y Javascript -->
+    <script src="{{ site.cdn_url_js }}"></script>
+
+</body>
+
+</html>

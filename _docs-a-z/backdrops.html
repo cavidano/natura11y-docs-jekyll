@@ -1,0 +1,678 @@
+---
+layout: documentation
+title: "Backdrops"
+backdrop_credit_name: "Luca Micheli"
+backdrop_credit_url: "https://unsplash.com/@lucamicheli"
+tags:
+    backdrop
+    background
+    images
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Backdrops provide a useful design pattern—placing a translucent image behind contextual content. Backdrops offer two distinct style variants: <a href="#imageProportional">Image proportional</a> and <a href="#fixedHeight">fixed height</a>.
+    </p>
+</div>
+<!-- .container -->
+
+{% capture as_body %}
+<p>
+    Backdrops remove the need for CSS background images. Feature images exist within the HTML, so screen readers can read the text of the image's <em>alt</em> attribute.
+</p>
+<p>
+    Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.
+</p>
+{% endcapture %}
+
+{% include accessibility-spotlight.html content=as_body %}
+
+<hr class="section-start" id="imageProportional">
+
+<div class="container narrow margin-y-4">
+    <h2>Image Proportional</h2>
+    <p>
+        Image proportional backdrops scale and stack responsively. Below is an example of a basic image proportional backdrop.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow">
+                <div class="backdrop theme-dark border-radius" {{ site.custom-properties-example }}>
+
+                    <div class="backdrop__credit">
+                        <p>
+                            Photo by <a href="https://unsplash.com/@zmachacek?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Zdeněk Macháček</a> on <a href="https://unsplash.com/collections/4468315/landscapes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
+                        </p>
+                    </div>
+
+                    <div class="backdrop__image">
+                        <img class="opacity-50" src="{{ site.url }}/images/examples/backdrop-example-01.jpg" alt="Placeholder">
+                    </div>
+
+                    <div class="backdrop__cover">
+
+                        <div class="container text-align-center">
+                            <p class="h4 text-shadow margin-bottom-3">
+                            <em>In Their Eternal Faces<br>The Sun&#8212;with just delight</em>
+                            </p>
+                            <a class="button font-size-md theme-secondary" href="#1">Emily Dickenson Poetry</a>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                <!-- .backdrop -->
+            </div>
+        </div>
+        <pre data-line="1,3-5,7-9,11-22">
+            <code class="language-html">
+                &lt;div class="backdrop theme-dark border-radius"&gt;
+
+                    &lt;div class="backdrop__credit"&gt;
+                        &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="backdrop__image"&gt;
+                        &lt;img class="opacity-50" src="https://via.placeholder.com/1600x900" alt="Placeholder"&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="backdrop__cover"&gt;
+
+                        &lt;div class="container text-align-center"&gt;
+                            &lt;p class="h4 text-shadow margin-bottom-3"&gt;
+                                &lt;em&gt;In Their Eternal Faces&lt;br&gt;The Sun&#8212;with just delight&lt;/em&gt;
+                            &lt;/p&gt;
+                            &lt;a class="button font-size-md theme-primary" href="#1"&gt;
+                                Emily Dickenson Poetry
+                            &lt;/a&gt;
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+                    
+                &lt;/div&gt;
+                &lt;!-- .backdrop --&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<figure class="container narrow margin-y-4">
+    <table class="table table--edge">
+        <caption class="screen-reader-only">
+            Backdrop HTML 
+        </caption>
+        <thead>
+            <tr>
+                <th class="width-30" scope="col">Line #</th>
+                <th class="width-70" scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-top">
+                <td>
+                    <a href="#figure_1.1" data-line-anchor>
+                        1
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The parent <code>.backdrop</code> selector is required.
+                    </p>
+                    <p>
+                        The <code>.theme-dark</code> utility class is optional. It provides the background and text color. If not present, these colors are inherited from the backdrop's nearest ancestor (with a theme color applied).
+                    </p>
+                    <p>
+                        The <code>.border-radius</code> utility class is optional.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.3-5" data-line-anchor>
+                        3-5
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.backdrop__credit</code> selector is optional.
+                    </p>
+                    <p>
+                        It is where you provide a credit for the image.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.7-9" data-line-anchor>
+                        7-9
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.backdrop__image</code> selector is required.
+                    </p>
+                    <p>
+                        It contains the feature image.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.11-22" data-line-anchor>
+                        11-22
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.backdrop__cover</code> selector is required. 
+                    </p>
+                    <p>
+                        It holds the backdrop's contextual content.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        The size of this backdrop (proportional width and height) is determined by the size of its feature image.
+    </p>
+    <p>
+        The translucent effect of the backdrop is acheived with the use of additional utility classes. Our <a href="#1">theme color utilities</a> (e.g. <code>.theme-dark</code>) provide the background and text color. The <a href="#1">opacity utility class</a> (e.g. <code>.opacity-30</code>) applied to the backdrop's feature image, allows the background color to show through.
+    </p>
+</div>
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        When using image size proportional backdrops for featured content (like the full-width example below) the content may become too tall for the image on smaller viewport sizes.
+    </p>
+</div>
+
+<figure class="margin-y-4">
+
+    <div class="backdrop backdrop--stack--lg theme-dark" {{ site.custom-properties-example }}>
+
+        <div class="backdrop__credit">
+            <p>
+                Photo by <a href="https://unsplash.com/@anik3t?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Aniket Deole</a> on <a href="https://unsplash.com/s/photos/yosemite?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
+            </p>
+        </div>
+
+        <div class="backdrop__image">
+            <img class="opacity-40--lg" src="{{ site.url }}/images/examples/backdrop-example-02.jpg" alt="Placeholder">
+        </div>
+
+        <div class="backdrop__cover">
+
+            <div class="container narrow margin-y-5">
+
+                <div class="text-shadow text-align-center margin-bottom-4">
+                    <h1 class="banner-headline"> 
+                        The mountain at a given distance In amber lies
+                    </h1>
+                    <p>
+                        &#8212;Excerpt from <em>Delight becomes pictoral</em>
+                    </p>
+                </div>
+
+                <div class="grid grid--gap-2 grid--cell-6--md">
+
+                    <div class="grid__cell">
+                        <a class="button button--outline width-100" href="#1">
+                            About Emily Dickenson
+                        </a>
+                    </div>
+
+                    <div class="grid__cell">
+                        <a class="button theme-secondary width-100 box-shadow-1" href="#1">
+                            Emily Dickenson Poetry
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- .backdrop -->
+
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        To occomodate small viewports, include a <em>stack breakpoint modifier</em> (e.g. <code>.backdrop--stack--{x}</code>) to the <code>.backdrop</code> selector. Where <em><strong>x</strong></em> equals the desired breakpoint (e.g., <em>lg</em> for large). The backdrop's image is placed above the content vertically until the viewport reaches the desired breakpoint specified in the modifier.
+    </p>
+</div>
+
+{% include browser-iframe.html iframe_url="/examples/backdrops-01.html" iframe_width="narrow" %}
+
+<div class="container narrow margin-y-4">
+    <p>
+        The above example shows how the same full-with backdrop appears on a smaller (mobile) viewport.
+    </p>
+    <p>
+        Notice, too, the image is at full opacity. That's because our <a href="#1">opacity classes</a> have their own a breakpoint modifiers. Adding <code>.opacity-40--lg</code> to the <code>.backdrop__image</code> selector gives that image a specified opacity (40%) at the large (lg) breakpoint.
+    </p>
+    <p>
+        Figure 2 (below) provides code used to create the backdrop above. Refer specifically to line 1, where the <code>.backdrop--stack--lg</code> breakpoint modifier is present.
+    </p>
+</div>
+
+<figure class="container medium margin-y-4">
+
+    <pre data-line="1">
+        <code class="language-html">
+            &lt;div class="backdrop backdrop--stack--lg theme-dark"&gt;
+
+                &lt;div class="backdrop__credit"&gt;
+                    &lt;p&gt;
+                        Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class="backdrop__image"&gt;
+                    &lt;img class="opacity-40--lg" src="https://via.placeholder.com/1600x900" alt="Placeholder"&gt;
+                &lt;/div&gt;
+
+                &lt;div class="backdrop__cover"&gt;
+
+                    &lt;div class="container narrow margin-y-5"&gt;
+
+                        &lt;div class="text-shadow text-align-center margin-bottom-4"&gt;
+                            &lt;h1 class="banner-headline"&gt; 
+                                The mountain at a given distance&lt;br&gt;
+                                In amber lies
+                            &lt;/h1&gt;
+                            &lt;p&gt;
+                                &#8212;Excerpt from &lt;em&gt;Delight becomes pictoral&lt;/em&gt;
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="grid grid--gap-2 grid--cell-6--md"&gt;
+                            &lt;div class="grid__cell"&gt;
+                                &lt;a class="button button--outline width-100" href="#1"&gt;
+                                    About Emily Dickenson
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;div class="grid__cell"&gt;
+                                &lt;a class="button theme-secondary width-100 box-shadow-1" href="#1"&gt;
+                                    Emily Dickenson Poetry
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;!-- .backdrop --&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 2
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        All of this together makes it easy to create responsive backdrops with different flavors of color and content. What if we don't want our backdrop's size to be dictated by its feature image?
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="fixedHeight">
+
+<div class="container narrow margin-y-4">
+    <h2>Fixed Height</h2>
+    <p>
+        Fixed height backdrops retain their height across viewport sizes. When needed, they adjust to the height of their inner content.
+    </p>
+    <p>
+        For a fixed height backdrop, append the <code>.backdrop--fixed</code> modifier to the <code>.backdrop</code> selector.
+    </p>
+</div>
+
+<figure class="margin-y-4">
+
+    <div class="backdrop backdrop--fixed theme-dark" {{ site.custom-properties-example }}>
+
+        <div class="backdrop__credit">
+            <p>
+                Photo by <a href="https://unsplash.com/@ryanschroeder?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="blank">Ryan Schroeder</a> on <a href="https://unsplash.com/@ryanschroeder?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="blank">Unsplash</a>
+            </p>
+        </div>
+
+        <div class="backdrop__image">
+            <img class="opacity-40" src="{{ site.url }}/images/examples/backdrop-example-03.jpg" alt="Placeholder">
+        </div>
+
+        <div class="backdrop__cover">
+
+            <div class="container medium margin-y-4">
+                <h1 class="banner-headline text-color-secondary text-shadow">
+                    The Mountain sat upon the Plain
+                </h1>
+            </div>
+
+        </div>
+        <!-- .backdrop__cover -->
+
+    </div>
+
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>Figure 3 gives us the HTML for the above example:</p>
+</div>
+
+<figure class="container medium margin-y-4">
+
+    <pre>
+        <code class="language-html">
+            &lt;div class="backdrop backdrop--fixed theme-dark"&gt;
+
+                &lt;div class="backdrop__credit"&gt;
+                    &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class="backdrop__image"&gt;
+                    &lt;img class="opacity-40" src="https://via.placeholder.com/1600x900" alt="Placeholder"&gt;
+                &lt;/div&gt;
+
+                &lt;div class="backdrop__cover"&gt;
+
+                    &lt;div class="container medium margin-y-4"&gt;
+                        &lt;h1 class="banner-headline text-color-secondary text-shadow"&gt;
+                            The Mountain sat upon the Plain
+                        &lt;/h1&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;!-- .backdrop --&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 3 
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        The <code>.backdrop--fixed</code> selector stretches to fit the content within <code>.backdrop__cover</code>.
+        Consider the following layout:
+    </p>
+</div>
+
+ <figure class="margin-y-5">
+    
+    <div class="backdrop backdrop--fixed theme-dark" {{ site.custom-properties-example }}>
+
+        <div class="backdrop__credit">
+            <p>
+                Photo by <a href="https://unsplash.com/@albertorestifo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Alberto Restifo</a> on <a href="https://unsplash.com/@albertorestifo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
+            </p>
+        </div>
+
+        <div class="backdrop__image">
+            <img class="opacity-40" src="{{ site.url }}/images/examples/backdrop-example-04.jpg" alt="">
+        </div>
+
+        <div class="backdrop__cover">
+
+            <div class="margin-y-5">
+
+                <div class="container narrow">
+                    <h1 class="banner-headline text-align-center text-shadow margin-bottom-4">
+                       <em>Nature in Poetry</em> 
+                    </h1>
+                </div>
+
+                <div class="container narrow medium--xl">
+
+                    <div class="grid grid--gap-2 grid--cell-6--xl justify-content-center">
+
+                        <div class="grid__cell">
+
+                            <div class="card border-radius theme-light box-shadow-2">
+
+                                <div class="card__head border-bottom">
+                                    <p>
+                                        <em>Featured Poem</em>
+                                    </p>
+                                </div>
+
+                                <div class="card__body">
+                                    <h2 class="h6">
+                                        This—is the land—the Sunset washes—
+                                    </h2>
+                                    <p>
+                                        <em>
+                                            This—is the land—the Sunset washes—<br>
+                                            These—are the Banks of the Yellow Sea—<br>
+                                            Where it rose—or whither it rushes—<br>
+                                            These—are the Western Mystery!
+                                        </em>
+                                    </p>
+                                    <p>
+                                        <em>
+                                            Night after Night<br>
+                                            Her purple traffic<br>
+                                            Strews the landing with Opal Bales—<br>
+                                            Merchantmen—poise upon Horizons—<br>
+                                            Dip—and vanish like Orioles!
+                                        </em>
+                                    </p>
+                                </div>
+
+                                <div class="card__foot border-top">
+                                    <a class="button button--has-icon--disperse theme-primary" href="#1">
+                                        <span class="button__text">Emily Dickenson Poetry</span>
+                                        <span class="icon_arrow-right button__icon"></span>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- .grid__cell -->
+
+                        <div class="grid__cell">
+
+                            <div class="card border-radius theme-light box-shadow-2">
+
+                                <div class="card__head border-bottom">
+                                    <p>
+                                        <em>About the Poet</em>
+                                    </p>
+                                </div>
+
+                                <div class="card__body">
+                                    <h2 class="h4">
+                                        Emily Dickenson
+                                    </h2>
+                                    <p>
+                                        Emily Elizabeth Dickinson was an American poet. Little-known during her life, she has since been regarded as one of the most important figures in American poetry.
+                                    </p>
+                                    <p>
+                                        Dickinson was born in Amherst, Massachusetts into a prominent family with strong ties to its community.
+                                    </p>
+                                </div>
+
+                                <div class="card__foot border-top">
+                                    <a class="button button--has-icon--disperse theme-primary" href="#1">
+                                        <span class="button__text">About Emily Dickenson</span>
+                                        <span class="icon_arrow-right button__icon"></span>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- .grid__cell -->
+                        
+                    </div>
+                    <!-- .grid -->
+
+                </div>
+
+            </div>
+            <!-- .container -->
+
+        </div>
+        <!-- .backdrop__cover -->
+    </div>
+
+ </figure>
+
+ <div class="container narrow margin-y-4">
+    <p>
+        In this example, the content inside <code>.backdrop__cover</code> is taller than the default height (400px), thus
+        <code>.backdrop--fixed</code> adjusts its height automatically.
+    </p>
+    <p>
+        The markup for the above example:
+    </p>
+ </div>
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;div class="backdrop backdrop--fixed theme-dark"&gt;
+
+                &lt;div class="backdrop__credit"&gt;
+                    &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class="backdrop__image"&gt;
+                    &lt;img class="opacity-40" src="https://via.placeholder.com/1600x900.jpg" alt=""&gt;
+                &lt;/div&gt;
+
+                &lt;div class="backdrop__cover"&gt;
+
+                    &lt;div class="margin-y-5"&gt;
+
+                        &lt;div class="container narrow"&gt;
+                            &lt;h1 class="banner-headline text-align-center text-shadow margin-bottom-4"&gt;
+                            &lt;em&gt;Nature in Poetry&lt;/em&gt; 
+                            &lt;/h1&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="container narrow medium--xl"&gt;
+
+                            &lt;div class="grid grid--gap-2 grid--cell-6--xl justify-content-center"&gt;
+
+                                &lt;div class="grid__cell"&gt;
+
+                                    &lt;div class="card border-radius theme-light box-shadow-2"&gt;
+
+                                        &lt;div class="card__head border-bottom"&gt;
+                                            &lt;p&gt;
+                                                &lt;em&gt;Featured Poem&lt;/em&gt;
+                                            &lt;/p&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;div class="card__body"&gt;
+                                            &lt;h2 class="h6"&gt;
+                                                This—is the land—the Sunset washes—
+                                            &lt;/h2&gt;
+                                            &lt;p&gt;
+                                                &lt;em&gt;
+                                                    This—is the land—the Sunset washes—&lt;br&gt;
+                                                    These—are the Banks of the Yellow Sea—&lt;br&gt;
+                                                    Where it rose—or whither it rushes—&lt;br&gt;
+                                                    These—are the Western Mystery!
+                                                &lt;/em&gt;
+                                            &lt;/p&gt;
+                                            &lt;p&gt;
+                                                &lt;em&gt;
+                                                    Night after Night&lt;br&gt;
+                                                    Her purple traffic&lt;br&gt;
+                                                    Strews the landing with Opal Bales—&lt;br&gt;
+                                                    Merchantmen—poise upon Horizons—&lt;br&gt;
+                                                    Dip—and vanish like Orioles!
+                                                &lt;/em&gt;
+                                            &lt;/p&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;div class="card__foot border-top"&gt;
+                                            &lt;a class="button button--has-icon--disperse theme-primary" href="#1"&gt;
+                                                &lt;span class="button__text"&gt;Emily Dickenson Poetry&lt;/span&gt;
+                                                &lt;span class="icon_arrow-right button__icon"&gt;&lt;/span&gt;
+                                            &lt;/a&gt;
+                                        &lt;/div&gt;
+
+                                    &lt;/div&gt;
+
+                                &lt;/div&gt;
+                                &lt;!-- .grid__cell --&gt;
+
+                                &lt;div class="grid__cell"&gt;
+
+                                    &lt;div class="card border-radius theme-light box-shadow-2"&gt;
+
+                                        &lt;div class="card__head border-bottom"&gt;
+                                            &lt;p&gt;
+                                                &lt;em&gt;About the Poet&lt;/em&gt;
+                                            &lt;/p&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;div class="card__body"&gt;
+                                            &lt;h2 class="h4"&gt;
+                                                Emily Dickenson
+                                            &lt;/h2&gt;
+                                            &lt;p&gt;
+                                                Emily Elizabeth Dickinson was an American poet. Little-known during her life, she has since been regarded as one of the most important figures in American poetry.
+                                            &lt;/p&gt;
+                                            &lt;p&gt;
+                                                Dickinson was born in Amherst, Massachusetts into a prominent family with strong ties to its community.
+                                            &lt;/p&gt;
+                                        &lt;/div&gt;
+
+                                        &lt;div class="card__foot border-top"&gt;
+                                            &lt;a class="button button--has-icon--disperse theme-primary" href="#1"&gt;
+                                                &lt;span class="button__text"&gt;About Emily Dickenson&lt;/span&gt;
+                                                &lt;span class="icon_arrow-right button__icon"&gt;&lt;/span&gt;
+                                            &lt;/a&gt;
+                                        &lt;/div&gt;
+
+                                    &lt;/div&gt;
+
+                                &lt;/div&gt;
+                                &lt;!-- .grid__cell --&gt;
+
+                            &lt;/div&gt;
+                            &lt;!-- .grid --&gt;
+
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+                    &lt;!-- .container --&gt;
+
+                &lt;/div&gt;
+                &lt;!-- .backdrop__cover --&gt;
+
+            &lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 4 
+    </figcaption>
+</figure>
+
+{% include related-css-variables.html anchor="backdrops" figure="5" %}

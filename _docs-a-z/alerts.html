@@ -1,0 +1,545 @@
+---
+layout: documentation
+title: "Alerts"
+backdrop_credit_name: "Zdeněk Macháček"
+backdrop_credit_url: "https://unsplash.com/@zmachacek"
+tags:
+    alert
+    confirm
+    warn
+    feedback
+    dismissable
+    dialog
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Alerts help draw attention to brief confirmation or warning messages—or any other important information—that shouldn't be overlooked while your visitor scans the page.
+    </p>
+</div>
+<!-- .container -->
+
+{% capture as_body %}
+<p>
+    When modifying alert colors, be sure to check that your colors meet a sufficient <a href="#1">contrast ratio</a>.
+</p>
+<p>
+    Never rely on color alone to convey meaning. Include a visual icon in alerts for those who experience colors differently.
+</p>
+<p>
+    Include an appropriate <a href="#1"><em>alert role</em></a> for assistive technology.
+</p>
+{% endcapture %}
+
+{% include accessibility-spotlight.html content=as_body %}
+
+<hr class="section-start" id="confirmAndWarn">
+
+<div class="container narrow margin-y-4">
+    <h2>Confirm and Warn</h2>
+    <p>
+        The Natura11y provides two types of alerts: <strong>Confirm</strong> implied with <em>green</em>, and <strong>Warn</strong> implied with <em>red</em>.
+    </p>
+    <p>
+        Every instance of an alert should include an icon to help convey meaning. Across the Framework <a href="{{ site.url }}/icons">Natura11y Icons</a>, our open-source icon library, is used for all icons.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <div
+                    class="alert alert--confirm margin-y-3"
+                    aria-labelledby="alert-confirm-label"
+                    aria-describedby="alert-confirm-description"
+                    role="alert">
+
+                    <div class="alert__title h5">
+                        <span class="icon_confirm" aria-hidden="true"></span>
+                        <span class="alert__title__text" id="alert-confirm-label">
+                            Alert Title
+                        </span>
+                    </div>
+
+                    <div class="alert__description" id="alert-confirm-description">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                            <a href="#1">quos natus aliquam</a>.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div
+                    class="alert alert--warn margin-y-3"
+                    aria-labelledby="alert-warn-label"
+                    aria-describedby="alert-warn-description"
+                    role="alert">
+
+                    <div class="alert__title h5">
+                        <span class="icon_warn" aria-hidden="true"></span>
+                        <span class="alert__title__text" id="alert-warn-label">
+                            Alert Title
+                        </span>
+                    </div>
+
+                    <div class="alert__description" id="alert-warn-description">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                            <a href="#1">quos natus aliquam</a>.
+                        </p>
+                    </div>
+
+                </div>
+    
+            </div>
+
+        </div>
+        <pre data-line="2-5,7-12,14-19">
+            <code class="language-html">
+                &lt;div
+                    class="alert alert--confirm"
+                    aria-labelledby="alert-label"
+                    aria-describedby="alert-description"
+                    role="alert"&gt;
+
+                    &lt;div class="alert__title h5"&gt;
+                        &lt;span class="icon_confirm" aria-hidden="true"&gt;&lt;/span&gt;
+                        &lt;span class="alert__title__text" id="alert-label"&gt;
+                            Alert Title
+                        &lt;/span&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="alert__description" id="alert-description"&gt;
+                        &lt;p&gt;
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                            &lt;a href="#1"&gt;quos natus aliquam&lt;/a&gt;.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<figure class="container narrow margin-y-4">
+    <table class="table table--edge">
+        <thead>
+            <tr>
+                <th class="width-30" scope="col">Line #</th>
+                <th class="width-70" scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="#figure_1.2-5" data-line-anchor>
+                        2-5
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The parent <code>.alert</code> selector is required.
+                    </p>
+                    <p>
+                        The <code>.alert--{x}</code> is the modifier class that provides the alert's color, where
+                        <em>x</em> equals <em>confirm</em>, <em>attention</em>, or <em>warn</em>. 
+                    </p>
+                    <p>
+                        The <code>aria-labelledby</code> attribute equals the alert title's <code>id</code> attribute.
+                    </p>
+                    <p>
+                        The <code>aria-describedby</code> attribute equals the alert description's <code>id</code> attribute.
+                    </p>
+                    <p>
+                        Include <code>role="alert"</code> if the alert includes urgent information.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.7-12" data-line-anchor>
+                        7-12
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.alert__title</code> selector is required. 
+                    </p>
+                    <p>
+                        It holds the alert's title and visual icon.
+                    </p>
+                    <p>
+                        The <code>.alert__title__text</code> selector holds the alert title's text. It is required. It
+                        includes the unique <code>id</code> targeted by the <code>aria-labelledby</code> attribute
+                        present on the <code>.alert</code> selector.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.14-19" data-line-anchor>
+                        14-19
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.alert__description</code> selector is not required.
+                    </p>
+                    <p>
+                        It holds the alert's description message. It includes the unique <code>id</code> targeted by the <code>aria-describedby</code> attribute present on the <code>.alert</code> selector.
+                    </p>
+                    <p>
+                        All links (<code>&lt;a&gt;</code> tags) within the <code>&lt;p&gt;</code> tags, will automatically inherit the alert's text color.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Inverse Color Modifier</h3>
+    <p>
+        For a bolder look, chain <code>--inverse</code> to the <code>alert--confirm</code> or
+        <code>alert--warn</code> modifier classes respectively.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <div
+                    class="alert alert--confirm alert--confirm--inverse margin-y-3"
+                    aria-labelledby="alert-confirm-inverse-label"
+                    aria-describedby="alert-confirm-inverse-description"
+                    role="alert">
+
+                    <div class="alert__title h5">
+                        <span class="icon_confirm" aria-hidden="true"></span>
+                        <span class="alert__title__text" id="alert-confirm-inverse-label">
+                            Alert Title
+                        </span>
+                    </div>
+
+                    <div class="alert__description" id="alert-confirm-inverse-description">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                            <a href="#1">quos natus aliquam</a>.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div
+                    class="alert alert--warn--inverse margin-y-3"
+                    aria-labelledby="alert-warn-inverse-label"
+                    aria-describedby="alert-warn-inverse-description"
+                    role="alert">
+
+                    <div class="alert__title h5">
+                        <span class="icon_warn" aria-hidden="true"></span>
+                        <span class="alert__title__text" id="alert-warn-inverse-label">
+                            Alert Title
+                        </span>
+                    </div>
+
+                    <div class="alert__description" id="alert-warn-inverse-description">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                            <a href="#1">quos natus aliquam</a>.
+                        </p>
+                    </div>
+
+                </div> 
+    
+            </div>
+
+        </div>
+        <pre data-line="1,5">
+            <code class="language-html">
+                &lt;div class="alert alert--confirm--inverse"&gt;
+                    ...
+                &lt;/div&gt;
+
+                &lt;div class="alert alert--warn--inverse"&gt;
+                    ...
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 2</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Title Only Alert</h3>
+    <p>
+        The <code>.alert__description</code> is not required. Leaving it out creates a title only alert.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <div
+                    class="alert alert--confirm--inverse margin-y-3"
+                    aria-labelledby="alert-confirm-title-only-label">
+
+                    <div class="alert__title h5">
+                        <span class="icon_confirm" aria-hidden="true"></span>
+                        <span class="alert__title__text" id="alert-confirm-title-only-label">
+                            Alert Confirm
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="alert alert--warn--inverse margin-y-3"
+                    aria-labelledby="alert-title-only-warn-label"
+                    aria-describedby="alert-04-desc"
+                    role="alert">
+
+                    <div class="alert__title h5">
+                        <span class="icon_warn" aria-hidden="true"></span>
+                        <span class="alert__title__text" id="alert-title-only-warn-label">
+                            Alert Warn
+                        </span>
+                    </div>
+
+                </div> 
+    
+            </div>
+
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div
+                    class="alert alert--confirm--inverse margin-y-3"
+                    aria-labelledby="alert-title-only-label"&gt;
+
+                    &lt;div class="alert__title h5"&gt;
+                        &lt;span class="icon_confirm" aria-hidden="true"&gt;&lt;/span&gt;
+                        &lt;span class="alert__title__text" id="alert-title-only-label"&gt;
+                            Alert Confirm
+                        &lt;/span&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 3</p>
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="dismissableAlerts">
+
+<div class="container narrow margin-y-4">
+    <h2>Dismissable Alerts</h2>
+    <p>
+        For dismissable alerts, add the <code>.alert--dismissable</code> modifier class. Doing so automatically places a close button inside the <code>.alert</code>.
+    </p>
+    <p>
+        When the close button is pressed, the alert fades out, then the entire <code>.alert</code> selector is removed
+        from the DOM.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <div
+                    class="alert alert--confirm alert--dismissable margin-y-3"
+                    aria-labelledby="alert-dismissable-confirm-label"
+                    aria-describedby="alert-dismissable-confirm-description"
+                    role="alert">
+
+                    <div class="alert__title h5">
+                        <span class="icon_confirm" aria-hidden="true"></span>
+                        <span class="alert__title__text" id="alert-dismissable-confirm-label">
+                            Alert Title
+                        </span>
+                    </div>
+
+                    <div class="alert__description" id="alert-dismissable-confirm-description">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                            <a href="#1">quos natus aliquam</a>.
+                        </p>
+                    </div>
+
+                </div>
+            
+                <div
+                    class="alert alert--warn alert--dismissable margin-y-3"
+                    aria-labelledby="alert-dismissable-warn-label"
+                    aria-describedby="alert-dismissable-warn-description"
+                    role="alert">
+
+                    <div class="alert__title h5">
+                        <span class="icon_warn" aria-hidden="true"></span>
+                        <span class="alert__title__text" id="alert-dismissable-warn-label">
+                            Alert Title
+                        </span>
+                    </div>
+
+                    <div class="alert__description" id="alert-dismissable-warn-description">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                            <a href="#1">quos natus aliquam</a>.
+                        </p>
+                    </div>
+
+                </div>
+    
+            </div>
+
+        </div>
+        <pre data-line="1">
+            <code class="language-html">
+                &lt;div class="alert alert--confirm alert--dismissable"&gt;
+                    ...
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 4</p>
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="moreStyleVariations">
+
+<div class="container narrow margin-y-4">
+    <h2>More Style Variations</h2>
+    <p>
+        Looking for even more alert styles? Exclude the <code>.alert--confirm</code> or <code>.alert--warn</code>
+        modifier classes. Instead, add the color utilities or border utilities for different accents and style
+        variations.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <div
+                    class="alert text-color-link border-left margin-bottom-3"
+                    aria-labelledby="alert-07-label"
+                    aria-describedby="alert-07-desc"
+                    role="alert">
+
+                    <div class="alert__title h5">
+                        <span class="icon_warn" aria-hidden="true"></span>
+                        <span class="alert__title__text" id="alert-07-label">
+                            Alert Title
+                        </span>
+                    </div>
+
+                    <div class="alert__description" id="alert-07-desc">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                            <a href="#1">quos natus aliquam</a>.
+                        </p>
+                    </div>
+
+                </div>
+                
+                <div
+                    class="alert theme-dark border-radius text-align-center"
+                    aria-labelledby="alert-06-label"
+                    aria-describedby="alert-06-desc"
+                    role="alert">
+
+                    <div class="alert__title h5 text-color-secondary">
+                        <span class="icon_warn" aria-hidden="true"></span>
+                        <span class="alert__title__text" id="alert-06-label">
+                            Alert Title
+                        </span>
+                    </div>
+
+                    <div class="alert__description" id="alert-06-desc">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                            <a href="#1">quos natus aliquam</a>.
+                        </p>
+                    </div>
+
+                </div>
+    
+            </div>
+
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="alert text-color-link border-left" role="alert"&gt;
+
+                    &lt;div class="alert__title h5"&gt;
+                        &lt;span class="icon_warn" aria-hidden="true"&gt;&lt;/span&gt;
+                        &lt;span class="alert__title__text" id="alert-07-label"&gt;
+                            Alert Title
+                        &lt;/span&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="alert__description" id="alert-07-desc"&gt;
+                        &lt;p&gt;
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                            &lt;a href="#1"&gt;quos natus aliquam&lt;/a&gt;.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+                
+                &lt;div class="alert theme-dark border-radius text-align-center" role="alert"&gt;
+
+                    &lt;div class="alert__title h5 text-color-secondary"&gt;
+                        &lt;span class="icon_warn" aria-hidden="true"&gt;&lt;/span&gt;
+                        &lt;span class="alert__title__text" id="alert-06-label"&gt;
+                            Alert Title
+                        &lt;/span&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="alert__description" id="alert-06-desc"&gt;
+                        &lt;p&gt;
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                            &lt;a href="#1"&gt;quos natus aliquam&lt;/a&gt;.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 5</p>
+    </figcaption>
+</figure>
+
+{% include related-css-variables.html anchor="alerts" figure="6" %}

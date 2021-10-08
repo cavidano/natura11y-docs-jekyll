@@ -1,0 +1,117 @@
+/*
+
+In this file:
+
+// A. Modules
+// B. Variables
+// C. Article Block
+// D. Article Elements and Modifiers 
+
+*/
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "../breakpoints/style" as breakpoints;
+
+//////////////////////////////////////////////
+// B. Variables
+//////////////////////////////////////////////
+
+// Scoped to Block
+
+%article-vars {
+    --article-sidebar-width: 200px;
+}
+
+//////////////////////////////////////////////
+// C. Article Block
+//////////////////////////////////////////////
+
+.article {
+    @extend %article-vars;
+    
+    display: grid;
+}
+
+//////////////////////////////////////////////
+// D. Article Elements and Modifiers
+//////////////////////////////////////////////
+
+.article__body {
+    overflow: hidden;
+}
+
+// .article__sidebar {
+//     border: 6px solid blue !important;
+// }
+
+// .article__header {
+//     border: 6px solid blueviolet !important;
+// }
+
+// .article__body {
+//     border: 6px solid burlywood !important;
+// }
+
+@include breakpoints.breakpoints-up(lg) {
+
+    [class*="article"] {
+
+        .article__header {
+            grid-area: header;
+        }
+        
+        .article__sidebar {
+            position: relative;
+            grid-area: sidebar;
+
+            .sticky-top {
+                max-height: 100vh;
+                overflow-y: auto;
+            }
+        }
+
+        .article__body {
+            grid-area: body;
+        }
+
+        .article__related {
+            grid-area: related;
+        }
+    }
+
+    .article--three-column,
+    .article--two-column {
+        grid-template-columns: var(--article-sidebar-width) 1fr;
+
+        grid-template-areas:
+            "header header"
+            "sidebar body"
+            "related related";
+
+        header .backdrop__cover > * {
+            margin-left: var(--article-sidebar-width);
+        }
+
+        [dir="rtl"] & {
+            header .backdrop__cover > * {
+                margin-left: unset;
+                margin-right: var(--article-sidebar-width);
+            }
+        }
+    }
+}
+
+@include breakpoints.breakpoints-up(xl) {
+
+    .article--three-column {
+        --article-sidebar-width: 260px;
+        grid-template-columns: var(--article-sidebar-width) 1fr var(--article-sidebar-width);
+
+        grid-template-areas:
+            "header header header"
+            "sidebar body related";
+    }
+}

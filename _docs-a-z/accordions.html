@@ -1,0 +1,536 @@
+---
+layout: documentation
+title: "Accordions"
+backdrop_credit_name: "Sara Codair"
+backdrop_credit_url: "https://unsplash.com/@shatteredsmooth"
+tags:
+    Toggle
+    Panel
+    Show/hide
+---  
+
+<div class="container narrow margin-y-4">
+    <p>
+        Accordions are useful when a page covers several different topics. A good example would be an FAQ page. It's best to avoid using accordions to make long pages appear shorter.
+    </p>
+</div>
+<!-- .container -->
+
+{% capture as_body %}
+<p>
+    All focusable elements in the accordion are included in the page <em>tab</em> sequence.
+</p>
+<p>
+    Accordions have keyboard support including <em>Tab</em> and <em>up</em> and <em>down</em> arrows.
+</p>
+<p>
+    When focused, accordion headers expand the panel with <em>space</em> or <em>enter</em> keys.
+</p>
+<p>
+    When clicked, accordion headers toggle the appropriate <em>aria-hidden</em> and <em>aria-expanded</em> attributes.
+</p>
+{% endcapture %}
+
+{% include accessibility-spotlight.html content=as_body %}
+
+<hr class="section-start" id="defaultBehavior">
+
+<div class="container narrow margin-y-4">
+    <h2>Default Behavior</h2>
+    <p>
+        The following is a basic accordion component. All accordion panels are closed by default.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <div class="accordion">
+
+                    <button
+                        class="accordion__button h5"
+                        id="acc-button-example-01"
+                        data-toggle="accordion"
+                        aria-controls="acc-panel-example-01"
+                        aria-expanded="false">
+                            Danaus Plexippus
+                    </button>
+
+                    <div
+                        class="accordion__panel"
+                        id="acc-panel-example-01"
+                        data-accordion="panel"
+                        aria-labelledby="acc-button-example-01"
+                        role="region">
+
+                        <div class="accordion__panel__content">
+                            <p>
+                                The monarch butterfly or simply monarch is a milkweed butterfly in the family Nymphalidae. Other common names, depending on region, include milkweed, common tiger, wanderer, and black veined brown. It may be the most familiar <a href="#1">North American</a> butterfly, and is considered an iconic pollinator species.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="accordion__button h5"
+                        id="acc-button-example-01"
+                        data-toggle="accordion"
+                        aria-controls="acc-panel-example-01"
+                        aria-expanded="false">
+                            Papilio Polyxenes
+                    </button>
+
+                    <div class="accordion__panel" id="acc-panel-example-01" data-accordion="panel" aria-labelledby="acc-button-example-01" role="region">
+
+                        <div class="accordion__panel__content">
+                            <p>
+                                The black swallowtail, American swallowtail, or parsnip swallowtail, is a butterfly found throughout much of <a href="#1">North America</a>. It is the state butterfly of Oklahoma and New Jersey.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="accordion__button h5"
+                        id="acc-button-example-01"
+                        data-toggle="accordion"
+                        aria-controls="acc-panel-example-01"
+                        aria-expanded="false">
+                            Hyalophora Cecropia
+                    </button>
+
+                    <div
+                        class="accordion__panel"
+                        id="acc-panel-example-01"
+                        data-accordion="panel"
+                        aria-labelledby="acc-button-example-01"
+                        role="region">
+
+                        <div class="accordion__panel__content">
+                            <p>
+                                The cecropia moth, is <a href="#1">North America's</a> largest native moth. It is a member of the family Saturniidae, or giant silk moths. Females have been documented with a wingspan of five to seven inches or more.
+                            </p>
+                        </div>
+
+                    </div>
+                    <button
+                        class="accordion__button h5"
+                        id="acc-button-example-01"
+                        data-toggle="accordion"
+                        aria-controls="acc-panel-example-01"
+                        aria-expanded="false">
+                            Deilephila Elpenor
+                    </button>
+
+                    <div
+                        class="accordion__panel"
+                        id="acc-panel-example-01"
+                        data-accordion="panel"
+                        aria-labelledby="acc-button-example-01"
+                        role="region">
+
+                        <div class="accordion__panel__content">
+                            <p>
+                                The elephant hawk moth or large elephant hawk moth, is a moth in the family Sphingidae. Its common name is derived from the caterpillar's resemblance to an elephant's trunk. It is most common in <a href="#1">central Europe</a> and is distributed throughout the Palearctic region.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="accordion__button h5"
+                        id="acc-button-example-01"
+                        data-toggle="accordion"
+                        aria-controls="acc-panel-example-01"
+                        aria-expanded="false">
+                            Papilio Troilus
+                    </button>
+
+                    <div
+                        class="accordion__panel"
+                        id="acc-panel-example-01"
+                        data-accordion="panel"
+                        aria-labelledby="acc-button-example-01"
+                        role="region">
+
+                        <div class="accordion__panel__content">
+                            <p>
+                                The spicebush swallowtail or green-clouded butterfly, is a common black swallowtail butterfly found in <a href="#1">North America</a>. It has two subspecies, Papilio troilus troilus and Papilio troilus ilioneus, the latter found mainly in the Florida peninsula.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            
+            </div>
+
+        </div>
+        <pre data-line="1,3-10,12-25">
+            <code class="language-html">
+                &lt;div class="accordion"&gt;
+
+                    &lt;button
+                        class="accordion__button h5"
+                        id="acc-button-example-01"
+                        data-toggle="accordion"
+                        aria-controls="acc-panel-example-01"
+                        aria-expanded="false"&gt;
+                            Danaus Plexippus
+                    &lt;/button&gt;
+
+                    &lt;div
+                        class="accordion__panel"
+                        id="acc-panel-example-01"
+                        data-accordion="panel"
+                        aria-labelledby="acc-button-example-01"
+                        role="region"&gt;
+
+                        &lt;div class="accordion__panel__content"&gt;
+                            &lt;p&gt;
+                                The monarch butterfly or simply monarch is a milkweed butterfly in the family Nymphalidae. Other common names, depending on region, include milkweed, common tiger, wanderer, and black veined brown. It may be the most familiar &lt;a href="#1"&gt;North American&lt;/a&gt; butterfly, and is considered an iconic pollinator species.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+
+                    &lt;!-- Repeat pair above as needed --&gt;
+
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<figure class="container narrow margin-y-4">
+    <table class="table table--edge">
+        <caption class="screen-reader-only">
+            Accordion Code Description
+        </caption>
+        <thead>
+            <tr>
+                <th class="width-30" scope="col">Line #</th>
+                <th class="width-70" scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="#figure_1.1" data-line-anchor>
+                        1
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The parent <code>.accordion</code> class is required.
+                    </p>
+                    <p>
+                         This selector uses JavaScript to group a set of topics (accordion headers) with one another.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.3-10" data-line-anchor>
+                        3-10
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The child <code>.accordion__button</code> selector is required.
+                    </p>
+                    <p>
+                        The <code>id</code> attribute equals the value of its associated panel's <code>aria-labelledby</code> attribute.
+                    </p>
+                    <p>
+                        The <code>data-toggle="accordion"</code> attribute is present on the accordion button for JavaScript purposes.
+                    </p>
+                    <p>
+                        The <code>aria-controls</code> attribute equals its associated panel's <code>id</code> attribute. 
+                    </p>
+                    <p>
+                        The <code>aria-expanded="false"</code> attribute is present on the button where its associated accordion panel should be closed when the page loads.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.12-25" data-line-anchor>
+                        12-25
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The child <code>.accordion__panel</code> selector is required.
+                    </p>
+                    <p>
+                        The <code>id</code> attribute equals the value of its associated button's <code>aria-controls</code> attribute.
+                    </p>
+                    <p>
+                        The <code>data-accordion="panel"</code> attribute is present on the accordion panel for JavaScript purposes.
+                    </p>
+                    <p>
+                        The <code>aria-labelledby</code> attribute equals the value of its associated buttons's <code>id</code> attribute.
+                    </p>
+                    <p>
+                        The <code>role="region"</code> attribute is present on the accordion panel for assistive technology.
+                    </p>
+                    <p>
+                        The granchild <code>.accordion__panel__content</code> selector holds the panel's content. Padding applied to this selector allows a clean open and close transition, without using jQuery.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</figure>
+
+<hr class="section-start" id="semanticHeaders">
+
+<div class="container narrow margin-y-4">
+    <h2>Semantic Headers</h2>
+    <p>
+        The the <code>.accordion__button</code> selector doesn't have to be a button tag. In fact, header tags in the accordion help describe the architecture of a page. For example, if an accordion group lives below a page's <code>&lt;h1&gt;</code>, the accordion headers could be <code>&lt;h2&gt;</code> tags.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+    <pre class="hide-toolbar" data-line="2">
+        <code class="language-html">
+            &lt;h2
+                class="accordion__button h5"
+                id="..."
+                data-toggle="accordion"
+                aria-controls="..."
+                aria-expanded="false"&gt;
+                    Danaus Plexippus
+            &lt;/h2&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 2
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        In Figure 2 (line 2) notice the <code>.h5</code> class. Header utility classes are particularly useful in this example. When a semantic header (e.g. <code>&lt;h1&gt;</code>) needs to be smaller (in visual size) than its natural markup style. You can use <a href="{{ site.url }}/docs/typography/#sectionHeadings">header utilities</a> on non-semantic tags (e.g., <code>&lt;button&gt;</code>), that need the appearance of a header.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="openByDefault">
+
+<div class="container narrow margin-y-4">
+    <h2>Open by Default</h2>
+    <p>
+        You may want one of your accordion topics to be open by default (when the page loads), like the following example:
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <div class="accordion">
+
+                    <button
+                        class="accordion__button h5"
+                        id="acc-button-example-02"
+                        data-toggle="accordion"
+                        aria-controls="acc-panel-example-02"
+                        aria-expanded="true">
+                            Danaus Plexippus
+                    </button>
+
+                    <div
+                        class="accordion__panel shown"
+                        id="acc-panel-example-02"
+                        data-accordion="panel"
+                        aria-labelledby="acc-button-example-02"
+                        role="region">
+
+                        <div class="accordion__panel__content">
+                            <p>
+                                The monarch butterfly or simply monarch is a milkweed butterfly in the family Nymphalidae. Other common names, depending on region, include milkweed, common tiger, wanderer, and black veined brown. It may be the most familiar <a href="#1">North American</a> butterfly, and is considered an iconic pollinator species.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="accordion__button h5"
+                        id="acc-button-example-02"
+                        data-toggle="accordion"
+                        aria-controls="acc-panel-example-02"
+                        aria-expanded="false">
+                            Papilio Polyxenes
+                    </button>
+
+                    <div class="accordion__panel" id="acc-panel-example-02" data-accordion="panel" aria-labelledby="acc-button-example-02" role="region">
+
+                        <div class="accordion__panel__content">
+                            <p>
+                                The black swallowtail, American swallowtail, or parsnip swallowtail, is a butterfly found throughout much of <a href="#1">North America</a>. It is the state butterfly of Oklahoma and New Jersey.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="accordion__button h5"
+                        id="acc-button-example-02"
+                        data-toggle="accordion"
+                        aria-controls="acc-panel-example-02"
+                        aria-expanded="false">
+                            Hyalophora Cecropia
+                    </button>
+
+                    <div
+                        class="accordion__panel"
+                        id="acc-panel-example-02"
+                        data-accordion="panel"
+                        aria-labelledby="acc-button-example-02"
+                        role="region">
+
+                        <div class="accordion__panel__content">
+                            <p>
+                                The cecropia moth, is <a href="#1">North America's</a> largest native moth. It is a member of the family Saturniidae, or giant silk moths. Females have been documented with a wingspan of five to seven inches or more.
+                            </p>
+                        </div>
+
+                    </div>
+                    <button
+                        class="accordion__button h5"
+                        id="acc-button-example-02"
+                        data-toggle="accordion"
+                        aria-controls="acc-panel-example-02"
+                        aria-expanded="false">
+                            Deilephila Elpenor
+                    </button>
+
+                    <div
+                        class="accordion__panel"
+                        id="acc-panel-example-02"
+                        data-accordion="panel"
+                        aria-labelledby="acc-button-example-02"
+                        role="region">
+
+                        <div class="accordion__panel__content">
+                            <p>
+                                The elephant hawk moth or large elephant hawk moth, is a moth in the family Sphingidae. Its common name is derived from the caterpillar's resemblance to an elephant's trunk. It is most common in <a href="#1">central Europe</a> and is distributed throughout the Palearctic region.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="accordion__button h5"
+                        id="acc-button-example-02"
+                        data-toggle="accordion"
+                        aria-controls="acc-panel-example-02"
+                        aria-expanded="false">
+                            Papilio Troilus
+                    </button>
+
+                    <div
+                        class="accordion__panel"
+                        id="acc-panel-example-02"
+                        data-accordion="panel"
+                        aria-labelledby="acc-button-example-02"
+                        role="region">
+
+                        <div class="accordion__panel__content">
+                            <p>
+                                The spicebush swallowtail or green-clouded butterfly, is a common black swallowtail butterfly found in <a href="#1">North America</a>. It has two subspecies, Papilio troilus troilus and Papilio troilus ilioneus, the latter found mainly in the Florida peninsula.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            
+            </div>
+
+        </div>
+        <pre class="hide-toolbar" data-line="6,11">
+            <code class="language-html">
+                &lt;button
+                    class="accordion__button h5"
+                    id="acc-button-id"
+                    data-toggle="accordion"
+                    aria-controls="acc-panel-id"
+                    aria-expanded="true"&gt;
+                        Danaus Plexippus
+                &lt;/button&gt;
+
+                &lt;div
+                    class="accordion__panel show"
+                    id="acc-panel-id"
+                    data-accordion="panel"
+                    aria-labelledby="acc-button-id"
+                    role="region"&gt;
+                    &lt;div class="accordion__panel__content"&gt;
+                        ...
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 3
+    </figcaption>
+</figure>
+
+<figure class="container narrow margin-y-4">
+    <table class="table table--edge">
+        <caption class="screen-reader-only">
+            Accordion Code Description
+        </caption>
+        <thead>
+            <tr>
+                <th class="width-30" scope="col">Line #</th>
+                <th class="width-70" scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="#figure_3.6" data-line-anchor>
+                        6
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        On the <code>.accordion__button</code> selector, set the <code>aria-expanded</code> attribute to <code>"true"</code>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_3.11" data-line-anchor>
+                        11
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        On the related <code>.accordion__panel</code> selector, include the class <code>.show</code>.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+
+{% include related-css-variables.html anchor="accordions" figure="4" %}

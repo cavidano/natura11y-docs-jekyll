@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){var e=document.getElementById("global-header").offsetHeight,t=document.getElementById("introduction"),n=function(){var n=window.innerHeight;t.style.height=n-e+"px"};n(),window.addEventListener("resize",n)}));

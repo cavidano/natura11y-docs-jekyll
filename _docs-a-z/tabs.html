@@ -1,0 +1,466 @@
+---
+layout: documentation
+title: "Tabs"
+backdrop_credit_name: "Erik-Jan Leusink"
+backdrop_credit_url: "https://unsplash.com/@ejleusink"
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        The tabs component provides a keyboard-friendly tabbed interface with flexible styling options. 
+    </p>
+</div>
+<!-- .container -->
+
+{% capture as_body %}
+<p>
+    All focusable elements in tabs are included in the page <em>tab</em> sequence.
+</p>
+<p>
+    Tabs have keyboard support including <em>Tab</em>, <em>left</em> and <em>right</em> arrows, <em>home</em>, and <em>end</em>.
+</p>
+<p>
+    When focused, tab buttons expand the panel with <em>space</em> or <em>enter</em> keys.
+</p>
+<p>
+    When clicked, tab buttons toggle the appropriate <em>aria-hidden</em> and <em>aria-expanded</em> attributes.
+</p>
+{% endcapture %}
+
+{% include accessibility-spotlight.html content=as_body %}
+
+<hr class="section-start" id="styledTabs">
+
+<div class="container narrow margin-y-4">
+    <h2>Styled Tabs</h2>
+    <p>
+        The <code>.tabs-nav</code> selector (Figure 1, Line 3) offers out-of-the-box styling for tab buttons.  
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <div class="tabs box-shadow-1" role="tablist">
+
+                    <ul class="tabs-nav tabs-nav--horizontal--md">
+                        <li>
+                            <button
+                                id="tab-button-example-01"
+                                aria-controls="tab-panel-example-01"
+                                aria-selected="true"
+                                role="tab">
+                                    Mackerel
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                id="tab-button-example-02"
+                                aria-controls="tab-panel-example-02"
+                                aria-selected="false"
+                                role="tab">
+                                    Classic
+                            </button>
+                        </li>
+                        <li>
+                            <button id="tab-button-example-03"
+                                aria-controls="tab-panel-example-03"
+                                aria-selected="false"
+                                role="tab">
+                                    Ticked
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div
+                        class="tabs__panel shown"
+                        id="tab-panel-example-01"
+                        aria-labelledby="tab-button-example-01"
+                        role="tabpanel">
+                        <div class="container padding-y-4">
+                            <p>
+                                The mackerel tabby pattern gives slender vertical, gently curving stripes on the sides of the body. These stripes may be continuous or broken into bars and short segments/spots, especially on the flanks and stomach. Three or five vertical lines in an 'M' shape almost always appear on the forehead, along with dark lines from the corners of the eyes, one or more crossing each cheek, and of course many stripes and lines at various angles on the neck and shoulder area, on the flanks, and around the legs and tail. Mackerel tabbies are also called 'fishbone tabbies,' probably doubly named after the <a href="#1">mackerel</a> fish.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="tabs__panel"
+                        id="tab-panel-example-02"
+                        aria-labelledby="tab-button-example-02"
+                        role="tabpanel">
+                        <div class="container padding-y-4">
+                            <p>
+                            The classic tabby (also known as blotched or marbled tabby) has the 'M' pattern on the forehead but the body markings, rather than primarily thin stripes or spots, are thick curving bands in a whirled or swirled pattern with a distinctive mark on each side of the body resembling a bullseye. Classic tabby is a <a href="#1">recessive</a>  trait. Classic tabbies are the most common type of tabby in much of the United Kingdom and the Middle East, among other places, but they are a far second in number to mackerel tabbies in most parts of the world.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="tabs__panel"
+                        id="tab-panel-example-03"
+                        aria-labelledby="tab-button-example-02"
+                        role="tabpanel">
+                        <div class="container padding-y-4">
+                            <p>
+                                The ticked tabby pattern is due to even fields of <a href="#1">agouti</a> hairs, each with distinct bands of color, which break up the tabby patterning into a salt-and-pepper appearance that makes them look sand-like—thus there are few to no stripes or bands. Residual ghost striping and/or barring can often be seen on the lower legs, face, and belly and sometimes at the tail tip, as well as the standard 'M' and a long dark line running along the spine, primarily in ticked tabbies who also carry a mackerel or classic tabby allele. These types of cats come in many forms and colors.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            
+            </div>
+
+        </div>
+        <pre data-line="1,3-30,32-42">
+            <code class="language-html">
+                &lt;div class="tabs box-shadow-1" role="tablist"&gt;
+
+                    &lt;ul class="tabs-nav tabs-nav--horizontal--md"&gt;
+                        &lt;li&gt;
+                            &lt;button
+                                id="tab-button-example-01"
+                                aria-controls="tab-panel-example-01"
+                                aria-selected="true"
+                                role="tab"&gt;
+                                    Mackerel
+                            &lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;button
+                                id="tab-button-example-02"
+                                aria-controls="tab-panel-example-02"
+                                aria-selected="false"
+                                role="tab"&gt;
+                                    Classic
+                            &lt;/button&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;button id="tab-button-example-03"
+                                aria-controls="tab-panel-example-03"
+                                aria-selected="false"
+                                role="tab"&gt;
+                                    Ticked
+                            &lt;/button&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+
+                    &lt;div
+                        class="tabs__panel shown"
+                        id="tab-panel-example-01"
+                        aria-labelledby="tab-button-example-01"
+                        role="tabpanel"&gt;
+                        &lt;div class="container padding-y-4"&gt;
+                            &lt;p&gt;
+                                The mackerel tabby pattern gives slender vertical, gently curving stripes on the sides of the body. These stripes may be continuous or broken into bars and short segments/spots, especially on the flanks and stomach. Three or five vertical lines in an 'M' shape almost always appear on the forehead, along with dark lines from the corners of the eyes, one or more crossing each cheek, and of course many stripes and lines at various angles on the neck and shoulder area, on the flanks, and around the legs and tail. Mackerel tabbies are also called 'fishbone tabbies,' probably doubly named after the &lt;a href="#1"&gt;mackerel&lt;/a&gt; fish.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div
+                        class="tabs__panel"
+                        id="tab-panel-example-02"
+                        aria-labelledby="tab-button-example-02"
+                        role="tabpanel"&gt;
+                        &lt;div class="container padding-y-4"&gt;
+                            &lt;p&gt;
+                                The classic tabby (also known as blotched or marbled tabby) has the 'M' pattern on the forehead but the body markings, rather than primarily thin stripes or spots, are thick curving bands in a whirled or swirled pattern with a distinctive mark on each side of the body resembling a bullseye. Classic tabby is a &lt;a href="#1"&gt;recessive&lt;/a&gt;  trait. Classic tabbies are the most common type of tabby in much of the United Kingdom and the Middle East, among other places, but they are a far second in number to mackerel tabbies in most parts of the world.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div
+                        class="tabs__panel"
+                        id="tab-panel-example-03"
+                        aria-labelledby="tab-button-example-02"
+                        role="tabpanel"&gt;
+                        &lt;div class="container padding-y-4"&gt;
+                            &lt;p&gt;
+                                The ticked tabby pattern is due to even fields of &lt;a href="#1"&gt;agouti&lt;/a&gt; hairs, each with distinct bands of color, which break up the tabby patterning into a salt-and-pepper appearance that makes them look sand-like—thus there are few to no stripes or bands. Residual ghost striping and/or barring can often be seen on the lower legs, face, and belly and sometimes at the tail tip, as well as the standard 'M' and a long dark line running along the spine, primarily in ticked tabbies who also carry a mackerel or classic tabby allele. These types of cats come in many forms and colors.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+                
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<figure class="container narrow margin-y-4">
+    <table class="table table--edge">
+        <caption class="screen-reader-only">
+            Tabs Code Description
+        </caption>
+        <thead>
+            <tr>
+                <th class="width-30" scope="col">Line #</th>
+                <th class="width-70" scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="#figure_1.1" data-line-anchor>
+                        1
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The parent <code>.tabs</code> class is required.
+                    </p>
+                    <p>
+                         This selector uses JavaScript to group the tab buttons and panels with one another.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.3-30" data-line-anchor>
+                        3-30
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The child <code>.tabs-nav</code> <code>&lt;ul&gt;</code> selector is required for styled tabs.
+                    </p>
+                    <p>
+                        With the child <code>.tabs-nav</code> selector, the <code>.tabs-nav--horizontal--{x}</code> modifier is optional. Here <strong><em>x</em></strong> equals its breakpoint modifier (e.g., lg for large).
+                    </p>
+                    <p>
+                        Each list item requires a <code>&lt;button&gt;</code>. The button's <code>id</code> attribute equals the value of its associated panel's <code>aria-labelledby</code> attribute.
+                    </p>
+                    <p>
+                        The <code>aria-controls</code> attribute equals its associated panel's <code>id</code> attribute. 
+                    </p>
+                    <p>
+                        The <code>role="tab"</code> attribute is present on the tab button for assistive technology.
+                    </p>
+                    <p>
+                        The <code>aria-selected="true"</code> attribute is present on the button where its associated tab panel should be open when the page loads.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.32-42" data-line-anchor>
+                        32-42
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The child <code>.tabs__panel</code> selector is required.
+                    </p>
+                    <p>
+                        The <code>id</code> attribute equals the value of its associated button's <code>aria-controls</code> attribute.
+                    </p>
+                    <p>
+                        The <code>aria-labelledby</code> attribute equals the value of its associated buttons's <code>id</code> attribute.
+                    </p>
+                    <p>
+                        The <code>role="tabpanel"</code> attribute is present on the accordion panel for assistive technology.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        In Figure 1, refer to <a href="#figure_1.3-30" data-line-anchor>line 3</a>. The <code>.tabs-nav--horizontal</code> modifier accepts chained <a href="{{ site.url }}/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+    </p>
+    <p>
+        With the styled tabs example (above), tab buttons start <em>vertical</em>. They then change to <em>horizontal</em> at the medium breakpoint.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="genericTabs">
+
+<div class="container narrow margin-y-4">
+    <h2>Generic Tabs</h2>
+    <p>
+        Create a tabbed interface without the <code>.tabs-nav</code> selector (above). You need is the <code>.tabs</code> parent class, and button for each <code>tabs__panel</code> selector. Buttons require the same attributes from the styled tabs example. An <code>aria-selected</code>, <code>aria-controls</code>, and a unique <code>id</code>. Be sure to include <code>role="tab"</code> on the buttons for accessibility.
+    </p>
+    <p>
+        The example below replaces <code>.tabs-nav</code> with <a href="{{ site.url }}/docs/navigation/#genericNavigation">generic navigation</a>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <div class="tabs" role="tablist">
+
+                    <div class="container">
+                    
+                        <ul class="nav nav--horizontal--md">
+                            <li>
+                                <button
+                                    aria-selected="true"
+                                    aria-controls="tab-panel-example-generic-01"
+                                    id="tab-button-example-generic-01"
+                                    role="tab">
+                                        Mackerel
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    aria-selected="false"
+                                    aria-controls="tab-panel-example-generic-02"
+                                    id="tab-button-example-generic-02"
+                                    role="tab">
+                                        Classic
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                    aria-selected="false"
+                                    aria-controls="tab-panel-example-generic-03"
+                                    id="tab-button-example-generic-03"
+                                    role="tab">
+                                        Ticked
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="tabs__panel shown"
+                        id="tab-panel-example-generic-01"
+                        aria-labelledby="tab-button-example-01"
+                        role="tabpanel">
+                        <div class="container padding-y-4">
+                            <p>
+                                The mackerel tabby pattern gives slender vertical, gently curving stripes on the sides of the body. These stripes may be continuous or broken into bars and short segments/spots, especially on the flanks and stomach. Three or five vertical lines in an 'M' shape almost always appear on the forehead, along with dark lines from the corners of the eyes, one or more crossing each cheek, and of course many stripes and lines at various angles on the neck and shoulder area, on the flanks, and around the legs and tail. Mackerel tabbies are also called 'fishbone tabbies,' probably doubly named after the <a href="#1">mackerel</a> fish.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="tabs__panel"
+                        id="tab-panel-example-generic-02"
+                        aria-labelledby="tab-button-example-02"
+                        role="tabpanel">
+                        <div class="container padding-y-4">
+                            <p>
+                            The classic tabby (also known as blotched or marbled tabby) has the 'M' pattern on the forehead but the body markings, rather than primarily thin stripes or spots, are thick curving bands in a whirled or swirled pattern with a distinctive mark on each side of the body resembling a bullseye. Classic tabby is a <a href="#1">recessive</a>  trait. Classic tabbies are the most common type of tabby in much of the United Kingdom and the Middle East, among other places, but they are a far second in number to mackerel tabbies in most parts of the world.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="tabs__panel"
+                        id="tab-panel-example-generic-03"
+                        aria-labelledby="tab-button-example-02"
+                        role="tabpanel">
+                        <div class="container padding-y-4">
+                            <p>
+                                The ticked tabby pattern is due to even fields of <a href="#1">agouti</a> hairs, each with distinct bands of color, which break up the tabby patterning into a salt-and-pepper appearance that makes them look sand-like—thus there are few to no stripes or bands. Residual ghost striping and/or barring can often be seen on the lower legs, face, and belly and sometimes at the tail tip, as well as the standard 'M' and a long dark line running along the spine, primarily in ticked tabbies who also carry a mackerel or classic tabby allele. These types of cats come in many forms and colors.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            
+            </div>
+
+        </div>
+        <pre data-line="5-33">
+            <code class="language-html">
+                &lt;div class="tabs" role="tablist"&gt;
+
+                    &lt;div class="container"&gt;
+                    
+                        &lt;ul class="nav nav--horizontal--md"&gt;
+                            &lt;li&gt;
+                                &lt;button
+                                    aria-selected="true"
+                                    aria-controls="tab-panel-example-generic-01"
+                                    id="tab-button-example-generic-01"
+                                    role="tab"&gt;
+                                        Mackerel
+                                &lt;/button&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;button
+                                    aria-selected="false"
+                                    aria-controls="tab-panel-example-generic-02"
+                                    id="tab-button-example-generic-02"
+                                    role="tab"&gt;
+                                        Classic
+                                &lt;/button&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;button
+                                    aria-selected="false"
+                                    aria-controls="tab-panel-example-generic-03"
+                                    id="tab-button-example-generic-03"
+                                    role="tab"&gt;
+                                        Ticked
+                                &lt;/button&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+
+                    &lt;/div&gt;
+
+                    &lt;div
+                        class="tabs__panel shown"
+                        id="tab-panel-example-generic-01"
+                        aria-labelledby="tab-button-example-01"
+                        role="tabpanel"&gt;
+                        &lt;div class="container padding-y-4"&gt;
+                            &lt;p&gt;
+                                The mackerel tabby pattern gives slender vertical, gently curving stripes on the sides of the body. These stripes may be continuous or broken into bars and short segments/spots, especially on the flanks and stomach. Three or five vertical lines in an 'M' shape almost always appear on the forehead, along with dark lines from the corners of the eyes, one or more crossing each cheek, and of course many stripes and lines at various angles on the neck and shoulder area, on the flanks, and around the legs and tail. Mackerel tabbies are also called 'fishbone tabbies,' probably doubly named after the &lt;a href="#1"&gt;mackerel&lt;/a&gt; fish.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div
+                        class="tabs__panel"
+                        id="tab-panel-example-generic-02"
+                        aria-labelledby="tab-button-example-02"
+                        role="tabpanel"&gt;
+                        &lt;div class="container padding-y-4"&gt;
+                            &lt;p&gt;
+                                The classic tabby (also known as blotched or marbled tabby) has the 'M' pattern on the forehead but the body markings, rather than primarily thin stripes or spots, are thick curving bands in a whirled or swirled pattern with a distinctive mark on each side of the body resembling a bullseye. Classic tabby is a &lt;a href="#1"&gt;recessive&lt;/a&gt;  trait. Classic tabbies are the most common type of tabby in much of the United Kingdom and the Middle East, among other places, but they are a far second in number to mackerel tabbies in most parts of the world.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div
+                        class="tabs__panel"
+                        id="tab-panel-example-generic-03"
+                        aria-labelledby="tab-button-example-02"
+                        role="tabpanel"&gt;
+                        &lt;div class="container padding-y-4"&gt;
+                            &lt;p&gt;
+                                The ticked tabby pattern is due to even fields of &lt;a href="#1"&gt;agouti&lt;/a&gt; hairs, each with distinct bands of color, which break up the tabby patterning into a salt-and-pepper appearance that makes them look sand-like—thus there are few to no stripes or bands. Residual ghost striping and/or barring can often be seen on the lower legs, face, and belly and sometimes at the tail tip, as well as the standard 'M' and a long dark line running along the spine, primarily in ticked tabbies who also carry a mackerel or classic tabby allele. These types of cats come in many forms and colors.
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 3
+    </figcaption>
+</figure>

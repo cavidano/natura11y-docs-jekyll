@@ -1,0 +1,375 @@
+---
+layout: documentation
+title: "Cards"
+backdrop_credit_name: "David Clode"
+backdrop_credit_url: "https://unsplash.com/@davidclode"
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Natura11y's card component contains and groups contextual, actionable content.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="theCardComponent">
+
+<div class="container narrow margin-y-4">
+    <h2>The Card Component</h2>
+    <p>
+        The example below provides a rudimentary card component.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <div class="card border">
+
+                    <div class="card__head border-bottom">
+                        <p>Tropical flowers</p>
+                    </div>
+
+                    <div class="card__body">
+                        <h2 class="h4">Gustavia superba</h2>
+                        <p>
+                            Gustavia superba is an understory tree that grows in <a href="#1">Central</a> and north-western <a href="#1">South America</a>. Common names include membrillo, sachamango and heaven lotus.
+                        </p>
+                    </div>
+
+                    <div class="card__foot border-top font-size-sm">
+                        <ul class="nav nav--horizontal justify-content-between">
+                            <li>
+                                <a href="#1">Secondary Action</a>
+                            </li>
+                            <li>
+                                <a class="button button--outline" href="#1">Primary Action</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- .card -->
+
+            </div>
+
+        </div>
+        <pre data-line="1,3-5,7-14,16-29" id="cool">
+            <code class="language-html">
+                &lt;div class="card border"&gt;
+
+                    &lt;div class="card__head border-bottom"&gt;
+                        &lt;p&gt;Tropical flowers&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="card__body"&gt;
+                        &lt;h2 class="h4"&gt;
+                            Gustavia superba
+                        &lt;/h2&gt;
+                        &lt;p&gt;
+                            Gustavia superba is an understory tree that grows in &lt;a href="#1"&gt;Central&lt;/a&gt; and north-western &lt;a href="#1"&gt;South America&lt;/a&gt;. Common names include membrillo, sachamango and heaven lotus.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="card__foot border-top font-size-sm"&gt;
+                        &lt;ul class="nav nav--horizontal justify-content-between"&gt;
+                            &lt;li&gt;
+                                &lt;a href="#1"&gt;
+                                    Secondary Action
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a class="button button--outline" href="#1"&gt;
+                                    Primary Action
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<figure class="container narrow margin-y-4">
+    <table class="table table--edge">
+        <thead>
+            <tr>
+                <th class="width-30" scope="col">Line #</th>
+                <th class="width-70" scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="#figure_1.1" data-line-anchor>
+                        1
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The parent <code>.card</code> selector is required.
+                    </p>
+                    <p>
+                        The <code>.border</code> utility class not required.
+                    </p>
+                    <p>
+                        It provides the card's outer border.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.3-5" data-line-anchor>
+                        3-5
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.card__head</code> selector is not required.
+                    </p>
+                    <p>
+                        It holds the card's small title.
+                    </p>
+                    <p>
+                        The <code>.border-bottom</code> utility class is not required.
+                    </p>
+                    <p>
+                        It provides the card header's bottom border.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.7-14" data-line-anchor>
+                        7-14
+                    </a>
+                </td>
+                <td>
+                     <p>
+                        The <code>.card__body</code> selector is required.
+                    </p>
+                    <p>
+                        It holds the card's main message. Cards can have multiple <code>.card__body</code> selectors.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.16-29" data-line-anchor>
+                        16-29
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.card__foot</code> selector is not required.
+                    </p>
+                    <p>
+                        It selector holds the card's actionable buttons and links.
+                    </p>
+                    <p>
+                        The <code>.border-top</code> utility class is not required.
+                    </p>
+                    <p>
+                        It provides the card footer's top border. 
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</figure>
+
+<hr class="section-start" id="includingImages">
+
+<div class="container narrow margin-y-4">
+    <h2>Including Images</h2>
+    <p>
+        Include an image within a card. Add the <code>&lt;img&gt;</code> as a sibling of <code>.card__body</code>. Images do not need a class.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <div class="card border">
+
+                    <img src="{{ site.url }}/images/examples/card-example-01.jpg" alt="">
+
+                    <div class="card__body">
+                        <h2 class="h4">Stellaria graminea</h2>
+                        <p>
+                            Stellaria graminea is a species of flowering plant in the family Caryophyllaceae known by these common names:
+                        </p>
+                        <ul>
+                            <li>
+                            <em>common starwort</em>
+                            </li>
+                            <li>
+                                <em>lesser stitchwort</em>  
+                            </li>
+                            <li>
+                                <em>grass-leaved stitchwort</em>
+                            </li>
+                            <li>
+                                <em>grass-like starwort</em>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card__foot border-top font-size-md text-color-link">
+                        <ul class="nav nav--horizontal justify-content-between">
+                            <li>
+                                <a href="#1">Search Images</a>
+                            </li>
+                            <li>
+                                <a class="button button--outline rounded-pill" href="#1">
+                                    Visit Wikipedia
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <pre data-line="3">
+            <code class="language-html">
+                &lt;div class="card border"&gt;
+
+                    &lt;img src="https://via.placeholder.com/800x450" alt=""&gt;
+
+                    &lt;div class="card__body"&gt;
+                        &lt;h2 class="h4"&gt;Stellaria graminea&lt;/h2&gt;
+                        &lt;p&gt;
+                            Stellaria graminea is a species of flowering plant in the family Caryophyllaceae known by these common names:
+                        &lt;/p&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;
+                                &lt;em&gt;common starwort&lt;/em&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;em&gt;lesser stitchwort&lt;/em&gt;  
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;em&gt;grass-leaved stitchwort&lt;/em&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;em&gt;grass-like starwort&lt;/em&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="card__foot border-top font-size-md text-color-link"&gt;
+                        &lt;ul class="nav nav--horizontal justify-content-between"&gt;
+                            &lt;li&gt;
+                                &lt;a href="#1"&gt;
+                                    Search Images
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a class="button button--outline rounded-pill" href="#1"&gt;
+                                    Visit Wikipedia
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 2
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="cardsWithinGrids">
+
+<div class="container narrow margin-y-4">
+    <h2>Cards Within Grids</h2>
+    <p>
+        It's common to display cards within the <a href="#1">grid component</a>, or the <a href="#1">css grid</a>. When so doing, the card footer aligns to the bottom. Consider the following example. Each card has a different character count, while their actionable footers remain aligned.  
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+
+    <div {{ site.custom-properties-example }}>
+        <div class="grid grid--gap-3 grid--cell-4--lg">
+
+            <div class="grid__cell">
+                <div class="card border font-size-md">
+                    <img src="{{ site.url }}/images/examples/card-example-03.jpg" alt="">
+                    <div class="card__body">
+                        <p class="h6">Prunus mume</p>
+                        <p>
+                            Prunus mume is an East Asian and Southeast Asian tree species classified in the Armeniaca section of the genus Prunus subgenus Prunus.
+                        </p>
+                    </div>
+                    <div class="card__foot border-top">
+                        <a class="button button--outline width-100 text-color-link" href="#1">
+                            Wikipedia
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- .grid__cell -->
+
+            <div class="grid__cell">
+                <div class="card border font-size-md">
+                    <img src="{{ site.url }}/images/examples/card-example-04.jpg" alt="">
+                    <div class="card__body">
+                        <p class="h6">Eschscholzia californica</p>
+                        <p>
+                            Eschscholzia californica, the California poppy, golden poppy, California sunlight or cup of gold, is a species of flowering plant in the family Papaveraceae, native to the United States and Mexico.
+                        </p>
+                    </div>
+                    <div class="card__foot border-top">
+                        <a class="button button--outline text-color-link width-100" href="#1">
+                            Wikipedia
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- .grid__cell -->
+
+            <div class="grid__cell">
+                <div class="card border font-size-md">
+                    <img src="{{ site.url }}/images/examples/card-example-05.jpg" alt="">
+                    <div class="card__body">
+                        <p class="h6">Geranium pratense</p>
+                        <p>
+                            Geranium pratense, the meadow crane's-bill or meadow geranium, is a species of flowering plant in the family Geraniaceae, native to Europe and Asia.
+                        </p>
+                    </div>
+                    <div class="card__foot border-top">
+                        <a class="button button--outline width-100 text-color-link" href="#1">
+                            Wikipedia
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- .grid__cell -->
+
+        </div>
+    </div>
+
+</figure>
+
+{% include related-css-variables.html anchor="cards" figure="3" %}

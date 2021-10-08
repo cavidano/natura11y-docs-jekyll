@@ -1,0 +1,801 @@
+---
+layout: documentation
+title: "Flex"
+backdrop_credit_name: "Zdeněk Macháček"
+backdrop_credit_url: "https://unsplash.com/@zmachacek"
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Natura11y's <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">flexbox</a> utilities provide options for creating one-dimensional layouts. Some flexbox utilities deal with horizontal and vertical alignment. These utilities work alongside the <a href="#1">navigation</a>, <a href="#1">grid</a>, and in some cases, <a href="#1">backdrop</a> components.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="flexDirectionUtilities">
+
+<div class="container narrow margin-y-4">
+    <h2>Flex Direction Utilities</h2>
+    <p>
+        The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction">flex direction</a> utilities (Figure 1) create the flex container. They define the main axis: <em>row</em> or <em>column</em>, along with direction: <em>normal</em> or <em>reverse</em>. Further, they set the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap">flex-wrap</a> property to <em>wrap</em>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow font-size-md text-align-center">
+
+                <div class="flex-row subtle-fill margin-bottom-4">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>3</p>
+                    </div>
+                </div>
+
+                <div class="flex-row-reverse subtle-fill margin-bottom-4">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>3</p>
+                    </div>
+                </div>
+
+                <div class="flex-column subtle-fill margin-bottom-4">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>3</p>
+                    </div>
+                </div>
+
+                <div class="flex-column-reverse subtle-fill margin-bottom-4">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>3</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="flex-row"&gt;...&lt;/div&gt;
+                &lt;div class="flex-row-reverse"&gt;...&lt;/div&gt;
+                &lt;div class="flex-column"&gt;...&lt;/div&gt;
+                &lt;div class="flex-column-reverse"&gt;...&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Need a flex row that doesn't wrap? Replace <code>.flex-row</code> with <code>.display-flex</code> (from the <a href="{{ site.url }}/docs/display/">display utilities</a>).
+    </p>
+</div>
+<!-- .container -->
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        Flex direction utilities accept <a href="{{ site.url }}/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+    </p>
+    <p>
+        With the HTML in Figure 2, the flex container starts with the <em>column</em> direction. It then changes to the <em>row</em> direction at the large breakpoint.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow font-size-md text-align-center">
+
+                <div class="flex-column flex-row--lg subtle-fill">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>3</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;!-- With breakpoint modifiers --&gt;
+
+                &lt;div class="flex-column flex-row--lg"&gt;...&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 2
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="flexGrowUtilities">
+
+<div class="container narrow margin-y-4">
+    <h2>Flex Grow Utilities</h2>
+    <p>
+       The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow" target="_blank">Flex grow</a> utilities set the grow factor of a flex item along the flex container's main axis. The default grow value of a flex item is <em>0</em>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;div class="flex-grow-1"&gt;...&lt;/div&gt;
+            &lt;div class="flex-grow-0"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 3
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        With <code>.flex-grow-1</code>, applied to a flex item, it will grow to fill any available space.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow font-size-md text-align-center">
+
+                <div class="display-flex subtle-fill">
+                    <div class="flex-grow-1 padding-x-3 padding-y-2 theme-white border">
+                        <p>Flex Item</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Flex Item</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="display-flex subtle-fill"&gt;
+                    &lt;div class="flex-grow-1 padding-x-3 padding-y-2 theme-white border"&gt;
+                        &lt;p&gt;Flex Item&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="padding-x-3 padding-y-2 theme-white border"&gt;
+                        &lt;p&gt;Flex Item&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 4
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Finally, Figure 5 shows the effect of each flex item with a different grow factor. 
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow text-align-center font-size-lg">
+
+                <div class="button-group">
+                    <a class="button button--outline button--has-icon--disperse flex-grow-1" href="#1">                    
+                        <span class="button__text">Sign In</span>
+                        <span class="icon_arrow-right button__icon"></span>
+                    </a>
+                    <a class="button button--icon-only theme-dark" href="#1">
+                        <span class="icon_person" aria-hidden="true"></span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="button-group"&gt;
+                    &lt;a class="button button--outline button--has-icon--disperse flex-grow-1" href="#1"&gt;                    
+                        &lt;span class="button__text"&gt;Sign In&lt;/span&gt;
+                        &lt;span class="icon_arrow-right button__icon"&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;a class="button button--icon-only theme-dark" href="#1"&gt;
+                        &lt;span class="icon_person" aria-hidden="true"&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 5
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="flexShrinkUtilities">
+
+<div class="container narrow margin-y-4">
+    <h2>Flex Shrink Utilities</h2>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink" target="_blank">Flex skrink</a> utilities (e.g., <code>.flex-grow-{x}</code>) set the shrink factor of a flex item, where <strong><em>x</em></strong> equals <em>0</em>, <em>1</em>, or <em>2</em>.These three decimals represent the amount which the flex item shrinks.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;div class="flex-shrink-0"&gt;...&lt;/div&gt;
+            &lt;div class="flex-shrink-1"&gt;...&lt;/div&gt;
+            &lt;div class="flex-shrink-2"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 6
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        With a flex shrink value of <em>0</em>, a flex item will not shrink as it's flex container gets smaller. With a shrink value of <em>1</em>, the flex item will shrink, but no smaller than it’s content. Finally, a flex item with a flex shrink value of <em>2</em> will shrink smaller than it’s content.
+    </p>
+    <p>
+        With the examples below, <code>.flex-shrink-1</code> applied to the first flex item allows it to shrink along it's main axis. 
+    </p>
+</div>
+<!-- .container -->
+
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow font-size-md text-align-center">
+
+                <div class="display-flex">
+                    <div class="flex-shrink-1 padding-x-3 padding-y-2 theme-white border">
+                        <p>Flex Shrink</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border"
+                    style="flex-basis: 100%;">
+                        <p>Width 100</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="display-flex"&gt;
+                    &lt;div class="flex-shrink-1 padding-x-3 padding-y-2 theme-white border"&gt;
+                        &lt;p&gt;Flex Shrink&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="padding-x-3 width-100 padding-y-2 theme-white border"&gt;
+                        &lt;p&gt;2&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 4
+    </figcaption>
+</figure>
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow font-size-md text-align-center">
+
+                <div class="display-flex subtle-fill">
+                    <div class="flex-shrink-0 padding-x-3 padding-y-2 theme-white border">
+                        <p>Flex Shrink 0</p>
+                    </div>
+                    <div class="flex-shrink-1 padding-x-3 padding-y-2 theme-white border">
+                        <p>Flex Shrink 1</p>
+                    </div>
+                    <div class="flex-shrink-2 padding-x-3 padding-y-2 theme-white border">
+                        <p>Flex Shrink 2</p>
+                    </div>
+                    <div class="flex-grow-1 padding-x-3 padding-y-2 theme-white border">
+                        <p>Flex Grow 1</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="flex-shrink-0"&gt;...&lt;/div&gt;
+                &lt;div class="flex-shrink-1"&gt;...&lt;/div&gt;
+                &lt;div class="flex-shrink-2"&gt;...&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 5
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="justifyContentUtilites">
+
+<div class="container narrow margin-y-4">
+    <h2>Justify Content Utilites</h2>
+    <p>
+        The <a href="#1">justify content</a> utilites (Figure 3) align items along the main-axis of their flex container.  
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow font-size-md">
+
+                <div class="flex-row justify-content-start subtle-fill margin-bottom-4">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 3</p>
+                    </div>
+                </div>
+
+                <div class="flex-row justify-content-end subtle-fill margin-bottom-4">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 3</p>
+                    </div>
+                </div>
+
+                <div class="flex-row justify-content-center subtle-fill margin-bottom-4">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 3</p>
+                    </div>
+                </div>
+
+                <div class="flex-row justify-content-between subtle-fill margin-bottom-4">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 3</p>
+                    </div>
+                </div>
+
+                <div class="flex-row justify-content-around subtle-fill margin-bottom-4">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 3</p>
+                    </div>
+                </div>
+
+                <div class="flex-row justify-content-evenly subtle-fill">
+
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 3</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="flex-row justify-content-start"&gt;...&lt;/div&gt;
+                &lt;div class="flex-row justify-content-end"&gt;...&lt;/div&gt;
+                &lt;div class="flex-row justify-content-center"&gt;...&lt;/div&gt;
+                &lt;div class="flex-row justify-content-between"&gt;...&lt;/div&gt;
+                &lt;div class="flex-row justify-content-around"&gt;...&lt;/div&gt;
+                &lt;div class="flex-row justify-content-evenly"&gt;...&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 6
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        Justify content utilities accept <a href="{{ site.url }}/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+    </p>
+    <p>
+        With the HTML in Figure 4. The flex container changes it's justification to <em>end</em> at the large breakpoint.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4" {{ site.custom-properties-example }}>
+    <div class="font-size-md">
+        <div class="flex-row justify-content-end--lg subtle-fill">
+            <div class="padding-x-3 padding-y-2 theme-white border">
+                <p>Item 1</p>
+            </div>
+            <div class="padding-x-3 padding-y-2 theme-white border">
+                <p>Item 2</p>
+            </div>
+            <div class="padding-x-3 padding-y-2 theme-white border">
+                <p>Item 3</p>
+            </div>
+        </div>
+    </div>
+</figure>
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;!-- With breakpoint modifiers --&gt;
+
+            &lt;div class="flex-row justify-content-end--lg"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 7
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="alignContentUtilites">
+
+<div class="container narrow margin-y-4">
+    <h2>Align Content Utilites</h2>
+    <p>
+        The <a href="#1">align content</a> utilites distribute the space between and around items along the flex container's cross-axis.  
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow font-size-md">
+                
+                <div class="flex-row justify-content-center align-content-start subtle-fill margin-bottom-4" style="height: 240px">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 3</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 4</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 5</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 6</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 7</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 8</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 9</p>
+                    </div>
+                </div>
+                                
+                <div class="flex-row justify-content-center align-content-end subtle-fill margin-bottom-4" style="height: 240px">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 3</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 4</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 5</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 6</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 7</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 8</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 9</p>
+                    </div>
+                </div>
+                
+                <div class="flex-row justify-content-center align-content-center subtle-fill margin-bottom-4" style="height: 240px">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 3</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 4</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 5</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 6</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 7</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 8</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 9</p>
+                    </div>
+                </div>
+            
+                <div class="flex-row justify-content-center align-content-between subtle-fill margin-bottom-4" style="height: 240px">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 3</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 4</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 5</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 6</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 7</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 8</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 9</p>
+                    </div>
+                </div>
+            
+                <div class="flex-row justify-content-center align-content-around subtle-fill margin-bottom-4" style="height: 240px">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 3</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 4</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 5</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 6</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 7</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 8</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 9</p>
+                    </div>
+                </div>
+        
+                <div class="flex-row justify-content-center align-content-evenly subtle-fill margin-bottom-4" style="height: 240px">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 3</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 4</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 5</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 6</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 7</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 8</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 9</p>
+                    </div>
+                </div>
+            
+                <div class="flex-row justify-content-center align-content-stretch subtle-fill" style="height: 240px">
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 1</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 2</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 3</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 4</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 5</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 6</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 7</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 8</p>
+                    </div>
+                    <div class="padding-x-3 padding-y-2 theme-white border">
+                        <p>Item 9</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="flex-row align-content-start"&gt;...&lt;/div&gt;
+                &lt;div class="flex-row align-content-end"&gt;...&lt;/div&gt;
+                &lt;div class="flex-row align-content-center"&gt;...&lt;/div&gt;
+                &lt;div class="flex-row align-content-between"&gt;...&lt;/div&gt;
+                &lt;div class="flex-row align-content-around"&gt;...&lt;/div&gt;
+                &lt;div class="flex-row align-content-evenly"&gt;...&lt;/div&gt;
+                &lt;div class="flex-row align-content-stretch"&gt;...&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 8
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        Align content utilities accept <a href="{{ site.url }}/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+    </p>
+    <p>
+        With the HTML in Figure 6. The flex container starts its alignment with <em>start</em> then changes to <em>end</em> at the large breakpoint.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4" {{ site.custom-properties-example }}>
+    <div class="font-size-md">
+        <div class="flex-row justify-content-center align-content-start align-content-end--lg subtle-fill margin-bottom-4" style="height: 240px">
+            <div class="padding-x-3 padding-y-2 theme-white border">
+                <p>Item 1</p>
+            </div>
+            <div class="padding-x-3 padding-y-2 theme-white border">
+                <p>Item 2</p>
+            </div>
+            <div class="padding-x-3 padding-y-2 theme-white border">
+                <p>Item 3</p>
+            </div>
+            <div class="padding-x-3 padding-y-2 theme-white border">
+                <p>Item 4</p>
+            </div>
+            <div class="padding-x-3 padding-y-2 theme-white border">
+                <p>Item 5</p>
+            </div>
+            <div class="padding-x-3 padding-y-2 theme-white border">
+                <p>Item 6</p>
+            </div>
+            <div class="padding-x-3 padding-y-2 theme-white border">
+                <p>Item 7</p>
+            </div>
+            <div class="padding-x-3 padding-y-2 theme-white border">
+                <p>Item 8</p>
+            </div>
+            <div class="padding-x-3 padding-y-2 theme-white border">
+                <p>Item 9</p>
+            </div>
+        </div>
+    </div>
+</figure>
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;!-- With breakpoint modifiers --&gt;
+
+            &lt;div class="flex-row align-content-start align-content-end--lg"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 9
+    </figcaption>
+</figure>

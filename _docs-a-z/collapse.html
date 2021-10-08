@@ -1,0 +1,133 @@
+---
+layout: documentation
+title: "Collapse"
+backdrop_credit_name: "Nicole Geri"
+backdrop_credit_url: "https://unsplash.com/@nicolegeri"
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Toggle the visibility of a block-level selector from a button located anywhere in the DOM.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start">
+
+<div class="container narrow margin-y-4">
+    <h2>The Collapse Relationship</h2>
+    <p>
+        The collapse mechanism establishes a relationship between a button and its target selctor. With each button press, the target's visibility toggles between <em>show</em> and <em>hide</em>. 
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <button
+                    class="button width-100 theme-primary display-block border-radius"
+                    data-toggle="collapse"
+                    data-target-toggle="#target-id">
+                        Navigation
+                </button>
+
+                <div class="collapse border border-radius margin-y-3" id="target-id">
+                    <ul class="nav nav--divider" id="" role="navigation">
+                        <li>
+                            <a href="#1">Link</a>
+                        </li>
+                        <li>
+                            <a href="#1">Link</a>
+                        </li>
+                        <li>
+                            <a href="#1">Link</a>
+                        </li>
+                    </ul>
+                </div>
+            
+            </div>
+            
+        </div>
+        <pre data-line="3,4,9,10">
+            <code class="language-html">
+                &lt;button
+                    class="button width-100 theme-primary display-block border-radius"
+                    data-toggle="collapse"
+                    data-target-toggle="#target-id"&gt;
+                        Navigation
+                &lt;/button&gt;
+
+                &lt;div
+                    class="collapse border border-radius margin-y-3"
+                    id="target-id"&gt;
+                        &lt;ul class="nav nav--divider" id="" role="navigation"&gt;
+                            &lt;li&gt;
+                                &lt;a href="#1"&gt;Link&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href="#1"&gt;Link&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href="#1"&gt;Link&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<figure class="container narrow margin-y-4">
+    <table class="table table--edge">
+        <thead>
+            <tr>
+                <th class="width-30" scope="col">Line #</th>
+                <th class="width-70" scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>
+                    <a href="#figure_1.3-4" data-line-anchor>
+                        3-4
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        On a  <code>&lt;button&gt;</code> tag, the <code>data-toggle="collapse"</code> attribute is required.
+                    </p>
+                    <p>
+                        The <code>data-target-toggle="#target-id"</code> attribute equals the value of its target selector's <code>id</code> attribute.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.9-10" data-line-anchor>
+                        9-10
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.collapse</code> class is required.
+                    </p>
+                    <p>
+                        It initially hides the target selector.
+                    </p>
+                    <p>
+                        The <code>id</code> attribute equals the value of its associated button's <code>data-target-toggle</code> attribute.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</figure>

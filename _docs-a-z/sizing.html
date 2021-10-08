@@ -1,0 +1,168 @@
+---
+layout: documentation
+title: "Sizing"
+backdrop_credit_name: "Larry Li"
+backdrop_credit_url: "https://unsplash.com/@larryli"
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Set specific width and height values to an element. 
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="widthUtilities">
+
+<div class="container narrow margin-y-4">
+    <h2>Width Utilities</h2>
+    <p>
+        Natura11y provides the following width utilities. Number values represent a percentage. For example, the <code>.width-50</code> utility makes its selector 50% of its parent.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow font-size-md text-align-center">
+
+                <div class="subtle-fill margin-bottom-4">
+                    <div class="padding-1 theme-white border width-10">
+                        <p>10</p>
+                    </div>
+                    <div class="padding-1 theme-white border width-20">
+                        <p>20</p>
+                    </div>
+                    <div class="padding-1 theme-white border width-30">
+                        <p>30</p>
+                    </div>
+                    <div class="padding-1 theme-white border width-40">
+                        <p>40</p>
+                    </div>
+                    <div class="padding-1 theme-white border width-50">
+                        <p>50</p>
+                    </div>
+                    <div class="padding-1 theme-white border width-60">
+                        <p>60</p>
+                    </div>
+                    <div class="padding-1 theme-white border width-70">
+                        <p>70</p>
+                    </div>
+                    <div class="padding-1 theme-white border width-80">
+                        <p>80</p>
+                    </div>
+                    <div class="padding-1 theme-white border width-90">
+                        <p>90</p>
+                    </div>
+                    <div class="padding-1 theme-white border width-100">
+                        <p>100</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="width-10"&gt;...&lt;/div&gt;
+                &lt;div class="width-20"&gt;...&lt;/div&gt;
+                &lt;div class="width-25"&gt;...&lt;/div&gt;
+                &lt;div class="width-30"&gt;...&lt;/div&gt;
+                &lt;div class="width-40"&gt;...&lt;/div&gt;
+                &lt;div class="width-50"&gt;...&lt;/div&gt;
+                &lt;div class="width-60"&gt;...&lt;/div&gt;
+                &lt;div class="width-70"&gt;...&lt;/div&gt;
+                &lt;div class="width-75"&gt;...&lt;/div&gt;
+                &lt;div class="width-80"&gt;...&lt;/div&gt;
+                &lt;div class="width-90"&gt;...&lt;/div&gt;
+                &lt;div class="width-100"&gt;...&lt;/div&gt;
+                &lt;div class="width-auto"&gt;...&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        Width utilities accept <a href="{{ site.url }}/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;!-- With breakpoint modifier --&gt;
+
+            &lt;div class="width-50--lg"&gt;...&lt;/div&gt;
+            &lt;div class="width-auto--lg"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 2
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="heightUtilities">
+
+<div class="container narrow margin-y-4">
+    <h2>Height Utilities</h2>
+    <p>
+        Natura11y provides only two height utilities:
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow font-size-md text-align-center">
+
+                <div class="subtle-fill margin-bottom-4"  style="height: 240px">
+                    <div class="padding-1 theme-white border width-50 height-100 flex-column justify-content-center margin-x-auto">
+                        <p><code>.height-100</code></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="height-100"&gt;...&lt;/div&gt;
+
+                &lt;!-- 100% height of viewport --&gt;
+                &lt;div class="height-100vh"&gt;...&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 3
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        Height utilities accept <a href="{{ site.url }}/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;!-- With breakpoint modifier --&gt;
+
+            &lt;div class="height-10vh--lg"&gt;...&lt;/div&gt;
+            &lt;div class="height-100--lg"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 4
+    </figcaption>
+</figure>

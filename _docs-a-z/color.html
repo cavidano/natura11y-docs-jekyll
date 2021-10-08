@@ -1,0 +1,965 @@
+---
+layout: documentation
+title: "Color"
+backdrop_credit_name: "David Clode"
+backdrop_credit_url: "https://unsplash.com/@davidclode"
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Introducing Natura11y's dynamic color system. Intuitively maintain colors&#8212;apply them with little effort across pages, components, and content.
+    </p>
+</div>
+<!-- .container -->
+
+{% capture as_body %}
+<p>
+    When selecting color combinations, make sure your colors meet a <a href="https://colorable.jxnblk.com/" target="_blank">sufficient contrast</a> ratio.
+</p>
+<p>
+    Learn more about <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank">accessible contrast ratios</a>.
+</p>
+{% endcapture %}
+
+{% include accessibility-spotlight.html content=as_body %}
+
+<hr class="section-start" id="themeColors">
+
+<div class="container narrow margin-y-4">
+    <h2>Theme Colors: Your Principle Palette</h2>
+    <p>
+        Your principal theme colors include <strong><em>Primary</em></strong>, <strong><em>Secondary</em></strong>, <strong><em>Dark</em></strong>, <strong><em>Light</em></strong>, and <strong><em>White</em></strong>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+
+    <div {{ site.custom-properties-example }}>
+
+        <div class="theme-primary padding-3 margin-y-2">
+            <p><strong>Primary</strong></p>
+        </div>
+        <div class="theme-secondary padding-3 margin-y-2">
+            <p><strong>Secondary</strong></p>
+        </div>
+        <div class="theme-dark padding-3 margin-y-2">
+            <p><strong>Dark</strong></p>
+        </div>
+        <div class="theme-light padding-3 margin-y-2">
+            <p><strong>Light</strong></p>
+        </div>
+        <div class="theme-white border padding-3 margin-y-2">
+            <p><strong>White (default)</strong></p>
+        </div>
+
+    </div>
+    <!-- .container -->    
+
+</figure>
+<!-- .container -->
+
+<div class="container narrow margin-y-4">
+    <p>
+        These five colors produce utility classes for <a href="#themeColorUtilities">theme colors</a>, <a href="#backgroundColorUtilities">background colors</a>, <a href="#1">text colors</a>, and <a href="#1">border colors</a>.
+    </p>
+    <p>
+        Natura11y treats <strong><em>white</em></strong> as a color&#8212;and this is important&#8212;it serves as your default theme. Natura11y's CSS file applies the white theme (and its <a href="#correlatedColors">correlated colors</a>) to the <code>&lt;body&gt;</code>.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="correlatedColors">
+
+<div class="container narrow margin-y-4">
+    <h2>Correlated Colors</h2>
+    <p>
+        Every theme color has five correlated colors. These are for text, borders, and certain links&#8212;along with instances of <em>confirm</em> and <em>warn</em>. Correlated colors work in isolation within their corresponding <a href="#themeColorUtilities">theme color utility</a> class.
+    </p>
+    <p>
+        Figure 1 (below) depicts the css variable declared for the <em><strong>primary</strong></em> theme on line 3. Lines 7-11 provide css variables for primary's correlated colors.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+    <pre class="hide-toolbar" data-line="3,7-11">
+        <code class="language-css">
+            // Primary Theme Color
+
+            --primary: #440381;
+
+            // Primary Correlated Colors
+            
+            --primary-text: var(--dark);
+            --primary-border: hsla(0, 0%, 0%, 0.25);
+            --primary-link: currentColor;
+            --primary-confirm: #16db93;
+            --primary-warn: #ff73aa;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        For a descriptive list of all colors available, jump over to the <a href="/docs/customization/#cp_color" target="blank">css variable reference guide</a>.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="themeColorUtilities">
+
+<div class="container narrow margin-y-4">
+    <h2>Theme Color Utilities</h2>
+    <p>
+        Natura11y's theme color utility classes are one of its most useful features. Each theme color utility provides predefined colors for <strong>background</strong>, <strong>text</strong>, <strong>borders</strong>, and <strong>links</strong> (within paragraphs). Theme color utilities also provide colors for instances of <strong>confirm</strong> and <strong>warn</strong>.   
+    </p>
+    <p>
+        Figure 2 (below) provides the five theme color utilities:
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+	<pre class="hide-toolbar">
+        <code class="language-html">
+            &lt;div class="theme-primary"&gt;...&lt;/div&gt;
+            &lt;div class="theme-secondary"&gt;...&lt;/div&gt;
+            &lt;div class="theme-dark"&gt;...&lt;/div&gt;
+            &lt;div class="theme-light"&gt;...&lt;/div&gt;
+            &lt;div class="theme-white"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+	<figcaption>
+        Figure 2
+	</figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        You may apply theme colors to any containing block-level element within the DOM. Consider the following five cards, each colored with a different theme color utility. 
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+    <div  {{ site.custom-properties-example }}>
+
+        <div class="card theme-primary border-radius margin-y-3">
+
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>Primary</strong>
+                </p>
+            </div>
+
+            <div class="card__body">
+                <h2 class="h4">
+                    Rainbow lorikeet
+                </h2>
+                <p>
+                    The rainbow lorikeet is a species of parrot found in Australia. It is common along the eastern seaboard, from northern <a href="#">Queensland</a> to <a href="#1">South Australia</a>. Its habitat is rainforest, coastal bush and woodland areas.
+                </p>
+            </div>
+
+            <div class="card__foot font-size-md border-top">
+                <ul class="nav nav--horizontal justify-content-between">
+                    <li>
+                        <a href="#1">Search Images</a>
+                    </li>
+                    <li>
+                        <a class="button button--outline rounded-pill" href="#1">
+                            Visit Wikipedia
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- .card -->
+
+        <div class="card theme-secondary border-radius margin-y-3">
+
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>Secondary</strong>
+                </p>
+            </div>
+
+            <div class="card__body">
+                <h2 class="h4">
+                    Rainbow lorikeet
+                </h2>
+                <p>
+                    The rainbow lorikeet is a species of parrot found in Australia. It is common along the eastern seaboard, from northern <a href="#">Queensland</a> to <a href="#1">South Australia</a>. Its habitat is rainforest, coastal bush and woodland areas.
+                </p>
+            </div>
+
+            <div class="card__foot font-size-md border-top">
+                <ul class="nav nav--horizontal justify-content-between">
+                    <li>
+                        <a href="#1">Search Images</a>
+                    </li>
+                    <li>
+                        <a class="button button--outline rounded-pill" href="#1">
+                            Visit Wikipedia
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- .card -->
+
+        <div class="card theme-dark border-radius margin-y-3">
+
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>Dark</strong>
+                </p>
+            </div>
+
+            <div class="card__body">
+                <h2 class="h4">
+                    Rainbow lorikeet
+                </h2>
+                <p>
+                    The rainbow lorikeet is a species of parrot found in Australia. It is common along the eastern seaboard, from northern <a href="#">Queensland</a> to <a href="#1">South Australia</a>. Its habitat is rainforest, coastal bush and woodland areas.
+                </p>
+            </div>
+
+            <div class="card__foot font-size-md border-top">
+                <ul class="nav nav--horizontal justify-content-between">
+                    <li>
+                        <a href="#1">Search Images</a>
+                    </li>
+                    <li>
+                        <a class="button button--outline rounded-pill" href="#1">
+                            Visit Wikipedia
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- .card -->
+
+        <div class="card theme-light border-radius margin-y-3">
+
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>Light</strong>
+                </p>
+            </div>
+
+            <div class="card__body">
+                <h2 class="h4">
+                    Rainbow lorikeet
+                </h2>
+                <p>
+                    The rainbow lorikeet is a species of parrot found in Australia. It is common along the eastern seaboard, from northern <a href="#">Queensland</a> to <a href="#1">South Australia</a>. Its habitat is rainforest, coastal bush and woodland areas.
+                </p>
+            </div>
+
+            <div class="card__foot font-size-md border-top">
+                <ul class="nav nav--horizontal justify-content-between">
+                    <li>
+                        <a href="#1">Search Images</a>
+                    </li>
+                    <li>
+                        <a class="button button--outline rounded-pill" href="#1">
+                            Visit Wikipedia
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- .card -->
+
+        <div class="card border border-radius margin-y-3">
+
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>White (default)</strong>
+                </p>
+            </div>
+
+            <div class="card__body">
+                <h2 class="h4">
+                    Rainbow lorikeet
+                </h2>
+                <p>
+                    The rainbow lorikeet is a species of parrot found in Australia. It is common along the eastern seaboard, from northern <a href="#">Queensland</a> to <a href="#1">South Australia</a>. Its habitat is rainforest, coastal bush and woodland areas.
+                </p>
+            </div>
+
+            <div class="card__foot font-size-md border-top">
+                <ul class="nav nav--horizontal justify-content-between">
+                    <li>
+                        <a href="#1">Search Images</a>
+                    </li>
+                    <li>
+                        <a class="button button--outline rounded-pill" href="#1">
+                            Visit Wikipedia
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- .card -->
+
+    </div>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        In Figure 3 (below), on line 1, notice the <code>.theme-primary</code> utility present. No other element within the card needs color specified. Each theme color utility applies its <a href="#correlatedColors">correlated colors</a> to all descendants. 
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+	<pre data-line="1">
+        <code class="language-html">
+            &lt;div class="card theme-primary border-radius"&gt;
+
+                &lt;div class="card__head border-bottom"&gt;
+                    &lt;p&gt;
+                        &lt;strong&gt;Theme: Primary&lt;/strong&gt;
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class="card__body"&gt;
+                    &lt;h2 class="h4"&gt;
+                        Rainbow lorikeet
+                    &lt;/h2&gt;
+                    &lt;p&gt;
+                        The rainbow lorikeet is a species of parrot found in Australia. It is common along the eastern seaboard, from northern &lt;a href="#"&gt;Queensland&lt;/a&gt; to &lt;a href="#1"&gt;South Australia&lt;/a&gt;. Its habitat is rainforest, coastal bush and woodland areas.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class="card__foot border-top"&gt;
+                    &lt;ul class="nav nav--horizontal justify-content-between"&gt;
+                        &lt;li&gt;
+                            &lt;a href="#1"&gt;Search Images&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a class="button button--outline rounded-pill" href="#1"&gt;
+                                Visit Wikipedia
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        </code>
+    </pre>
+	<figcaption>
+        Figure 3
+	</figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Links</h3>
+    <p>
+        Refer to Figure 1 (above), on line 9. The correlated link color (e.g. <code>--primary-link</code>) value sets the color of generic links (<code>&lt;a&gt;</code> tags) within paragraphs (<code>&lt;p&gt;</code> tags).  This is not only convenient, it keeps paragraph links visible and accessible.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+    <div class="overflow-hidden" {{ site.custom-properties-example }}>
+
+        <div class="card theme-primary border-radius margin-y-3">
+
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>Primary</strong>
+                </p>
+            </div>
+
+            <div class="card__body">
+                <p>
+                    It is common along the eastern seaboard, from northern <a href="#">Queensland</a> to <a href="#1">South Australia</a>.
+                </p>
+            </div>
+        </div>
+        <!-- .card -->
+
+        <div class="card theme-secondary border-radius margin-y-3">
+
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>Secondary</strong>
+                </p>
+            </div>
+
+            <div class="card__body">
+                <p>
+                    It is common along the eastern seaboard, from northern <a href="#">Queensland</a> to <a href="#1">South Australia</a>.
+                </p>
+            </div>
+        </div>
+        <!-- .card -->
+
+        <div class="card theme-dark border-radius margin-y-3">
+
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>Dark</strong>
+                </p>
+            </div>
+
+            <div class="card__body">
+                <p>
+                    It is common along the eastern seaboard, from northern <a href="#">Queensland</a> to <a href="#1">South Australia</a>.
+                </p>
+            </div>
+        </div>
+        <!-- .card -->
+
+        <div class="card theme-light border-radius margin-y-3">
+
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>Light</strong>
+                </p>
+            </div>
+
+            <div class="card__body">
+                <p>
+                    It is common along the eastern seaboard, from northern <a href="#">Queensland</a> to <a href="#1">South Australia</a>.
+                </p>
+            </div>
+        </div>
+        <!-- .card -->
+
+        <div class="card theme-white border border-radius margin-y-3">
+
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>White</strong>
+                </p>
+            </div>
+
+            <div class="card__body">
+                <p>
+                    It is common along the eastern seaboard, from northern <a href="#">Queensland</a> to <a href="#1">South Australia</a>.
+                </p>
+            </div>
+        </div>
+        <!-- .card -->
+
+    </div>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Beyond generic links, a <a href="#textColorUtilities">text color utility</a> named <code>.text-color-link</code> is available. With the following example, <code>.text-color-link</code> (Figure 4, Line 5) colors the buttons within the <a href="/docs/buttons/#theButtonGroup">button group</a> selector blue.   
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container">
+                <div class="button-group font-size-lg text-color-link">
+                    <a class="button button--outline" href="#1">
+                        Sign In
+                    </a>
+                    <a class="button button--icon-only" href="#1" aria-label="Language">
+                        <span class="icon_language" aria-hidden="true"></span>
+                    </a>
+                    <a class="button button--icon-only" href="#1" aria-label="Search">
+                        <span class="icon_search" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <pre data-line="1">
+            <code class="language-html">
+                &lt;div class="button-group text-color-link"&gt;
+
+                    &lt;a class="button button--outline" href="#1"&gt;
+                        Sign In
+                    &lt;/a&gt;
+                    &lt;a class="button button--icon-only" href="#1" aria-label="Language"&gt;
+                        &lt;span class="icon_language" aria-hidden="true"&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;a class="button button--icon-only" href="#1" aria-label="Search"&gt;
+                        &lt;span class="icon_search" aria-hidden="true"&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 4
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Confirm and Warn</h3>
+    <p>
+        In Figure 1 (above), on lines 10 and 11, you will find declarations for <em><strong>confirm</strong></em> and  <em><strong>warn</strong></em> color values. Natura11y allows you to specify confirm and warn values for each theme color!
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+    <div class="overflow-hidden" {{ site.custom-properties-example }}>
+
+        <div class="card theme-primary border-radius margin-y-3">
+
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>Primary</strong>
+                </p>
+            </div>
+
+            <div class="card__body">
+                <div class="grid grid--gap-2 grid--cell-fill text-align-center">
+                    <div class="grid__cell">     
+                        <div class="alert alert--confirm border">
+                            <div class="alert__title">
+                                <span class="icon_confirm" aria-hidden="true"></span>
+                                <span class="alert__title__text">
+                                    Alert Confirm
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__cell">
+                        <div class="alert alert--warn border">
+                            <div class="alert__title">
+                                <span class="icon_warn" aria-hidden="true"></span>
+                                <span class="alert__title__text">
+                                    Alert Warn
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- .card -->
+
+        <div class="card theme-secondary border-radius margin-y-3">
+
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>Secondary</strong>
+                </p>
+            </div>
+
+            <div class="card__body">
+                <div class="grid grid--gap-2 grid--cell-fill text-align-center">
+                    <div class="grid__cell">     
+                        <div class="alert alert--confirm border">
+                            <div class="alert__title">
+                                <span class="icon_confirm" aria-hidden="true"></span>
+                                <span class="alert__title__text">
+                                    Alert Confirm
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__cell">
+                        <div class="alert alert--warn border">
+                            <div class="alert__title">
+                                <span class="icon_warn" aria-hidden="true"></span>
+                                <span class="alert__title__text">
+                                    Alert Warn
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- .card -->
+
+        <div class="card theme-dark border-radius margin-y-3">
+
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>Dark</strong>
+                </p>
+            </div>
+
+            <div class="card__body">
+                <div class="grid grid--gap-2 grid--cell-fill text-align-center">
+                    <div class="grid__cell">     
+                        <div class="alert alert--confirm border">
+                            <div class="alert__title">
+                                <span class="icon_confirm" aria-hidden="true"></span>
+                                <span class="alert__title__text">
+                                    Alert Confirm
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__cell">
+                        <div class="alert alert--warn border">
+                            <div class="alert__title">
+                                <span class="icon_warn" aria-hidden="true"></span>
+                                <span class="alert__title__text">
+                                    Alert Warn
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- .card -->
+
+        <div class="card theme-light border-radius margin-y-3">
+
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>Light</strong>
+                </p>
+            </div>
+
+            <div class="card__body">
+                <div class="grid grid--gap-2 grid--cell-fill text-align-center">
+                    <div class="grid__cell">     
+                        <div class="alert alert--confirm border">
+                            <div class="alert__title">
+                                <span class="icon_confirm" aria-hidden="true"></span>
+                                <span class="alert__title__text">
+                                    Alert Confirm
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__cell">
+                        <div class="alert alert--warn border">
+                            <div class="alert__title">
+                                <span class="icon_warn" aria-hidden="true"></span>
+                                <span class="alert__title__text">
+                                    Alert Warn
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- .card -->
+
+        <div class="card theme-white border-radius border margin-y-3">
+
+            <div class="card__head border-bottom font-size-rg">
+                <p>
+                    <strong>White</strong>
+                </p>
+            </div>
+
+            <div class="card__body">
+                <div class="grid grid--gap-2 grid--cell-fill text-align-center">
+                    <div class="grid__cell">     
+                        <div class="alert alert--confirm border">
+                            <div class="alert__title">
+                                <span class="icon_confirm" aria-hidden="true"></span>
+                                <span class="alert__title__text">
+                                    Alert Confirm
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__cell">
+                        <div class="alert alert--warn border">
+                            <div class="alert__title">
+                                <span class="icon_warn" aria-hidden="true"></span>
+                                <span class="alert__title__text">
+                                    Alert Warn
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- .card -->
+
+    </div>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Instances of <em>confirm</em> and <em>warn</em> appear in <a href="/docs/alerts">alerts</a>, and <a href="/docs/forms">forms</a>. 
+    </p>
+</div>
+<!-- .container -->
+
+<div class="container narrow margin-y-4">
+    <h3>Infinitely Nestable</h3>
+    <p>
+        You can nest theme color utilities throughout the DOM.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+    <div {{ site.custom-properties-example }}>
+
+        <div class="theme-primary padding-3">
+            <p><strong>Primary</strong></p>
+            <div class="theme-secondary padding-3 box-shadow-1">
+                <p><strong>Secondary</strong></p>
+                <div class="theme-dark padding-3 box-shadow-1">
+                    <p><strong>Dark</strong></p>
+                    <div class="theme-light padding-3 box-shadow-1">
+                        <p><strong>Light</strong></p>
+                        <div class="theme-white padding-3 box-shadow-1">
+                            <p><strong>White</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Specific</h3>
+    <p>
+        Apply a theme color at a specific breakpoint. Chain a breakpoint modifier (e.g. <code>--lg</code> for a <em>large</em> breakpoint) to a the color utility. In the following example, <code>.theme-primary--lg</code> is present on the parent selector of our nav (Figure 5, line 1).  
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1 theme-primary--lg" {{ site.custom-properties-example }}>
+            <div class="container narrow">
+                <ul class="nav nav--divider nav--horizontal border border-radius" role="navigation">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <pre data-line="1">
+            <code class="language-html">
+                &lt;div class="theme-primary--lg"&gt;
+
+                    &lt;ul class="nav nav--divider nav--horizontal border border-radius"&gt;
+                        &lt;li&gt;
+                            &lt;a href="#1"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#1"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#1"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 5
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        On smaller viewports The above example uses the default <em><strong>white</strong></em> theme. It instead used the <em><strong>primary</strong></em> theme when the viewport reaches the large breakpoint. Scale your browser horizontally to see this change occur.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="backgroundColorUtilities">
+
+<div class="container narrow margin-y-4">
+    <h2>Background Color Utilities</h2>
+    <p>
+        Need to apply only a background color? Our background color utilities (shown in Figure 6) apply a background color to its selector.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow">
+                <div class="grid grid--gap-2 grid--cell-fill">
+
+                    <div class="grid__cell">
+                        <div class="aspect-ratio aspect-ratio--1by1">
+                            <div class="aspect-ratio__content background-color-primary">
+                                <p class="screen-reader-only">Primary</p>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="aspect-ratio aspect-ratio--1by1">
+                            <div class="aspect-ratio__content background-color-secondary">
+                                <p class="screen-reader-only">Secondary</p>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="aspect-ratio aspect-ratio--1by1">
+                            <div class="aspect-ratio__content background-color-dark">
+                                <p class="screen-reader-only">Dark</p>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="aspect-ratio aspect-ratio--1by1">
+                            <div class="aspect-ratio__content background-color-light">
+                                <p class="screen-reader-only">Light</p>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="aspect-ratio aspect-ratio--1by1">
+                            <div class="aspect-ratio__content border">
+                                <p class="screen-reader-only">White</p>
+                            </div>
+                        </div> 
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="background-color-primary"&gt;...&lt;/div&gt;
+                &lt;div class="background-color-secondary"&gt;...&lt;/div&gt;
+                &lt;div class="background-color-dark"&gt;...&lt;/div&gt;
+                &lt;div class="background-color-light"&gt;...&lt;/div&gt;
+                &lt;div class="background-color-white"&gt;...&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 6
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Available <em>background color utilities</em> shown in figure 6:
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="textColorUtilities">
+
+<div class="container narrow margin-y-4">
+    <h2>Text Color Utilities</h2>
+    <p>
+        Natura11y's <em>text color utilities</em> are useful for applying text color specificly to certain selectors. 
+    </p>
+    <p>
+        Consider the following example in Figure 7. With our primary theme applied to the containing element (line 1), <code>.text-color-secondary</code> is present on the third button selector.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 theme-primary box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow">
+                <ul class="nav nav--horizontal justify-content-center">
+                    <li>
+                        <a class="button" href="#1">
+                            Button
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button" href="#1">
+                            Button
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button text-color-secondary" href="#1">
+                            Button
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <pre data-line="1,15">
+            <code class="language-html">
+                &lt;div class="theme-light"&gt;
+
+                    &lt;ul class="nav nav--horizontal justify-content-center"&gt;
+                        &lt;li&gt;
+                            &lt;a class="button" href="#1"&gt;
+                                Button
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a class="button" href="#1"&gt;
+                                Button
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a class="button text-color-secondary" href="#1"&gt;
+                                Button
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 7
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Keep in mind that text color utilities take priority over color applied with theme color utilies. This, of course allows for even more variations within your themes.  
+    </p>
+    <p>
+        Available <em>text color utilities</em> shown in figure 8:
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+	<pre class="hide-toolbar">
+        <code class="language-html">
+            &lt;div class="text-color-primary"&gt;...&lt;/div&gt;
+            &lt;div class="text-color-secondary"&gt;...&lt;/div&gt;
+            &lt;div class="text-color-dark"&gt;...&lt;/div&gt;
+            &lt;div class="text-color-light"&gt;...&lt;/div&gt;
+            &lt;div class="text-color-white"&gt;...&lt;/div&gt;
+            &lt;div class="text-color-link"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+	<figcaption>
+        Figure 8
+	</figcaption>
+</figure>
+
+{% include related-css-variables.html anchor="color" figure="9" %}

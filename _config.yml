@@ -1,0 +1,112 @@
+# Name of website
+title: Natura11y Inclusive Framwork
+
+# Short description of your site
+description: An open source accessible design system
+
+# URL (Local)
+baseurl: ''
+
+# Permalinks
+permalink: pretty
+
+# Exclude
+exclude:
+  - readme.md
+
+  # Comment (exclude) for versioning
+  # - version/*`
+
+  - src/*
+  - .babelrc
+  - node_modules/*
+  - Gemfile
+  - Gemfile.lock
+  - package-lock.json
+  - package.json
+  - webpack.config.js
+
+# Collections
+collections:
+  docs-introduction:
+    output: true
+    permalink: /docs/:path/
+    order:
+      - get-started.html
+      - customization.html
+      - accessibility.html
+
+  docs-a-z:
+    output: true
+    permalink: /docs/:path/
+
+  examples:
+    output: true
+    permalink: /examples/:slug.html
+
+# Custom Global Vars
+
+cdn_url_css: 'https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/css/natura11y.css'
+cdn_url_js: 'https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/js/natura11y.js'
+cdn_url_icons: 'https://cdn.jsdelivr.net/gh/cavidano/natura11y-icons@1.0.0/dist/css/natura11y_icons.css'
+
+custom-properties-example: '
+  style="
+  --primary: #440381;
+  --secondary: #ffcc66;
+  --dark: #1f163f;
+  --light: #f2edeb;
+  --primary-text: white;
+  --primary-confirm: #00cc55;
+  --primary-warn: #ff6090;
+  --secondary-text: var(--dark);
+  --secondary-confirm: #165a2d;
+  --secondary-warn: #a40e36;
+  --dark-confirm: #00cc53;
+  --dark-warn: #ff5557;
+  --a11y-link: #0066cc;
+  --dark-link: #21b2fa;
+  --body-font-family: Source Sans Pro;
+  --body-line-height: 1.4;
+  --article-sidebar-width: 200px;
+  "
+  '
+
+custom-properties-practice-exercise: '
+  style="
+  --primary: #00A870;
+  --secondary: #004857;
+  --dark: #131B40;
+  --light: #e6ebed;
+
+  --a11y-link: #0040b2;
+
+  --primary-text: var(--dark);
+  --primary-link: currentColor;
+
+  --secondary-text: white;
+  --secondary-link: currentColor;
+
+  --dark-text: white;
+  --dark-link: currentColor;
+
+  --light-text: var(--dark);
+  --light-link: var(--a11y-link);
+
+  --white-text: var(--dark);
+  --white-link: var(--a11y-link);
+  "
+  '
+
+
+plugins:
+- jekyll-datapage-generator
+
+page_gen:
+- data: 'natura11yIcons'
+  template: 'icon-detail'
+  dir: 'icons'
+  index_files: true
+  
+  name: 'class-name'
+  

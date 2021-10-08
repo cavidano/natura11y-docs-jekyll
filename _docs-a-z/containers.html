@@ -1,0 +1,127 @@
+---
+layout: documentation
+title: "Containers"
+backdrop_credit_name: "Mark Basarab"
+backdrop_credit_url: "https://unsplash.com/@markbasarabvisuals"
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Manage the padding and widths of the containing elements that make up your layouts. 
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="theContainerUtility">
+
+<div class="container narrow margin-y-4">
+    <h2>The Container Utility</h2>
+    <p>
+        The container utility (<code>.container</code>) applies consistent padding on the left and right sides of its selector. A container without a <a href="#widthVariations">width variation utility</a> span the full width of its parent.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container margin-y-4" {{ site.custom-properties-example }}>
+
+    <div class="font-size-md">
+
+        <div class="container border subtle-fill padding-y-2 margin-y-3">
+            <p>Container (full width)</p>
+        </div>
+
+    </div>
+
+</figure>
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;div class="container"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="widthVariations">
+
+<div class="container narrow margin-y-4">
+    <h2>Width Variations</h2>
+    <p>
+        Width variation utilities come in three sizes: <strong>narrow</strong>, <strong>medium</strong>, and <strong>wide</strong> (Figure 2). Apply them to containers or use them independently. Width variation utilities horizontally center their selectors.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container margin-y-4" {{ site.custom-properties-example }}>
+
+    <div class="font-size-md">
+
+        <div class="container narrow border subtle-fill padding-y-2 margin-y-3">
+            <p>Container (Narrow)</p>
+        </div>
+
+        <div class="container medium border subtle-fill padding-y-2 margin-y-3">
+            <p>Container (Medium)</p>
+        </div>
+
+        <div class="container wide border subtle-fill padding-y-2 margin-y-3">
+            <p>Container (Wide)</p>
+        </div>
+
+    </div>
+
+</figure>
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;div class="container narrow"&gt;...&lt;/div&gt;
+            &lt;div class="container medium"&gt;...&lt;/div&gt;
+            &lt;div class="container wide"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 2
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        Width variation utilities accept <a href="{{ site.url }}/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+    </p>
+    <p>
+        Consider the HTML in Figure 3. The container starts at the <em>narrow</em> width. It then changes to the <em>medium</em> width at the large breakpoint. Finally, the container changes to the <em>wide</em> width at the extra-large breakpoint.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container margin-y-4" {{ site.custom-properties-example }}>
+
+    <div class="font-size-md">
+
+        <div class="container narrow medium--lg wide--xl border subtle-fill padding-y-2 margin-y-3">
+            <p>Container (Responsive)</p>
+        </div>
+
+    </div>
+
+</figure>
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;!-- With breakpoint modifiers --&gt;
+
+            &lt;div class="container narrow medium--lg wide--xl"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 3
+    </figcaption>
+</figure>
+
+{% include related-css-variables.html anchor="containers" figure="4" %}

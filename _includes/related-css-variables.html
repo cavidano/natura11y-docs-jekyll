@@ -1,0 +1,26 @@
+{% if include.figure %}
+    {% assign figure_number = include.figure %}
+{% else %}
+    {% assign figure_number = 'X' %}
+{% endif %}
+
+<hr class="section-start" id="relatedCSSVariables">
+
+<div class="container narrow margin-y-4">
+	<h2>Related CSS Variables</h2>
+	<p>
+		Further <a href="{{ site.url }}/docs/customization/#customizableCDN">customize</a> {{ include.anchor }} by redefining any of their related <a href="{{ site.url }}/docs/customization/#cp_{{ include.anchor }}">CSS variables</a>, shown in Figure {{ figure_number }} below.
+	</p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+	<div
+		class="example"
+		id="related-custom-properties"
+		data-title="{{ include.anchor | capitalize }}"></div>
+
+    <figcaption>
+        <p>Figure {{ figure_number }}</p>
+    </figcaption>
+</figure>

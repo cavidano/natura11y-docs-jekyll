@@ -1,0 +1,390 @@
+---
+layout: documentation
+title: "Modal"
+backdrop_credit_name: "Rachel Hannah Photo"
+backdrop_credit_url: "https://unsplash.com/@rachyhannahphoto"
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Present actionable content to visitors with dismissable modal dialog overlays. 
+    </p>
+</div>
+<!-- .container -->
+
+{% capture as_body %}
+<p>
+    Modals have keyboard support for focusable elements. Use the <em>Tab</em> and <em>Shift + Tab</em> keys without leaving the model by accident. Using the <em>Esc</em> key closes the model.
+</p>
+<p>
+    When a modal closes, keyboard user return to the last active element in the document.
+</p>
+<p>
+    Include <em>role="dialog"</em> on the modal element.
+</p>
+<p>
+    Provide an accessible name with <em>aria-describedby</em>, referring to the modal title element.
+</p>
+{% endcapture %}
+
+{% include accessibility-spotlight.html content=as_body %}
+
+<hr class="section-start" id="defaultBehavior">
+
+<div class="container narrow margin-y-4">
+    <h2>Default Behavior</h2>
+    <p>
+        Use the button below to launch the modal component with default behavior. Modals center horizontally and vertically. Content within the <code>.modal__content__body</code> selector scrolls (vertically) when its content's height exceeds the height of the veiwport. 
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <button
+                    class="button theme-primary border-radius width-100 margin-y-3"
+                    data-modal-open="modal-example-01">
+                        Open Modal (Default)
+                </button>
+
+            </div>
+
+        </div>
+        <pre data-line="3-7,11,13-15,17-24,26-47,49-58">
+            <code class="language-html">
+                &lt;!-- Modal button --&gt;
+
+                &lt;button
+                    class="button theme-primary"
+                    data-modal-open="modal-example-01"&gt;
+                        Open Modal
+                &lt;/button>
+
+                &lt;!-- Modal dialog --&gt;
+
+                &lt;div class="modal padding-2" id="modal-example-01" role="dialog"&gt;
+
+                    &lt;div
+                        class="modal__content narrow border-radius box-shadow-3"
+                        aria-labelledby="modal-example-01-title"&gt;
+
+                        &lt;header class="modal__content__head border-bottom"&gt;
+                            &lt;h2 class="h6" id="modal-example-01-title"&gt;
+                                Modal Title One
+                            &lt;/h2&gt;
+                            &lt;button class="button button--icon-only" data-modal-close&gt;
+                                &lt;span class="icon_close" aria-hidden="true"&gt;&lt;/span&gt;
+                            &lt;/button&gt;
+                        &lt;/header&gt;
+
+                        &lt;main class="modal__content__body" id="modal-example-01-content"&gt;
+                            &lt;p&gt;
+                                Lorem, ipsum &lt;a href="#1"&gt;dolor sit amet&lt;/a&gt; consectetur adipisicing elit. Vero eveniet, deleniti
+                                perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est perspiciatis.
+                            &lt;/p&gt;
+                            &lt;p&gt;
+                                Lorem, ipsum &lt;a href="#1"&gt;dolor sit amet&lt;/a&gt; consectetur adipisicing elit. Vero eveniet, deleniti
+                                perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est perspiciatis.
+                            &lt;/p&gt;
+                            &lt;p&gt;
+                                Lorem, ipsum &lt;a href="#1"&gt;dolor sit amet&lt;/a&gt; consectetur adipisicing elit. Vero eveniet, deleniti
+                                perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est perspiciatis.
+                            &lt;/p&gt;
+                            &lt;p&gt;
+                                Lorem, ipsum &lt;a href="#1"&gt;dolor sit amet&lt;/a&gt; consectetur adipisicing elit. Vero eveniet, deleniti
+                                perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est perspiciatis.
+                            &lt;/p&gt;
+                            &lt;p&gt;
+                                Lorem, ipsum &lt;a href="#1"&gt;dolor sit amet&lt;/a&gt; consectetur adipisicing elit. Vero eveniet, deleniti
+                                perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est perspiciatis.
+                            &lt;/p&gt;
+                        &lt;/main&gt;
+
+                        &lt;footer class="modal__content__foot border-top text-color-link"&gt;
+                            &lt;ul class="nav nav--horizontal justify-content-between"&gt;
+                                &lt;li&gt;
+                                    &lt;a href="#1"&gt;Secondary Action&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a class="button rounded-pill" href="#1"&gt;Primary Action&lt;/a&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/footer&gt;
+
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<figure class="container narrow margin-y-4">
+    <table class="table table--edge">
+        <caption class="screen-reader-only">
+            Modal Code Description
+        </caption>
+        <thead>
+            <tr>
+                <th class="width-30" scope="col">Line #</th>
+                <th class="width-70" scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="#figure_1.3-7" data-line-anchor>
+                        3-7
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        A <code>button</code> with the <code>data-modal-open</code> attribute is required.
+                    </p>
+                    <p>
+                        The <code>data-modal-open</code> attribute equals its associated modal's <code>id</code> attribute. 
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.11" data-line-anchor>
+                        11
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.modal</code> selector is required.
+                    </p>
+                    <p>
+                        The <code>id</code> attribute equals the value of its associated button's <code>data-modal-open</code> attribute.
+                    </p>
+                    <p>
+                        The <code>role="dialog"</code> attribute is present for for assistive technology.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.13-15" data-line-anchor>
+                        13-15
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.modal__content</code> selector is required.
+                    </p>
+                    <p>
+                        It centers the modal and holds the modal's header, body, and footer selectors.
+                    </p>
+                    <p>
+                        The <code>.narrow</code> utility is optional. It sets the width of the modal. 
+                    </p>
+                    <p>
+                        The <code>.border-radius</code> utility is optional. 
+                    </p>
+                    <p>
+                        The <code>.box-shadow-3</code> utility is optional. 
+                    </p>
+                    <p>
+                        The <code>aria-labelledby</code> attribute is recommended for assistive technology.
+                    </p>
+                    <p>
+                        The <code>aria-labelledby</code> attribute equals its associated header's <code>id</code> attribute. This header is present within <code>modal__content__head</code>. 
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.17-24" data-line-anchor>
+                        17-24
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.modal__content__head</code> selector is required.
+                    </p>
+                    <p>
+                        It holds the modal's header and close icon button.
+                    </p>
+                    <p>
+                        The <code>.border-bottom</code> utility is optional. 
+                    </p>
+                    <p>
+                        The <code>.button</code> selector with the <code>data-modal-close</code> attribute closes the modal. 
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.26-47" data-line-anchor>
+                        26-47
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.modal__content__body</code> selector is required.
+                    </p>
+                    <p>
+                        It holds the modal's main content.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_1.49-58" data-line-anchor>
+                        49-58
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.card__foot</code> selector is not required.
+                    </p>
+                    <p>
+                        It selector holds the modal's actionable buttons and links.
+                    </p>
+                    <p>
+                        The <code>.border-top</code> utility class is not required.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</figure>
+
+<hr class="section-start" id="ScrollEntireModal">
+
+<div class="container narrow margin-y-4">
+    <h2>Scroll Entire Modal</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veniam quia, voluptatum labore magnam consequuntur repellat praesentium odit.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <button
+                    class="button theme-primary border-radius width-100 margin-y-3"
+                    data-modal-open="modal-example-02">
+                        Open Modal (Scroll All)
+                </button>
+
+            </div>
+
+        </div>
+        <pre data-line="3-7,11,13-15,17-24,26-47,49-58">
+            <code class="language-html">
+                &lt;div class="modal modal--scroll-all" id="..." role="dialog"&gt;
+                   ...
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="closeOutside">
+
+<div class="container narrow margin-y-4">
+    <h2>Close Outside</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veniam quia, voluptatum labore magnam consequuntur repellat praesentium odit.
+    </p>
+</div>
+<!-- .container -->
+
+{% include related-css-variables.html anchor="modal" figure="2" %}
+
+<div class="modal padding-2" id="modal-example-01" role="dialog">
+	<div
+        class="modal__content narrow border-radius box-shadow-3"
+        aria-labelledby="modal-example-01-title">
+
+		<header class="modal__content__head border-bottom">
+            <h2 class="h5" id="modal-example-01-title">
+                Suricata Suricatta
+            </h2>
+            <button class="button button--icon-only" data-modal-close>
+                <span class="icon_close" aria-hidden="true"></span>
+            </button>
+        </header>
+
+		<main class="modal__content__body" id="modal-example-01-content">
+			<p>
+                The <strong>meerkat</strong> (Suricata suricatta) or suricate is a small <a href="#1">mongoose</a> found in southern Africa. It is characterised by a broad head, large eyes, a pointed snout, long legs, a thin tapering tail, and a brindled coat pattern. The head-and-body length is around 24–35 cm (9.4–13.8 in), and the weight is typically between 0.62 and 0.97 kg (1.4 and 2.1 lb). The coat is light grey to yellowish brown with alternate, poorly defined light and dark bands on the back. Meerkats have foreclaws adapted for digging and have the ability to thermoregulate to survive in their harsh, dry habitat. Three subspecies are recognised.
+            </p>
+		</main>
+
+		<footer class="modal__content__foot border-top text-color-link">
+			<ul class="nav nav--horizontal justify-content-between">
+				<li>
+					<a href="#1">Secondary Action</a>
+				</li>
+				<li>
+					<a class="button rounded-pill" href="#1">Primary Action</a>
+				</li>
+			</ul>
+		</footer>
+	</div>
+	<!-- .modal__content -->
+</div>
+
+<div class="modal modal--scroll-all" id="modal-example-02" role="dialog">
+	<div
+        class="modal__content narrow border-radius box-shadow-3 margin-y-4"
+        aria-labelledby="modal-example-01-title">
+
+		<header class="modal__content__head border-bottom">
+            <h2 class="h5" id="modal-example-01-title">
+                Suricata Suricatta
+            </h2>
+            <button class="button button--icon-only" data-modal-close>
+                <span class="icon_close" aria-hidden="true"></span>
+            </button>
+        </header>
+
+		<main class="modal__content__body" id="modal-example-01-content">
+			<p>
+                The <strong>meerkat</strong> (Suricata suricatta) or suricate is a small <a href="#1">mongoose</a> found in southern Africa. It is characterised by a broad head, large eyes, a pointed snout, long legs, a thin tapering tail, and a brindled coat pattern. The head-and-body length is around 24–35 cm (9.4–13.8 in), and the weight is typically between 0.62 and 0.97 kg (1.4 and 2.1 lb). The coat is light grey to yellowish brown with alternate, poorly defined light and dark bands on the back. Meerkats have foreclaws adapted for digging and have the ability to thermoregulate to survive in their harsh, dry habitat. Three subspecies are recognised.
+            </p>
+            <p>
+                Meerkats are eusocial, and form packs of two to 30 individuals each that occupy home ranges around 5 km2 (1.9 sq mi) in area. There is a social hierarchy—generally dominant individuals in a pack breed and produce offspring, and the nonbreeding, subordinate members provide altruistic care to the pups. Breeding occurs round the year, with peaks during heavy rainfall; after a gestation of 60 to 70 days a litter of three to seven pups is born.
+            </p>
+            <p>
+                They live in rock crevices in stony, often calcareous areas, and in large burrow systems in plains. The burrow systems, typically 5 m (16 ft) in diameter with around 15 openings, are large underground networks consisting of two to three levels of tunnels. These tunnels are around 7.5 cm (3.0 in) high at the top and wider below, and extend up to 1.5 m (4.9 ft) into the ground. Burrows have moderated internal temperatures and provide a comfortable microclimate that protects meerkats in harsh weather and at extreme temperatures.
+            </p>
+            <p>
+                Meerkats are active during the day, mostly in the early morning and late afternoon; they remain continually alert and retreat to burrows (or 'boltholes') on sensing danger. They use a broad variety of calls to communicate among one another for different purposes, for example to raise alarm on sighting a predator. Primarily insectivorous, meerkats feed heavily on beetles and lepidopterans, though they also include amphibians, arthropods, small birds, reptiles, and plant material in their diet.
+            </p>
+            <p>
+                Commonly found in arid, open habitats with little woody vegetation, meerkats occur in southwestern Botswana, western and southern Namibia, northern and western South Africa; the range barely extends into southwestern Angola. With no significant threats to the populations, the meerkat is listed as Least Concern on the IUCN Red List. Meerkats are widely depicted in television, movies and other media.
+            </p>
+		</main>
+
+		<footer class="modal__content__foot border-top text-color-link">
+			<ul class="nav nav--horizontal justify-content-between">
+				<li>
+					<a href="#1">Secondary Action</a>
+				</li>
+				<li>
+					<a class="button rounded-pill" href="#1">Primary Action</a>
+				</li>
+			</ul>
+		</footer>
+	</div>
+	<!-- .modal__content -->
+</div>

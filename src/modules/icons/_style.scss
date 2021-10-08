@@ -1,0 +1,68 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Shared Styles
+// C. Icon Font Utility Class
+// D. Rotating Utility Class
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+// Scoped to Block
+
+%icon-font-vars {
+  --icon-size: 1em;
+}
+
+//////////////////////////////////////////////
+// B. Shared Styles
+//////////////////////////////////////////////
+
+[class^="icon_"],
+[class*="icon_"] {
+  @extend %icon-font-vars;
+  
+  font-size: var(--icon-size);
+  vertical-align: middle;
+  
+  position: relative;
+  pointer-events: none;
+
+  &[class*="-left"], 
+  &[class*="-right"] {
+    [dir="rtl"] & {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+//////////////////////////////////////////////
+// C. Icon Font Utility Class
+//////////////////////////////////////////////
+
+.icon_font {
+  font-family: 'Natura11y';
+}
+
+//////////////////////////////////////////////
+// D. Rotating Utility Class
+//////////////////////////////////////////////
+
+.icon_loading.rotate {
+  display: inline-block;
+  animation: rotate-s-loader 1s linear infinite;
+}
+
+@keyframes rotate-s-loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<div class="article article--two-column">
+
+    <div class="article__sidebar">
+        {% include sidebar.html %}
+    </div>
+
+    <div class="article__body border-left--lg" id="primary-content">
+
+        <div class="article__body__content">
+
+            <div class="backdrop backdrop--fixed theme-dark">
+
+                <div class="backdrop__image">
+                    <img class="opacity-40" src="{{ site.url }}/images/backdrop-{{ page.slug }}.jpg" alt="">
+                </div>
+
+                <div class="backdrop__cover">
+
+                    <div class="margin-y-5">
+
+                        <div class="container narrow">
+                            <h1 class="banner-headline text-shadow">
+                                {{ page.title }}
+                            </h1>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- .backdrop__cover -->
+
+                <div class="backdrop__credit">
+                    <p>
+                        Photo by <a href="{{ page.backdrop_credit_url }}" target="_blank">{{ page.backdrop_credit_name }}</a> on Unsplash
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="padding-y-4">
+                <div class="container narrow font-size-rg">
+                    <h2 class="screen-reader-only">On this Page:</h2>
+                    <nav id="table-of-contents"></nav>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="margin-y-5">
+                {{ content }}
+            </div>
+        
+        </div>
+        <!-- .article__body__content -->
+
+    </div>
+    <!-- .article__body -->
+
+</div>

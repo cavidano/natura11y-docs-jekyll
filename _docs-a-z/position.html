@@ -1,0 +1,94 @@
+---
+layout: documentation
+title: "Position"
+backdrop_credit_name: "Janis Wolf"
+backdrop_credit_url: "https://unsplash.com/@janiswolf"
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Change the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank">position</a> property of an element. 
+    </p>
+</div>
+<!-- .container -->
+
+
+<hr class="section-start" id="positionUtilities">
+
+<div class="container narrow margin-y-4">
+    <h2>Position Utilities</h2>
+    <p>
+        Natura11y provides the following position utilities:
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;div class="position-static"&gt;...&lt;/div&gt;
+            &lt;div class="position-relative"&gt;...&lt;/div&gt;
+            &lt;div class="position-absolute"&gt;...&lt;/div&gt;
+            &lt;div class="position-fixed"&gt;...&lt;/div&gt;
+            &lt;div class="position-sticky"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 1
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h2>Position Absolute (Directional) Utilities</h2>
+    <p>
+        You can swap the <code>.position-absolute</code> utility with any of the four directional utilities shown in Figure 2. Doing so applies the absolute position and direction at once.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow font-size-md">
+                
+                <div class="position-relative subtle-fill margin-bottom-4" style="height: 240px">
+                    <div class="position-top-left padding-x-3 padding-y-2 theme-white border">
+                        <p><code>.position-absolute</code></p>
+                    </div>
+                </div>
+                
+                <div class="position-relative subtle-fill margin-bottom-4" style="height: 240px">
+                    <div class="position-top-right padding-x-3 padding-y-2 theme-white border">
+                        <p><code>.position-top-right</code></p>
+                    </div>
+                </div>
+
+                <div class="position-relative subtle-fill margin-bottom-4" style="height: 240px">
+                    <div class="position-bottom-left padding-x-3 padding-y-2 theme-white border">
+                        <p><code>.position-bottom-left</code></p>
+                    </div>
+                </div>
+
+                <div class="position-relative subtle-fill" style="height: 240px">
+                    <div class="position-bottom-right padding-x-3 padding-y-2 theme-white border">
+                        <p><code>.position-bottom-right</code></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="position-relative"&gt;
+                    &lt;div class="position-top-left"&gt;...&lt;/div&gt;
+                    &lt;div class="position-top-right"&gt;...&lt;/div&gt;
+                    &lt;div class="position-bottom-left"&gt;...&lt;/div&gt;
+                    &lt;div class="position-bottom-right"&gt;...&lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 2
+    </figcaption>
+</figure>
