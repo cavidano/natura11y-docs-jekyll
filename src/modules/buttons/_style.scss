@@ -158,7 +158,7 @@ button {
     width: var(--button-icon-only-size);
     height: var(--button-icon-only-size);
 
-    [class*="_icon"] {
+    [class*="icon-"] {
         --icon-size: 1.25em;
 
         display: flex;

@@ -55,22 +55,22 @@ export default class Document {
 
                 // Footer Links
                 
-                const translateLinkList = document.querySelectorAll('[data-lang]');
+                // const translateLinkList = document.querySelectorAll('[data-lang]');
 
-                translateLinkList.forEach((translateLink) => {
+                // translateLinkList.forEach((translateLink) => {
 
-                    translateLink.classList.add('notranslate');
+                //     translateLink.classList.add('notranslate');
                     
-                    translateLink.addEventListener('click', (event) => {
+                //     translateLink.addEventListener('click', (event) => {
 
-                        event.preventDefault();
+                //         event.preventDefault();
 
-                        let myLang = translateLink.getAttribute('data-lang');
+                //         let myLang = translateLink.getAttribute('data-lang');
 
-                        setLanguage(myLang);
+                //         setLanguage(myLang);
 
-                    });
-                });
+                //     });
+                // });
 
                 const allLanguageSelect = document.getElementById('custom-language-select');
                 const allLanguageButton = document.getElementById('custom-language-update');

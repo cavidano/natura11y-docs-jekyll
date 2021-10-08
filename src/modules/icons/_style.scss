@@ -23,8 +23,7 @@ In this file:
 // B. Shared Styles
 //////////////////////////////////////////////
 
-[class^="icon_"],
-[class*="icon_"] {
+.icon {
   @extend %icon-font-vars;
   
   font-size: var(--icon-size);
@@ -46,14 +45,14 @@ In this file:
 //////////////////////////////////////////////
 
 .icon_font {
-  font-family: 'Natura11y';
+  font-family: 'natura11y-icons';
 }
 
 //////////////////////////////////////////////
 // D. Rotating Utility Class
 //////////////////////////////////////////////
 
-.icon_loading.rotate {
+.icon-loading.rotate {
   display: inline-block;
   animation: rotate-s-loader 1s linear infinite;
 }
