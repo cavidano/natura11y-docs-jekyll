@@ -16,7 +16,7 @@ In this file:
 // Scoped to Block
 
 %icon-font-vars {
-  --icon-size: 1em;
+  --icon-size: 1.25em;
 }
 
 //////////////////////////////////////////////
@@ -27,7 +27,9 @@ In this file:
   @extend %icon-font-vars;
   
   font-size: var(--icon-size);
-  vertical-align: middle;
+  vertical-align: baseline;
+
+  display: flex;
   
   position: relative;
   pointer-events: none;

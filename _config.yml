@@ -97,8 +97,7 @@ custom-properties-practice-exercise: '
   --white-link: var(--a11y-link);
   "
   '
-
-
+  
 plugins:
 - jekyll-datapage-generator
 
@@ -108,5 +107,5 @@ page_gen:
   dir: 'icons'
   index_files: true
   
-  name: 'class-name'
+  name: 'className'
   

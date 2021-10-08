@@ -1,0 +1,78 @@
+[
+    {
+       "icon": "Accessibility",
+       "className": "accessibility",
+       "code": 61697,
+       "tags": [
+          "accessibility",
+          "person"
+       ]
+    },
+    {
+       "icon": "Arrow Down",
+       "className": "arrow-down",
+       "code": 61698,
+       "tags": [
+          "arrow",
+          "direction",
+          "down"
+       ]
+    },
+    {
+       "icon": "Arrow Left",
+       "className": "arrow-left",
+       "code": 61699,
+       "tags": [
+          "arrow",
+          "direction",
+          "left"
+       ]
+    },
+    {
+       "icon": "Arrow Right",
+       "className": "arrow-right",
+       "code": 61700,
+       "tags": [
+          "arrow",
+          "direction",
+          "left"
+       ]
+    },
+    {
+       "icon": "Arrow Up",
+       "className": "arrow-up",
+       "code": 61701,
+       "tags": [
+          "arrow",
+          "direction",
+          "up"
+       ]
+    },
+    {
+       "icon": "Bell",
+       "className": "bell",
+       "code": 61702,
+       "tags": [
+          "notification",
+          "alert"
+       ]
+    },
+    {
+       "icon": "Calendar",
+       "className": "calendar",
+       "code": 61703,
+       "tags": [
+          "office",
+          "date"
+       ]
+    },
+    {
+       "icon": "Caret Down",
+       "className": "caret-down",
+       "code": 61704,
+       "tags": [
+          "arrow",
+          "down"
+       ]
+    }
+ ]
