@@ -1,74 +1,85 @@
 #Natura11y Icons
 
 -  icon: Accessibility
-   class-name: accessibility
-   code: 61697
+   className: accessibility
+   codePoint: 61697
    tags:
       - accessibility
       - person
 
 -  icon: Arrow Down
-   class-name: arrow-down
-   code: 61698
+   className: arrow-down
+   codePoint: 61698
    tags:
       - arrow
       - direction
       - down
 
 -  icon: Arrow Left
-   class-name: arrow-left
-   code: 61699
+   className: arrow-left
+   codePoint: 61699
    tags:
       - arrow
       - direction
       - left
 
 -  icon: Arrow Right
-   class-name: arrow-right
-   code: 61700
+   className: arrow-right
+   codePoint: 61700
    tags:
       - arrow
       - direction
       - left
 
 -  icon: Arrow Up
-   class-name: arrow-up
-   code: 61701
+   className: arrow-up
+   codePoint: 61701
    tags:
       - arrow
       - direction
       - up
 
 -  icon: Bell
-   class-name: bell
-   code: 61702
+   className: bell
+   codePoint: 61702
    tags:
       - notification
       - alert
 
 -  icon: Calendar
-   class-name: calendar
-   code: 61703
+   className: calendar
+   codePoint: 61703
    tags:
       - office
       - date
 
 -  icon: Caret Down
-   class-name: caret-down
-   code: 61704
+   className: caret-down
+   codePoint: 61704
    tags:
       - arrow
       - down
 
+-  icon: Caret Left
+   className: caret-left
+   codePoint: 61705
+   tags:
+      - arrow
+      - left
 
+-  icon: Caret Right
+   className: caret-right
+   codePoint: 61706
+   tags:
+      - arrow
+      - right
 
-# - caret-down: 61704
-
-# - caret-left: 61705
-
-# - caret-right: 61706
-
-# - caret-up: 61707
+-  icon: Caret Up
+   className: caret-up
+   codePoint: 61707
+   tags:
+      - arrow
+      - up
 
 # - checkbox-checked: 61708
 
