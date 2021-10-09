@@ -15,7 +15,7 @@ module.exports = merge(common, {
     devServer: {
         port: 9000, 
         contentBase: path.resolve(__dirname),
-        index: 'nyc-header-footer.html'
+        index: 'tearsheet.html'
     },
     module: {
         rules: [
@@ -43,8 +43,8 @@ module.exports = merge(common, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './nyc-header-footer.html',
-            filename: 'nyc-header-footer.html',
+            template: './tearsheet.html',
+            filename: 'tearsheet.html',
             inject: 'body'
         })
     ]
