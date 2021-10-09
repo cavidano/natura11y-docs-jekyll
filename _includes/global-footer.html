@@ -66,69 +66,64 @@
 
 <script>
 
-const coreIconsData = {{ site.data.natura11yIcons | jsonify }};
+	const coreIconsData = {{ site.data.natura11yIcons | jsonify }};
+	const natura11yIconGrid = document.getElementById("natura11yIconGrid");
 
-const natura11yIconGridView = document.getElementById("natura11yIconGrid");
+	const displayIcons = (icons) => {
 
-let coreIconsArray = [];
+		const iconGridHTML = icons.map((icon) => {
 
-console.log("Icon JSON", coreIconsData);
+			let name = icon.className;
+			let tags = icon.tags;
 
-const displayIcons = (icons) => {
+			return (`
+			<div class="grid__cell">
 
-	const iconGridHTML = icons.map((icon) => {
+				<a href="{{ site.url }}/icons/${name}">
 
-		let name = icon.className;
-		let tags = icon.tags;
+					<div class="aspect-ratio aspect-ratio--1by1 margin-bottom-1">
+						<div class="aspect-ratio__content display-flex justify-content-center align-items-center border border-radius ">
+							<span class="icon icon-${name}" style="font-size: 2em !important;"></span>   
+						</div>
+					</div>
+			
+					<p class="font-size-sm opacity-70">
+						${name}
+					</p>
 
-		return `
-		<div class="grid__cell">
+				</a>
 
-			 <a href="{{ site.url }}/icons/${name}">
+			</div>`);
 
-			<div class="aspect-ratio aspect-ratio--1by1 margin-bottom-1">
-				<div class="aspect-ratio__content display-flex justify-content-center align-items-center border border-radius ">
-					<span class="icon icon-${name}" style="font-size: 2em !important;"></span>   
-				</div>
-			</div>
+		}).join('');
+
+		natura11yIconGrid.innerHTML = iconGridHTML;
+
+	};
+
+	displayIcons(coreIconsData);
+
+	// Search Icons
+
+	const searchBar = document.getElementById('natura11y-icon-search');
+
+	searchBar.addEventListener('keyup', (event) => {
+
+		const searchString = event.target.value.toLowerCase();
 		
-			<p class="font-size-sm">
-				${name}
-			</p>
-			</a>
+		const filteredIcons = coreIconsData.filter((icons) => {
+			return (
+				icons.className.toLowerCase().includes(searchString) ||
+				icons.tags.toString().includes(searchString)
+			);
+		});
 
-		</div>`;
-
-	}).join('');
-
-	natura11yIconGrid.innerHTML = iconGridHTML;
-
-};
-
-displayIcons(coreIconsData);
-
-// Toggle
-
-const searchBar = document.getElementById('natura11y-icon-search');
-
-searchBar.addEventListener('keyup', (event) => {
-
-    const searchString = event.target.value.toLowerCase();
-    
-    const filteredIcons = coreIconsData.filter((iconArray) => {
-        return (
-            iconArray.className.toLowerCase().includes(searchString) ||
-            iconArray.tags.toString().includes(searchString)
-        );
-    });
-
-    displayIcons(filteredIcons);
-});
+		displayIcons(filteredIcons);
+	});
 
 </script>
 
 {% endif %}
-
 
 {% if page.url contains '/docs' %}
 
@@ -141,16 +136,18 @@ searchBar.addEventListener('keyup', (event) => {
 {% endif %}
 
 {% if page.url contains '/docs' or page.url contains '/icons' %}
+
 <script src="{{ site.url }}/dist/js/prism.js"></script>
 
 {% endif %}
 
-<script defer src="{{ site.url }}/dist/js/natura11y_docs.js"></script>
-
-{% include google-translate-scripts.html %}
+<script src="{{ site.url }}/dist/js/natura11y_docs.js"></script>
 
 <script>
-	const figureCaptionList = document.querySelectorAll('figcaption');
+
+	// Code Anchor IDs
+
+const figureCaptionList = document.querySelectorAll('figcaption');
 
 	figureCaptionList.forEach((caption) => {
 		let captionText = caption.innerHTML;
