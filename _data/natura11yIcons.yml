@@ -4,88 +4,102 @@
    className: accessibility
    codePoint: 61697
    tags:
-      - accessibility
-      - person
+      - 'accessibility'
+      - 'person'
 
 -  icon: Arrow Down
    className: arrow-down
    codePoint: 61698
    tags:
-      - arrow
-      - direction
-      - down
+      - 'arrow'
+      - 'direction'
+      - 'down'
 
 -  icon: Arrow Left
    className: arrow-left
    codePoint: 61699
    tags:
-      - arrow
-      - direction
-      - left
+      - 'arrow'
+      - 'direction'
+      - 'left'
 
 -  icon: Arrow Right
    className: arrow-right
    codePoint: 61700
    tags:
-      - arrow
-      - direction
-      - left
+      - 'arrow'
+      - 'direction'
+      - 'left'
 
 -  icon: Arrow Up
    className: arrow-up
    codePoint: 61701
    tags:
-      - arrow
-      - direction
-      - up
+      - 'arrow'
+      - 'direction'
+      - 'up'
 
 -  icon: Bell
    className: bell
    codePoint: 61702
    tags:
-      - notification
-      - alert
+      - 'notification'
+      - 'alert'
 
 -  icon: Calendar
    className: calendar
    codePoint: 61703
    tags:
-      - office
-      - date
+      - 'office'
+      - 'date'
 
 -  icon: Caret Down
    className: caret-down
    codePoint: 61704
    tags:
-      - arrow
-      - down
+      - 'arrow'
+      - 'down'
 
 -  icon: Caret Left
    className: caret-left
    codePoint: 61705
    tags:
-      - arrow
-      - left
+      - 'arrow'
+      - 'left'
 
 -  icon: Caret Right
    className: caret-right
    codePoint: 61706
    tags:
-      - arrow
-      - right
+      - 'arrow'
+      - 'right'
 
 -  icon: Caret Up
    className: caret-up
    codePoint: 61707
    tags:
-      - arrow
-      - up
+      - 'arrow'
+      - 'up'
 
-# - checkbox-checked: 61708
+-  icon: Checkbox Checked
+   className: checkbox-checked
+   codePoint: 61708
+   tags:
+      - 'confirm'
+      - 'yes'
 
-# - checkbox-unchecked: 61709
+-  icon: Checkbox Unchecked
+   className: checkbox-unchecked
+   codePoint: 61709
+   tags:
+      - 'no'
 
-# - chevron-left: 61710
+-  icon: Chevron Left
+   className: chevron-left
+   codePoint: 61710
+   tags:
+      - 'arrow'
+      - 'left'
 
 # - chevron-right: 61711
 
