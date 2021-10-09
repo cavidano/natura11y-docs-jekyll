@@ -101,63 +101,7 @@ const displayIcons = (icons) => {
 
 	}).join('');
 
-	// const iconListHTML = icons.map((iconArray, index) => {
-
-	//     let name = iconArray.properties.name;
-	//     let tags = iconArray.icon.tags;
-
-	//     let htmlSpan = `
-	//         <span class="token tag">
-	//             <span class="token tag"><span class="token punctuation">&lt;</span>span </span>
-	//             <span class="token attr-name">class</span>
-	//             <span class="token attr-value">
-	//                 <span class="token punctuation attr-equals">=</span>
-	//                 <span class="token punctuation">"</span>
-	//                 icon_${name}
-	//                 <span class="token punctuation">" </span>
-	//             </span>
-	//             <span class="token attr-name">aria-hidden</span>
-	//             <span class="token attr-value">
-	//                 <span class="token punctuation attr-equals">=</span>
-	//                 <span class="token punctuation">"</span>
-	//                 true
-	//                 <span class="token punctuation">"</span>
-	//             </span>
-	//             <span class="token punctuation">&gt;</span>
-	//         </span>
-	//         <span class="token tag">
-	//             <span class="token tag">
-	//                 <span class="token punctuation">&lt;/</span>span
-	//             </span>
-	//             <span class="token punctuation">&gt;</span>
-	//         </span>`;
-
-	//     return `           
-	//         <div class="display-flex align-items-stretch theme-dark border-top">
-
-	//             <div class="display-flex width-25 border-right padding-2">
-	//                 <div class="margin-y-auto text-align-center width-100">
-	//                     <span class="icon_${name} display-inline-block" style="font-size: 1.5em !important;"></span>
-	//                 </div>
-	//             </div>
-
-	//             <div class="width-75 padding-3">
-	//                 <p class="font-size-md margin-bottom-1">
-	//                     Class: ${name}
-	//                 </p>
-	//                 <p class="font-size-sm opacity-80 margin-bottom-1">
-	//                     Tags: ${tags.map((cool) => cool.replace(',', '')).join(', ')}</p>
-	//                 <div class="font-size-md">
-	//                     ${htmlSpan.split('\n').map((s) => s.trim()).join('')}
-	//                 </div>
-	//             </div>
-
-	//         </div>`;
-
-	// }).join('');
-
 	natura11yIconGrid.innerHTML = iconGridHTML;
-	// natura11yIconList.innerHTML = iconListHTML;
 
 };
 
@@ -182,7 +126,10 @@ searchBar.addEventListener('keyup', (event) => {
 });
 </script>
 
-{% endif %} {% if page.url contains '/docs' %}
+{% endif %}
+
+
+{% if page.url contains '/docs' %}
 
 <script src="{{ site.url }}/dist/js/display_custom_properties.js"></script>
 
@@ -190,6 +137,9 @@ searchBar.addEventListener('keyup', (event) => {
 
 <script src="{{ site.url }}/dist/js/iframe_height.js"></script>
 
+{% endif %}
+
+{% if page.url contains '/docs' or page.url contains '/icons' %}
 <script src="{{ site.url }}/dist/js/prism.js"></script>
 
 {% endif %}

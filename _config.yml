@@ -103,9 +103,9 @@ plugins:
 
 page_gen:
 - data: 'natura11yIcons'
-  template: 'icon-detail'
+  template: 'icon-single'
   dir: 'icons'
   index_files: true
-  
   name: 'className'
+  title: 'icon'
   

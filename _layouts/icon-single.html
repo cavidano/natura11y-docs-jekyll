@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<div class="container narrow margin-y-4">
+
+    <h1 class="h2">
+        {{ page.title }}
+    </h1>
+
+    <p class="font-size-md">
+        <strong>Tags:</strong> 
+        {% for tag in page.tags %}
+        {% if forloop.last == true %}{{ tag }}{% else %}{{ tag }}, {% endif %}
+        {% endfor %}
+    </p>
+    
+</div>
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+
+                <div class="aspect-ratio aspect-ratio--4by3">
+                    <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
+                        <span class="icon icon-{{ page.className }}" style="font-size: 275px;"></span>
+                    </div>
+                </div>
+    
+            </div>
+
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;span class="icon icon-{{ page.className }}"&gt;&lt;/span&gt;
+            </code>
+        </pre>
+    </div>
+</figure>
+
+
+
+
+
+
+<div class="overflow-hidden">
+    
+</div>

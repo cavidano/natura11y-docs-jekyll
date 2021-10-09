@@ -17,57 +17,7 @@ backdrop_credit_url: "https://unsplash.com/@zmachacek"
 </div>
 <!-- .container -->
 
-<div class="container narrow margin-y-4">
-    <h3 class="h5">
-        Cool Data
-    </h3>
-    
-    <ul>
-        {% for icon in site.data.natura11yIcons %}
-        <li>
-            <a href="{{ site.url }}/icons/{{ icon.class-name }}">
-            {{ icon.icon }}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
-<!-- .container -->
-
-<div class="container narrow margin-y-4">
-    <h3 class="h5">
-        Icon Data
-    </h3>
-    
-    <ul>
-        {% for icon in site.data.iconFont.icons %}
-        {% assign iconName = icon.properties.name %}
-        <li>
-            <a href="#1">
-            {{ iconName }}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
-<!-- .container -->
-
 <div class="medium margin-y-5">
-
-    <div class="container">
-        <ul class="tabs-nav tabs-nav--horizontal">
-            <li>
-                <a class="display-block" href="{{ site.url }}/icons/" aria-current="page">
-                    Icons
-                </a>
-            </li>
-            <li>
-                <a class="display-block" href="{{ site.url }}/icons/usage">
-                    Usage
-                </a>
-            </li>
-        </ul>
-    </div>
 
     <div class="tabs container padding-y-4" role="tablist">
 
