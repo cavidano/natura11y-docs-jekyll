@@ -4,207 +4,457 @@
    className: accessibility
    codePoint: 61697
    tags:
-      - 'accessibility'
-      - 'person'
+      - accessibility
+      - person
 
 -  icon: Arrow Down
    className: arrow-down
    codePoint: 61698
    tags:
-      - 'arrow'
-      - 'direction'
-      - 'down'
+      - arrow
+      - direction
+      - down
 
 -  icon: Arrow Left
    className: arrow-left
    codePoint: 61699
    tags:
-      - 'arrow'
-      - 'direction'
-      - 'left'
+      - arrow
+      - direction
+      - left
 
 -  icon: Arrow Right
    className: arrow-right
    codePoint: 61700
    tags:
-      - 'arrow'
-      - 'direction'
-      - 'left'
+      - arrow
+      - direction
+      - left
 
 -  icon: Arrow Up
    className: arrow-up
    codePoint: 61701
    tags:
-      - 'arrow'
-      - 'direction'
-      - 'up'
+      - arrow
+      - direction
+      - up
 
 -  icon: Bell
    className: bell
    codePoint: 61702
    tags:
-      - 'notification'
-      - 'alert'
+      - alert
+      - notification
+      - notify
 
 -  icon: Calendar
    className: calendar
    codePoint: 61703
    tags:
-      - 'office'
-      - 'date'
+      - date
+      - office
 
 -  icon: Caret Down
    className: caret-down
    codePoint: 61704
    tags:
-      - 'arrow'
-      - 'down'
+      - arrow
+      - down
 
 -  icon: Caret Left
    className: caret-left
    codePoint: 61705
    tags:
-      - 'arrow'
-      - 'left'
+      - arrow
+      - left
 
 -  icon: Caret Right
    className: caret-right
    codePoint: 61706
    tags:
-      - 'arrow'
-      - 'right'
+      - arrow
+      - right
 
 -  icon: Caret Up
    className: caret-up
    codePoint: 61707
    tags:
-      - 'arrow'
-      - 'up'
+      - arrow
+      - up
 
 -  icon: Checkbox Checked
    className: checkbox-checked
    codePoint: 61708
    tags:
-      - 'confirm'
-      - 'yes'
+      - confirm
+      - /yes
 
 -  icon: Checkbox Unchecked
    className: checkbox-unchecked
    codePoint: 61709
    tags:
-      - 'no'
+      - no
 
 -  icon: Chevron Left
    className: chevron-left
    codePoint: 61710
    tags:
-      - 'arrow'
-      - 'left'
+      - arrow
+      - left
 
-# - chevron-right: 61711
+-  icon: Chevron Right
+   className: chevron-right
+   codePoint: 61711
+   tags:
+      - arrow
+      - right
 
-# - chevron-up: 61712
+-  icon: Chevron Up
+   className: chevron-up
+   codePoint: 61712
+   tags:
+      - arrow
+      - up
 
-# - close: 61713
+-  icon: Confirm
+   className: confirm
+   codePoint: 61714
+   tags:
+      - success
 
-# - confirm: 61714
+-  icon: Delete
+   className: delete
+   codePoint: 61715
+   tags:
+      - trash
+      - remove
 
-# - delete: 61715
+-  icon: Disabled
+   className: disabled
+   codePoint: 61716
+   tags:
+      - trash
+      - remove
 
-# - disabled: 61716
+-  icon: Double Chevron Down
+   className: double-chevron-down
+   codePoint: 61717
+   tags:
+      - arrow
+      - down
 
-# - double-chevron-down: 61717
+-  icon: Double Chevron Left
+   className: double-chevron-left
+   codePoint: 61718
+   tags:
+      - arrow
+      - left
 
-# - double-chevron-left: 61718
+-  icon: Double Chevron Right
+   className: double-chevron-right
+   codePoint: 61719
+   tags:
+      - arrow
+      - right
 
-# - double-chevron-right: 61719
+-  icon: Double Chevron Up
+   className: double-chevron-up
+   codePoint: 61720
+   tags:
+      - arrow
+      - up
 
-# - double-chevron-up: 61720
+-  icon: Edit
+   className: edit
+   codePoint: 61721
+   tags:
+      - pencil
 
-# - edit: 61721
+-  icon: Facebook
+   className: facebook
+   codePoint: 61722
+   tags:
+      - social
+      - brand
+      - logo
 
-# - facebook: 61722
+-  icon: Github
+   className: github
+   codePoint: 61723
+   tags:
+      - social
+      - brand
+      - logo
 
-# - github: 61723
+-  icon: Grid
+   className: grid
+   codePoint: 61724
+   tags:
+      - view
 
-# - grid: 61724
+-  icon: Hashtag
+   className: hashtag
+   codePoint: 61725
+   tags:
+      - social
+      - pound
 
-# - hashtag: 61725
+-  icon: Heart
+   className: heart
+   codePoint: 61726
+   tags:
+      - love
 
-# - heart: 61726
+-  icon: Home
+   className: home
+   codePoint: 61727
+   tags:
+      - love
 
-# - home: 61727
+-  icon: Info
+   className: info
+   codePoint: 61728
+   tags:
+      - more
 
-# - info: 61728
+-  icon: Instagram
+   className: instagram
+   codePoint: 61729
+   tags:
+      - brand
+      - logo
+      - social
 
-# - instagram: 61729
+-  icon: Language
+   className: language
+   codePoint: 61730
+   tags:
+      - translate
 
-# - language: 61730
+-  icon: Linkedin
+   className: linkedin
+   codePoint: 61731
+   tags:
+      - translate
 
-# - linkedin: 61731
+-  icon: List
+   className: list
+   codePoint: 61732
+   tags:
+      - view
 
-# - list: 61732
+-  icon: Loading
+   className: loading
+   codePoint: 61733
+   tags:
+      - spinner
 
-# - loading: 61733
+-  icon: Loading
+   className: loading
+   codePoint: 61733
+   tags:
+      - spinner
 
-# - mail: 61734
+-  icon: Mail
+   className: mail
+   codePoint: 61734
+   tags:
+      - envelope
 
-# - map-pin: 61735
+-  icon: Map Pin
+   className: mail
+   codePoint: 61735
+   tags:
+      - location
 
-# - menu: 61736
+-  icon: Menu
+   className: menu
+   codePoint: 61736
+   tags:
+      - bars
+      - hamburger
 
-# - minus: 61737
+-  icon: Minus
+   className: minus
+   codePoint: 61737
+   tags:
+      - location
 
-# - mobile: 61738
+-  icon: Mobile
+   className: mobile
+   codePoint: 61738
+   tags:
+      - phone
 
-# - more-horizontal: 61739
+-  icon: More (Horizontal)
+   className: more-horizontal
+   codePoint: 61739
+   tags:
+      - dots
+      - menu
 
-# - more-vertical: 61740
+-  icon: More (Vertical)
+   className: more-vertical
+   codePoint: 61740
+   tags:
+      - dots
+      - menu
 
-# - npm: 61741
+-  icon: NPM
+   className: npm
+   codePoint: 61741
+   tags:
+      - brand
+      - logo
 
-# - page-end: 61742
+-  icon: Page End
+   className: page-end
+   codePoint: 61742
+   tags:
+      - pagination
+      - jump
 
-# - page-start: 61743
+-  icon: Page Start
+   className: page-start
+   codePoint: 61743
+   tags:
+      - pagination
+      - jump
 
-# - parking: 61744
+-  icon: Parking
+   className: parking
+   codePoint: 61744
+   tags:
+      - transportation
 
-# - people: 61745
+-  icon: People
+   className: people
+   codePoint: 61745
+   tags:
+      - human
+      - team
 
-# - person: 61746
+-  icon: Person
+   className: person
+   codePoint: 61746
+   tags:
+      - human
+      - individual
 
-# - plus: 61747
+-  icon: Plus
+   className: plus
+   codePoint: 61747
+   tags:
+      - add
 
-# - print: 61748
+-  icon: Print
+   className: print
+   codePoint: 61748
+   tags:
+      - printer
 
-# - question-mark: 61749
+-  icon: Question Mark
+   className: question-mark
+   codePoint: 61749
+   tags:
+      - info
 
-# - radio-checked: 61750
+-  icon: Radio Checked
+   className: radio-checked
+   codePoint: 61750
+   tags:
+      - selected
+      - yes
 
-# - radio-unchecked: 61751
+-  icon: Radio Unchecked
+   className: radio-unchecked
+   codePoint: 61751
+   tags:
+      - selected
+      - yes
 
-# - search: 61752
+-  icon: Search
+   className: search
+   codePoint: 61752
+   tags:
+      - find
+      - magnifying glass
 
-# - settings: 61753
+-  icon: Settings
+   className: settings
+   codePoint: 61753
+   tags:
+      - gear
 
-# - shopping-cart: 61754
+-  icon: Shopping Cart
+   className: shopping-cart
+   codePoint: 61754
+   tags:
+      - commerce
+      - buy
 
-# - shrink: 61755
+-  icon: Shrink
+   className: shrink
+   codePoint: 61755
+   tags:
+      - close
+      - return
 
-# - star-fill-half: 61756
+-  icon: Star (fill half)
+   className: star-fill-half
+   codePoint: 61756
+   tags:
+      - rate
+      - favor
 
-# - star-fill: 61757
+-  icon: Star (fill)
+   className: star-fill
+   codePoint: 61757
+   tags:
+      - rate
+      - favor
 
-# - switch: 61758
+-  icon: Switch
+   className: switch
+   codePoint: 61758
+   tags:
+      - toggle
+      - check
+      - confirm
 
 # - switch1: 61759
 
-# - twitter: 61760
+-  icon: Twitter
+   className: twitter
+   codePoint: 61760
+   tags:
+      - brand
+      - social
+      - logo
 
-# - upload: 61761
+-  icon: Upload
+   className: upload
+   codePoint: 61761
+   tags:
+      - file
+      - send
 
-# - warn: 61762
+-  icon: Warn
+   className: warn
+   codePoint: 61762
+   tags:
+      - error
 
-# - wheelchair: 61763
+-  icon: Wheelchair
+   className: wheelchair
+   codePoint: 61763
+   tags:
+      - disability
 
-# - youtube: 61764
+-  icon: YouTube
+   className: youtube
+   codePoint: 61764
+   tags:
+      - brand
+      - social
+      - logo
