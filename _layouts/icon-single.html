@@ -17,34 +17,32 @@ layout: default
     
 </div>
 
-<figure class="container medium margin-y-4">
-    <div class="example">
-        <div class="box-shadow-1" {{ site.custom-properties-example }}>
-
-            <div class="container narrow">
-
-                <div class="aspect-ratio aspect-ratio--4by3">
-                    <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
-                        <span class="icon icon-{{ page.className }}" style="font-size: 275px;"></span>
-                    </div>
+<div class="container medium">
+    <div class="icon-preview medium">
+        <div class="one box-shadow-1">
+            <div class="aspect-ratio aspect-ratio--4by3">
+                <div class="aspect-ratio__content flex-row justify-content-center align-items-center">
+                    <span class="icon icon-{{ page.className }}"></span>
                 </div>
-    
             </div>
-
         </div>
+        <div class="two theme-dark flex-row justify-content-center align-items-center">
+            <span class="icon icon-{{ page.className }}"></span>
+        </div>
+        <div class="three theme-primary flex-row justify-content-center align-items-center">
+            <span class="icon icon-{{ page.className }}"></span>
+        </div>
+        <div class="four subtle-fill text-color-link flex-row justify-content-center align-items-center">
+            <span class="icon icon-{{ page.className }}"></span>
+        </div>
+    </div>
+</div>
+<figure class="container medium margin-y-2">
         <pre>
             <code class="language-html">
                 &lt;span class="icon icon-{{ page.className }}"&gt;&lt;/span&gt;
+
+                &lt;i class="icon icon-{{ page.className }}"&gt;&lt;/i&gt;
             </code>
         </pre>
-    </div>
 </figure>
-
-
-
-
-
-
-<div class="overflow-hidden">
-    
-</div>

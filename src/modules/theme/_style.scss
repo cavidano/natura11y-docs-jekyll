@@ -287,3 +287,79 @@ kbd {
     padding: 2px 4px;
     white-space: nowrap;
 }
+
+
+.icon-preview {
+    display: grid;
+    gap: var(--spacer-2);
+
+    .one {
+        grid-area: one;
+
+        .icon {
+            font-size: 8em;
+        }
+    }
+    
+    .icon {
+        font-size: 2em;
+    }
+    
+    .two { 
+        grid-area: two;
+    }
+    
+    .three { 
+        grid-area: three;
+    }
+    
+    .four { 
+        grid-area: four;
+    }
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr ;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "one one one"
+      "two three four";
+
+    @include breakpoints.breakpoints-up(md) {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "one one two"
+            "one one three"
+            "one one four";
+
+        .one {
+            grid-area: one;
+    
+            .icon {
+                font-size: 14em;
+            }
+    
+        }
+
+        .two { 
+            .icon {
+                font-size: 6em;
+            }
+        }
+    
+        .three { 
+            .icon {
+                font-size: 4em;
+            }
+        }
+    
+        .four {
+            .icon {
+                font-size: 2em;
+            }
+        }
+    }
+
+  }
+  
