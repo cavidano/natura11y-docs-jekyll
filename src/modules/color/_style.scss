@@ -129,7 +129,6 @@ $theme-colors: (
 // C. Color Utilities 
 //////////////////////////////////////////////
 
-
 body:not([class*="theme-"]),
 body > footer:not([class*="theme-"]),
 [class*="theme-"],
@@ -153,7 +152,7 @@ body > footer:not([class*="theme-"]),
     .td-content > a,
     p > a:not([class*="text-"]),
     .text-color-link {
-        color: var(--link-color) !important;
+        color: var(--link-color);
     }
 
     select option,

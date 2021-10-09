@@ -6,6 +6,8 @@
    tags:
       - accessibility
       - person
+   svg: >
+   
 
 -  icon: Arrow Down
    className: arrow-down
