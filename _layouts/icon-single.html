@@ -3,19 +3,17 @@ layout: default
 ---
 
 <div class="container medium text-align-center margin-y-4">
-
     <h1 class="font-weight-normal">
         {{ page.title }}
     </h1>
-
     <p class="font-size-md">
         <strong>Tags:</strong> 
         {% for tag in page.tags %}
         {% if forloop.last == true %}{{ tag }}{% else %}{{ tag }}, {% endif %}
         {% endfor %}
     </p>
-    
 </div>
+<!-- .container -->
 
 <figure class="container medium margin-y-4">
     <div class="example">
@@ -38,7 +36,7 @@ layout: default
                 </svg>
             </div>
             <div class="four subtle-fill text-color-link flex-row justify-content-center align-items-center">
-                <svg width="100%" height="3em" viewBox="0 0 48 48">
+                <svg width="100%" height="3em" viewBox="0 0 48 48" {% if page.className == 'loading' %} class="icon-loading rotate" {% endif %}>
                     {{ page.svg }}
                 </svg>
             </div>
@@ -51,6 +49,11 @@ layout: default
                 &lt;span class="icon icon-{{ page.className }}"&gt;&lt;/span&gt;
 
                 &lt;i class="icon icon-{{ page.className }}"&gt;&lt;/i&gt;
+                {% if page.className == 'loading' %}
+                &lt;!-- The loading icon accepts an optional rotate modifier --&gt;
+
+                &lt;span class="icon icon-{{ page.className }} icon--rotate"&gt;&lt;/span&gt;
+                {% endif %}
             </code>
         </pre>
     </div>
@@ -64,7 +67,7 @@ layout: default
 <div class="container narrow text-align-center margin-y-4">
     <div class="margin-y-3">
         <a
-            class="button button--has-icon button--outline"
+            class="button button--has-icon button--outline font-size-md"
             href="{{ site.url }}/icons/svg/{{ page.className }}.svg"
             download>
             <span class="icon icon-upload" style="transform: scaleY(-1)"></span>

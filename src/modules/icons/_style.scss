@@ -43,7 +43,6 @@ In this file:
   }
 }
 
-
 //////////////////////////////////////////////
 // C. Icon Font Utility Class
 //////////////////////////////////////////////
@@ -57,11 +56,10 @@ In this file:
 //////////////////////////////////////////////
 
 .icon-loading.rotate {
-  display: inline-block;
-  animation: rotate-s-loader 1s linear infinite;
+  animation: rotate360 1s linear infinite;
 }
 
-@keyframes rotate-s-loader {
+@keyframes rotate360 {
   from {
     transform: rotate(0);
   }
