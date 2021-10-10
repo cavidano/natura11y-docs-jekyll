@@ -322,7 +322,7 @@
       - envelope
 
 -  icon: Map Pin
-   className: mail
+   className: map-pin
    codePoint: 61736
    tags:
       - location
@@ -474,15 +474,21 @@
       - rate
       - favor
 
--  icon: Switch
-   className: switch
+-  icon: Switch Off 
+   className: switch-off
+   codePoint: 61759
+   tags:
+      - toggle
+      - check
+      - off
+
+-  icon: Switch On 
+   className: switch-on
    codePoint: 61760
    tags:
       - toggle
       - check
-      - confirm
-
-# - switch1: 61759
+      - off
 
 -  icon: Twitter
    className: twitter
