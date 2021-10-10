@@ -124,9 +124,18 @@
    svg: >
       <path d="M36 12v24h-24v-24h24zM36 8h-24c-2.209 0-4 1.791-4 4v0 24c0 2.209 1.791 4 4 4v0h24c2.209 0 4-1.791 4-4v0-24c0-2.209-1.791-4-4-4v0z"></path>
 
+-  icon: Chevron Down
+   className: chevron-down
+   codePoint: 61710
+   tags:
+      - arrow
+      - down
+   svg: >
+      <path d="M6.589 17.416l15.995 15.995c0.362 0.364 0.863 0.589 1.416 0.589s1.053-0.224 1.415-0.587l15.998-15.998c0.375-0.364 0.608-0.873 0.608-1.436 0-1.105-0.895-2-2-2-0.563 0-1.071 0.232-1.435 0.607l-14.586 14.586-14.586-14.586c-0.365-0.379-0.876-0.615-1.442-0.615-1.105 0-2 0.895-2 2 0 0.568 0.237 1.080 0.616 1.444l0.001 0.001z"></path>
+
 -  icon: Chevron Left
    className: chevron-left
-   codePoint: 61710
+   codePoint: 61711
    tags:
       - arrow
       - left
@@ -135,7 +144,7 @@
 
 -  icon: Chevron Right
    className: chevron-right
-   codePoint: 61711
+   codePoint: 61712
    tags:
       - arrow
       - right
@@ -144,7 +153,7 @@
 
 -  icon: Chevron Up
    className: chevron-up
-   codePoint: 61712
+   codePoint: 61713
    tags:
       - arrow
       - up
@@ -153,9 +162,18 @@
    svg: >
       <path d="M41.411 30.584l-15.995-15.995c-0.362-0.364-0.863-0.589-1.416-0.589s-1.053 0.224-1.415 0.587l-15.998 15.998c-0.375 0.364-0.608 0.873-0.608 1.436 0 1.105 0.895 2 2 2 0.563 0 1.071-0.232 1.435-0.607l14.586-14.586 14.586 14.586c0.364 0.379 0.876 0.615 1.442 0.615 1.105 0 2-0.895 2-2 0-0.568-0.237-1.080-0.616-1.444l-0.001-0.001z"></path>
 
+-  icon: Close
+   className: close
+   codePoint: 61714
+   tags:
+      - exit
+      - times
+   svg: >
+      <path d="M43.413 40.585l-16.585-16.585 16.586-16.586c0.379-0.365 0.614-0.876 0.614-1.442 0-1.105-0.895-2-2-2-0.568 0-1.080 0.237-1.444 0.617l-16.585 16.584-16.585-16.585c-0.364-0.375-0.873-0.608-1.436-0.608-1.105 0-2 0.895-2 2 0 0.563 0.232 1.071 0.607 1.435l16.586 16.586-16.583 16.583c-0.381 0.365-0.617 0.877-0.617 1.445 0 1.105 0.895 2 2 2 0.566 0 1.078-0.235 1.442-0.614l0.001-0.001 16.586-16.586 16.585 16.585c0.364 0.374 0.872 0.607 1.435 0.607 1.105 0 2-0.895 2-2 0-0.563-0.233-1.072-0.608-1.436l-0.001-0z"></path>
+
 -  icon: Confirm
    className: confirm
-   codePoint: 61714
+   codePoint: 61715
    tags:
       - success
    svg: >
@@ -163,55 +181,58 @@
 
 -  icon: Delete
    className: delete
-   codePoint: 61715
+   codePoint: 61716
    tags:
       - trash
       - remove
+   svg: >
+      <path d="M11 40c0 2.209 1.791 4 4 4v0h18c2.209 0 4-1.791 4-4v0-28h-26z"></path>
+      <path d="M39 6h-8l-2-2h-10l-2 2h-8c-1.105 0-2 0.895-2 2s0.895 2 2 2v0h30c1.105 0 2-0.895 2-2s-0.895-2-2-2v0z"></path>
 
 -  icon: Disabled
    className: disabled
-   codePoint: 61716
+   codePoint: 61717
    tags:
       - trash
       - remove
 
 -  icon: Double Chevron Down
    className: double-chevron-down
-   codePoint: 61717
+   codePoint: 61718
    tags:
       - arrow
       - down
 
 -  icon: Double Chevron Left
    className: double-chevron-left
-   codePoint: 61718
+   codePoint: 61719
    tags:
       - arrow
       - left
 
 -  icon: Double Chevron Right
    className: double-chevron-right
-   codePoint: 61719
+   codePoint: 61720
    tags:
       - arrow
       - right
 
 -  icon: Double Chevron Up
    className: double-chevron-up
-   codePoint: 61720
+   codePoint: 61721
    tags:
       - arrow
       - up
 
 -  icon: Edit
    className: edit
-   codePoint: 61721
+   codePoint: 61722
    tags:
       - pencil
 
 -  icon: Facebook
    className: facebook
-   codePoint: 61722
+   codePoint: 61723
    tags:
       - social
       - brand
@@ -219,7 +240,7 @@
 
 -  icon: Github
    className: github
-   codePoint: 61723
+   codePoint: 61724
    tags:
       - social
       - brand
@@ -227,38 +248,38 @@
 
 -  icon: Grid
    className: grid
-   codePoint: 61724
+   codePoint: 61725
    tags:
       - view
 
 -  icon: Hashtag
    className: hashtag
-   codePoint: 61725
+   codePoint: 61726
    tags:
       - social
       - pound
 
 -  icon: Heart
    className: heart
-   codePoint: 61726
+   codePoint: 61727
    tags:
       - love
 
 -  icon: Home
    className: home
-   codePoint: 61727
+   codePoint: 61728
    tags:
       - love
 
 -  icon: Info
    className: info
-   codePoint: 61728
+   codePoint: 61729
    tags:
       - more
 
 -  icon: Instagram
    className: instagram
-   codePoint: 61729
+   codePoint: 61730
    tags:
       - brand
       - logo
@@ -266,19 +287,19 @@
 
 -  icon: Language
    className: language
-   codePoint: 61730
+   codePoint: 61731
    tags:
       - translate
 
 -  icon: Linkedin
    className: linkedin
-   codePoint: 61731
+   codePoint: 61732
    tags:
       - translate
 
 -  icon: List
    className: list
-   codePoint: 61732
+   codePoint: 61733
    tags:
       - view
 
@@ -290,172 +311,172 @@
 
 -  icon: Loading
    className: loading
-   codePoint: 61733
+   codePoint: 61734
    tags:
       - spinner
 
 -  icon: Mail
    className: mail
-   codePoint: 61734
+   codePoint: 61735
    tags:
       - envelope
 
 -  icon: Map Pin
    className: mail
-   codePoint: 61735
+   codePoint: 61736
    tags:
       - location
 
 -  icon: Menu
    className: menu
-   codePoint: 61736
+   codePoint: 61737
    tags:
       - bars
       - hamburger
 
 -  icon: Minus
    className: minus
-   codePoint: 61737
+   codePoint: 61738
    tags:
       - location
 
 -  icon: Mobile
    className: mobile
-   codePoint: 61738
+   codePoint: 61739
    tags:
       - phone
 
 -  icon: More (Horizontal)
    className: more-horizontal
-   codePoint: 61739
+   codePoint: 61740
    tags:
       - dots
       - menu
 
 -  icon: More (Vertical)
    className: more-vertical
-   codePoint: 61740
+   codePoint: 61741
    tags:
       - dots
       - menu
 
 -  icon: NPM
    className: npm
-   codePoint: 61741
+   codePoint: 61742
    tags:
       - brand
       - logo
 
 -  icon: Page End
    className: page-end
-   codePoint: 61742
+   codePoint: 61743
    tags:
       - pagination
       - jump
 
 -  icon: Page Start
    className: page-start
-   codePoint: 61743
+   codePoint: 61744
    tags:
       - pagination
       - jump
 
 -  icon: Parking
    className: parking
-   codePoint: 61744
+   codePoint: 61745
    tags:
       - transportation
 
 -  icon: People
    className: people
-   codePoint: 61745
+   codePoint: 61746
    tags:
       - human
       - team
 
 -  icon: Person
    className: person
-   codePoint: 61746
+   codePoint: 61747
    tags:
       - human
       - individual
 
 -  icon: Plus
    className: plus
-   codePoint: 61747
+   codePoint: 61748
    tags:
       - add
 
 -  icon: Print
    className: print
-   codePoint: 61748
+   codePoint: 61749
    tags:
       - printer
 
 -  icon: Question Mark
    className: question-mark
-   codePoint: 61749
+   codePoint: 61750
    tags:
       - info
 
 -  icon: Radio Checked
    className: radio-checked
-   codePoint: 61750
+   codePoint: 61751
    tags:
       - selected
       - yes
 
 -  icon: Radio Unchecked
    className: radio-unchecked
-   codePoint: 61751
+   codePoint: 61752
    tags:
       - selected
       - yes
 
 -  icon: Search
    className: search
-   codePoint: 61752
+   codePoint: 61753
    tags:
       - find
       - magnifying glass
 
 -  icon: Settings
    className: settings
-   codePoint: 61753
+   codePoint: 61754
    tags:
       - gear
 
 -  icon: Shopping Cart
    className: shopping-cart
-   codePoint: 61754
+   codePoint: 61755
    tags:
       - commerce
       - buy
 
 -  icon: Shrink
    className: shrink
-   codePoint: 61755
+   codePoint: 61756
    tags:
       - close
       - return
 
 -  icon: Star (fill half)
    className: star-fill-half
-   codePoint: 61756
+   codePoint: 61757
    tags:
       - rate
       - favor
 
 -  icon: Star (fill)
    className: star-fill
-   codePoint: 61757
+   codePoint: 61758
    tags:
       - rate
       - favor
 
 -  icon: Switch
    className: switch
-   codePoint: 61758
+   codePoint: 61760
    tags:
       - toggle
       - check
@@ -465,7 +486,7 @@
 
 -  icon: Twitter
    className: twitter
-   codePoint: 61760
+   codePoint: 61761
    tags:
       - brand
       - social
@@ -473,26 +494,27 @@
 
 -  icon: Upload
    className: upload
-   codePoint: 61761
+   codePoint: 61762
    tags:
       - file
       - send
 
 -  icon: Warn
    className: warn
-   codePoint: 61762
+   codePoint: 61763
    tags:
       - error
 
 -  icon: Wheelchair
    className: wheelchair
-   codePoint: 61763
+   codePoint: 61764
    tags:
+      - accessibility
       - disability
 
 -  icon: YouTube
    className: youtube
-   codePoint: 61764
+   codePoint: 61765
    tags:
       - brand
       - social
