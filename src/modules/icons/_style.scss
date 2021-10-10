@@ -27,10 +27,11 @@ In this file:
   @extend %icon-font-vars;
   
   font-size: var(--icon-size);
-  vertical-align: baseline;
 
-  display: flex;
-  
+  display: inline-flex;
+
+  vertical-align: middle;
+
   position: relative;
   pointer-events: none;
 
@@ -41,6 +42,7 @@ In this file:
     }
   }
 }
+
 
 //////////////////////////////////////////////
 // C. Icon Font Utility Class

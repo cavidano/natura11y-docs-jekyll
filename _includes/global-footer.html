@@ -75,15 +75,22 @@
 
 			let name = icon.className;
 			let tags = icon.tags;
+			let svg = icon.svg
 
 			return (`
 			<div class="grid__cell">
 
+			
+
 				<a href="{{ site.url }}/icons/${name}">
 
 					<div class="aspect-ratio aspect-ratio--1by1 margin-bottom-1">
-						<div class="aspect-ratio__content display-flex justify-content-center align-items-center border border-radius ">
-							<span class="icon icon-${name}" style="font-size: 2em !important;"></span>   
+						<div class="aspect-ratio__content display-flex justify-content-center align-items-center border border-radius">
+							<svg width="100%" height="2.5em" fill="currentColor" viewBox="0 0 48 48">
+								${svg}
+							</svg>
+
+						
 						</div>
 					</div>
 			
