@@ -293,6 +293,10 @@ kbd {
     display: grid;
     gap: var(--spacer-2);
 
+    svg {
+        fill: currentColor;
+    }
+
     .one {
         grid-area: one;
 
