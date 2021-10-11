@@ -16,17 +16,31 @@
 
 {% for category in site.data.natura11yCustomProperties %}
 
-<p>{{category.type}}</p>
+{% if category.type == page.title %}
 
-{% endfor %}
+{% assign scope = category.scope %}
+{% assign customProperties = category.customProperties %}
 
 <figure class="container medium margin-y-4">
 	<div
 		class="example"
 		id="related-custom-properties"
-		data-title="{{ include.anchor | capitalize }}"></div>
-
+		data-title="{{ include.anchor | capitalize }}">
+		<pre>
+			<code class="language-css">
+				{{ scope }} {
+					{% for property in customProperties %}
+						--{{ property.name }}: {{ property.value }};
+					{% endfor %}
+				}
+			</code>
+		</pre>
+	</div>
     <figcaption>
         <p>Figure {{ figure_number }}</p>
     </figcaption>
 </figure>
+
+{% endif %}
+
+{% endfor %}
