@@ -15,29 +15,6 @@
 
  <div class="sticky-top collapse display-block--lg" id="docs-sidebar">
 
-    <form class="container narrow margin-y-2 display-none" autocomplete="off">
-
-        <div class="form-entry font-size-md">
-
-            <div class="form-entry__field">
-
-                <label class="form-entry__field__label screen-reader-only" for="search-example">
-                    Filter Docs
-                </label>
-                
-                <span class="form-entry__field__input">
-                    <span class="icon icon-search opacity-40" aria-hidden="true"></span>
-                    <input type="text" name="search-example" id="filter-docs-input" placeholder="Filter Docs">
-                </span>
-
-            </div>
-        
-        </div>
-
-    </form>
-    
-    <hr class="margin-y-2 margin-x-n2--lg display-none">
-
     <div class="container narrow margin-y-2 font-size-md">
 
         <ul class="nav font-size-md">
@@ -45,7 +22,7 @@
             {% for doc in site.docs-introduction %}
             
             <li data-title="{{ doc.title }}">
-                <a href="{{site.baseurl}}/docs/{{doc.slug}}" {% if page.url contains {{doc.slug}} %} aria-current="page" {% endif %}>
+                <a href="{{ site.url }}/docs/{{ doc.slug }}" {% if page.url contains {{ doc.slug }} %} aria-current="page" {% endif %}>
                     {{ doc.title }}
                 </a>
             </li>
@@ -61,7 +38,7 @@
             {% for doc in site.docs-a-z %}
 
             <li data-title="{{ doc.title }}">
-                <a href="{{site.baseurl}}/docs/{{doc.slug}}" {% if page.url contains {{doc.slug}} %} aria-current="page" {% endif %}>
+                <a href="{{ site.url }}/docs/{{ doc.slug }}" {% if page.url contains {{ doc.slug }} %} aria-current="page" {% endif %}>
                     {{ doc.title }}
                 </a>
             </li>
