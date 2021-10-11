@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
 
-    const copyButtonText = "Copy";
-    const copyButtonActionText = "Copied!";
+    const copyButtonText = 'Copy';
+    const copyButtonActionText = 'Copied!';
 
     const initClipboard = () => {
 
@@ -14,8 +14,8 @@ window.addEventListener('load', () => {
 
                 event.preventDefault();
 
-                let currentTable = event.target.closest("table");
-                let currentTableRowsList = currentTable.querySelectorAll("tbody > tr");
+                let currentTable = event.target.closest('table');
+                let currentTableRowsList = currentTable.querySelectorAll('tbody > tr');
                 let currentTableSingleButtonList = currentTable.querySelectorAll('[data-clipboard="single"]');
 
                 currentTableSingleButtonList.forEach((singleButton) => {
@@ -115,34 +115,5 @@ window.addEventListener('load', () => {
 
     };
 
-    // const displayRelatedProperties = (customProperties) => {
-
-    //     const customProperyHTML = customProperties.map((property) => {
-
-    //         // let type = property.type;
-    //         let properties = property.customProperties;
-    //         let scope = property.scope;
-
-    //         let cpRows = properties.map((property) => {
-    //             return `    --${property.name}: ${property.value};`;
-    //         }).join('\n');
-
-    //         return (`
-    //             <pre>
-    //                 <code class="language-css">
-    //                     ${scope} {\n${cpRows}\n}
-    //                 </code>
-    //             </pre>
-    //         `);
-
-    //     }).join(''); 
-
-    //     relatedPropertiesContainer.innerHTML = customProperyHTML;
-
-    //     Prism.highlightElement(relatedPropertiesContainer.querySelector("code"))
-
-    // };
-
     initClipboard();
-    
 });

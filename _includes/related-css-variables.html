@@ -28,11 +28,11 @@
 		data-title="{{ include.anchor | capitalize }}">
 		<pre>
 			<code class="language-css">
-				{{ scope }} {
-					{% for property in customProperties %}
-						--{{ property.name }}: {{ property.value }};
-					{% endfor %}
-				}
+			{{ scope }} {
+				{%- for property in customProperties %}
+				--{{ property.name }}: {{ property.value }};
+				{%- endfor %}
+			}
 			</code>
 		</pre>
 	</div>
@@ -42,5 +42,4 @@
 </figure>
 
 {% endif %}
-
 {% endfor %}
