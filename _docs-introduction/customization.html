@@ -258,6 +258,84 @@ backdrop_credit_url: "https://unsplash.com/@bamin"
 </div>
 <!-- .container -->
 
+
+<div class="container medium margin-y-4" id="all-custom-properties">
+    <div class="table-scroll" role="region">
+        {% include table-scroll-help.html %}
+        
+        {% for category in site.data.natura11yCustomProperties %}
+
+        {% assign title = category.type %}
+        {% assign scope = category.scope %}
+        {% assign customProperties = category.customProperties %}
+
+        <div class="table-scroll__container theme-dark">
+
+            <div class="cp-header box-shadow-1" id="cp_${id}">
+                <span class="cp-header__title">{{ title }}</span>
+                <a class="cp-header__link button button--has-icon" href="{{ site.url }}/docs/${slug}">
+                    <span class="button__text">Docs</span>
+                    <span class="icon icon-arrow-right button__icon"></span>
+                </a>
+            </div>
+
+            <table class="table">
+                <caption class="border-bottom">
+                    <p class="font-size-md">
+                        Variable scope: <code>{{ scope }}</code>
+                    </p>
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            CSS Variable
+                        </th>
+                        <th scope="col">Default Value</th>
+                        <th scope="col">
+                            <button data-clipboard="all">
+                                <span>Copy All</span>
+                            </button>
+                        </th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                {% for property in customProperties %}
+
+                    {% assign name = property.name %}
+                    {% assign value = property.value %}
+                    {% assign description = property.description %}
+
+                    <tr>
+                        <td>
+                            <span data-prop>--{{ name }}</span>
+                        </td>
+                        <td>
+                            <span data-val>{{ value }}</span>
+                        </td>
+                        <td>  
+                            <button data-clipboard="single">
+                                Copy
+                            </button>
+                        </td>
+                        <td>
+                            {{ description }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    
+                </tbody>
+
+            </table>
+            {% endfor %}
+        
+        </div>
+
+    </div>
+</div>
+<!-- .container -->
+
 <div class="container medium margin-y-4" id="all-custom-properties">
     <div class="table-scroll" role="region">
         {% include table-scroll-help.html %}

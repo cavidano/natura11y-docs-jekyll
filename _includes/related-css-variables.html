@@ -14,6 +14,12 @@
 </div>
 <!-- .container -->
 
+{% for category in site.data.natura11yCustomProperties %}
+
+<p>{{category.type}}</p>
+
+{% endfor %}
+
 <figure class="container medium margin-y-4">
 	<div
 		class="example"

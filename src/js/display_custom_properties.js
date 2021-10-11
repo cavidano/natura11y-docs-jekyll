@@ -1,34 +1,34 @@
 window.addEventListener('DOMContentLoaded', () => {
     
-    const customPropertiesData = "/lib/json/root-custom-properties.json";
+    // const customPropertiesData = "/lib/json/root-custom-properties.json";
 
-    const allPropertiesContainer = document.getElementById("all-custom-properties");
+    // const allPropertiesContainer = document.getElementById("all-custom-properties");
     const relatedPropertiesContainer = document.getElementById("related-custom-properties");
 
     const copyButtonText = "Copy";
     const copyButtonActionText = "Copied!";
 
-    const loadCustomProperties = async () => {
-        try {
-            const response = await fetch(customPropertiesData);
-            const customPropertyData = await response.json();
+    // const loadCustomProperties = async () => {
+    //     try {
+    //         const response = await fetch(customPropertiesData);
+    //         const customPropertyData = await response.json();
 
-            if(allPropertiesContainer){
-                displayAllProperties(customPropertyData);
-                checkAchor();
-                initClipboard();
-            }
+    //         if(allPropertiesContainer){
+    //             // displayAllProperties(customPropertyData);
+    //             checkAchor();
+    //             initClipboard();
+    //         }
             
-            if(relatedPropertiesContainer){
-                let myFilter = relatedPropertiesContainer.getAttribute('data-title').toString();
-                let relatedProperties = customPropertyData.filter(prop => prop.type === myFilter);
-                displayRelatedProperties(relatedProperties);
-            }
+    //         if(relatedPropertiesContainer){
+    //             let myFilter = relatedPropertiesContainer.getAttribute('data-title').toString();
+    //             let relatedProperties = customPropertyData.filter(prop => prop.type === myFilter);
+    //             displayRelatedProperties(relatedProperties);
+    //         }
         
-        } catch (err) {
-            console.error(err);
-        }
-    };
+    //     } catch (err) {
+    //         console.error(err);
+    //     }
+    // };
 
     const checkAchor = () => {
         const hash = window.location.hash;
@@ -38,6 +38,8 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     const initClipboard = () => {
+
+        console.log("whoa")
 
         const allCPButtonList = document.querySelectorAll('[data-clipboard="all"]');
         const cpButtonList = document.querySelectorAll('[data-clipboard="single"]');
@@ -148,86 +150,87 @@ window.addEventListener('DOMContentLoaded', () => {
 
     };
 
-    const displayAllProperties = (customProperties) => {
 
-        const allPropertiesTable = allPropertiesContainer.querySelector(".table-scroll__container");
+    // const displayAllProperties = (customProperties) => {
 
-        const customProperyHTML = customProperties.map((customPropertyArray) => {
+    //     const allPropertiesTable = allPropertiesContainer.querySelector(".table-scroll__container");
 
-            let type = customPropertyArray.type;
-            let properties = customPropertyArray.customProperties;
-            let scope = customPropertyArray.scope;
+    //     const customProperyHTML = customProperties.map((customPropertyArray) => {
 
-            let id = type.replace(/\s+/g, '-').toLowerCase();
+    //         let type = customPropertyArray.type;
+    //         let properties = customPropertyArray.customProperties;
+    //         let scope = customPropertyArray.scope;
 
-            let slug;
+    //         let id = type.replace(/\s+/g, '-').toLowerCase();
 
-            if(type === 'Gradient Veneer' || type === 'Subtle Fill') {
-                slug = 'accents/#' + id;
-            } else {
-                slug = id;
-            }
+    //         let slug;
 
-            let cpRows = properties.map((property) => {
-                return `
-                    <tr>
-                        <td>
-                            <span data-prop>--${property.name}</span>
-                        </td>
-                        <td>
-                            <span data-val>${property.value}</span>
-                        </td>
-                        <td>  
-                            <button data-clipboard="single">
-                                ${copyButtonText}
-                            </button>
-                        </td>
-                        <td>
-                            ${property.description}
-                        </td>
-                    </tr>
-                `;
-            }).join('');
+    //         if(type === 'Gradient Veneer' || type === 'Subtle Fill') {
+    //             slug = 'accents/#' + id;
+    //         } else {
+    //             slug = id;
+    //         }
 
-            return `
-                <div class="cp-header box-shadow-1" id="cp_${id}">
-                    <span class="cp-header__title">${type}</span>
-                    <a class="cp-header__link button button--has-icon" href="../../docs/${slug}">
-                        <span class="button__text">Docs</span>
-                        <span class="icon icon-arrow-right button__icon"></span>
-                    </a>
-                </div>
-                <table class="table">
-                    <caption class="border-bottom">
-                        <p class="font-size-md">
-                            Variable scope: <code>${scope}</code>
-                        </p>
-                    </caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">
-                                CSS Variable
-                            </th>
-                            <th scope="col">Default Value</th>
-                            <th scope="col">
-                                <button data-clipboard="all">
-                                    <span>Copy All</span>
-                                </button>
-                            </th>
-                            <th scope="col">Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${cpRows}
-                    </tbody>
+    //         let cpRows = properties.map((property) => {
+    //             return `
+    //                 <tr>
+    //                     <td>
+    //                         <span data-prop>--${property.name}</span>
+    //                     </td>
+    //                     <td>
+    //                         <span data-val>${property.value}</span>
+    //                     </td>
+    //                     <td>  
+    //                         <button data-clipboard="single">
+    //                             ${copyButtonText}
+    //                         </button>
+    //                     </td>
+    //                     <td>
+    //                         ${property.description}
+    //                     </td>
+    //                 </tr>
+    //             `;
+    //         }).join('');
 
-                </table>
-            `;
+    //         return `
+    //             <div class="cp-header box-shadow-1" id="cp_${id}">
+    //                 <span class="cp-header__title">${type}</span>
+    //                 <a class="cp-header__link button button--has-icon" href="../../docs/${slug}">
+    //                     <span class="button__text">Docs</span>
+    //                     <span class="icon icon-arrow-right button__icon"></span>
+    //                 </a>
+    //             </div>
+    //             <table class="table">
+    //                 <caption class="border-bottom">
+    //                     <p class="font-size-md">
+    //                         Variable scope: <code>${scope}</code>
+    //                     </p>
+    //                 </caption>
+    //                 <thead>
+    //                     <tr>
+    //                         <th scope="col">
+    //                             CSS Variable
+    //                         </th>
+    //                         <th scope="col">Default Value</th>
+    //                         <th scope="col">
+    //                             <button data-clipboard="all">
+    //                                 <span>Copy All</span>
+    //                             </button>
+    //                         </th>
+    //                         <th scope="col">Description</th>
+    //                     </tr>
+    //                 </thead>
+    //                 <tbody>
+    //                     ${cpRows}
+    //                 </tbody>
 
-        }).join('');
+    //             </table>
+    //         `;
 
-        allPropertiesTable.innerHTML = customProperyHTML;
-    };
+    //     }).join('');
+
+    //     allPropertiesTable.innerHTML = customProperyHTML;
+    // };
 
     const displayRelatedProperties = (customProperties) => {
 
@@ -257,6 +260,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     };
 
-    loadCustomProperties();
+    // loadCustomProperties();
+    initClipboard();
 
 });
