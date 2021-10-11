@@ -130,11 +130,15 @@
 
 {% if page.url contains '/docs' %}
 
-<script src="{{ site.url }}/dist/js/all_cp_clipboard.js"></script>
-
 <script src="{{ site.url }}/dist/js/table_of_contents.js"></script>
 
 <script src="{{ site.url }}/dist/js/iframe_height.js"></script>
+
+{% endif %}
+
+{% if page.title == 'Customization' %}
+
+<script src="{{ site.url }}/dist/js/all_cp_clipboard.js"></script>
 
 {% endif %}
 
@@ -144,7 +148,7 @@
 
 {% endif %}
 
-<script src="{{ site.url }}/dist/js/natura11y_docs.js"></script>
+<script defer src="{{ site.url }}/dist/js/natura11y_docs.js"></script>
 
 <script>
 
