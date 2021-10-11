@@ -270,10 +270,11 @@ backdrop_credit_url: "https://unsplash.com/@bamin"
             {% assign title = category.type %}
             {% assign scope = category.scope %}
             {% assign customProperties = category.customProperties %}
+            {% assign slug = title | replace: " ", "_" | downcase %}
 
-            <div class="cp-header box-shadow-1" id="cp_${id}">
+            <div class="cp-header box-shadow-1" id="cp_{{ slug }}">
                 <span class="cp-header__title">{{ title }}</span>
-                <a class="cp-header__link button button--has-icon" href="{{ site.url }}/docs/${slug}">
+                <a class="cp-header__link button button--has-icon" href="{{ site.url }}/docs/{{ slug }}">
                     <span class="button__text">Docs</span>
                     <span class="icon icon-arrow-right button__icon"></span>
                 </a>

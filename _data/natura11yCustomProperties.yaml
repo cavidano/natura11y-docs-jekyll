@@ -461,27 +461,27 @@
     - name: h1-font-size
       value: calc(var(--body-font-size) * 3)
       description: >
-        Font size of <em>Header 1</em>
+        Font size of <em>Section Header Level 1</em>
     - name: h2-font-size
       value: calc(var(--body-font-size) * 2.2)
       description: >
-        Font size of <em>Header 2</em>
+        Font size of <em>Section Header Level 2</em>
     - name: h3-font-size
       value: calc(var(--body-font-size) * 1.8)
       description: >
-        Font size of <em>Header 3</em>
+        Font size of <em>Section Header Level 3</em>
     - name: h4-font-size
       value: calc(var(--body-font-size) * 1.6)
       description: >
-        Font size of <em>Header 4</em>
+        Font size of <em>Section Header Level 4</em>
     - name: h5-font-size
       value: calc(var(--body-font-size) * 1.4)
       description: >
-        Font size of <em>Header 5</em>
+        Font size of <em>Section Header Level 5</em>
     - name: h6-font-size
       value: calc(var(--body-font-size) * 1.2)
       description: >
-        Font size of <em>Header 6</em>
+        Font size of <em>Section Header Level 6</em>
     - name: header-line-height
       value: '1.125'
       description: >

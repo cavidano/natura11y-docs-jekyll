@@ -1,41 +1,9 @@
 window.addEventListener('DOMContentLoaded', () => {
-    
-    // const customPropertiesData = "/lib/json/root-custom-properties.json";
 
-    // const allPropertiesContainer = document.getElementById("all-custom-properties");
     const relatedPropertiesContainer = document.getElementById("related-custom-properties");
 
     const copyButtonText = "Copy";
     const copyButtonActionText = "Copied!";
-
-    // const loadCustomProperties = async () => {
-    //     try {
-    //         const response = await fetch(customPropertiesData);
-    //         const customPropertyData = await response.json();
-
-    //         if(allPropertiesContainer){
-    //             // displayAllProperties(customPropertyData);
-    //             checkAchor();
-    //             initClipboard();
-    //         }
-            
-    //         if(relatedPropertiesContainer){
-    //             let myFilter = relatedPropertiesContainer.getAttribute('data-title').toString();
-    //             let relatedProperties = customPropertyData.filter(prop => prop.type === myFilter);
-    //             displayRelatedProperties(relatedProperties);
-    //         }
-        
-    //     } catch (err) {
-    //         console.error(err);
-    //     }
-    // };
-
-    const checkAchor = () => {
-        const hash = window.location.hash;
-        if (window.location.hash) {
-            window.location.href = hash;
-        }
-    };
 
     const initClipboard = () => {
 
@@ -114,6 +82,7 @@ window.addEventListener('DOMContentLoaded', () => {
             cpButton.addEventListener('click', (event) => {
 
                 event.preventDefault();
+                
                 resetButton();
                 
                 let currentRow = event.target.closest('tr');
