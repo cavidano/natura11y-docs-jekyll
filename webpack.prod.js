@@ -11,7 +11,7 @@ module.exports = merge(common, {
         home: './src/js/home.js',
         iframe_height: './src/js/iframe_height.js',
         table_of_contents: './src/js/table_of_contents.js',
-        display_custom_properties: './src/js/display_custom_properties.js',
+        all_cp_clipboard: './src/js/all_cp_clipboard.js',
         prism: './src/js/prism.js',
     },
     mode: 'production',
