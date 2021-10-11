@@ -290,8 +290,7 @@ In this file:
         @extend .caret;
         
         &::before {
-            margin-left: var(--nav-gap) !important;
-            margin-right: var(--nav-gap) !important;
+            margin-inline: var(--nav-gap) !important;
             transform: rotate(-90deg);
         }
     }
