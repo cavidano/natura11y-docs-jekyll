@@ -1,6 +1,5 @@
-<img src="./images/naturally-logo-color.png">
-<img src="./images/naturally-logo-color.svg">
 
+![Naturally Inclusive Framework Logo](./images/naturally-logo-color.svg)
 
 # Natura11y-docs
 
