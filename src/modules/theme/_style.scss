@@ -220,25 +220,36 @@ a[data-logo="brand"] {
 }
 
 .cp-header {
+    --table-scroll-min-width: 800px;
+
+    position: relative;
+    
     display: flex;
+
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    
     font-size: var(--font-size-lg);
+    
     font-weight: var(--font-weight-normal);
+    
     padding: var(--spacer-2);
+
     min-width: var(--table-scroll-min-width);
 
     &::after {
-        content: "";
         position: absolute;
+        content: "";
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: currentColor;
-        opacity: 0.0825;
+        
         pointer-events: none;
+
+        background-color: currentColor;
+        
+        opacity: 0.075;
     }
 }
 

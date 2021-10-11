@@ -258,18 +258,18 @@ backdrop_credit_url: "https://unsplash.com/@bamin"
 </div>
 <!-- .container -->
 
-
 <div class="container medium margin-y-4" id="all-custom-properties">
     <div class="table-scroll" role="region">
+
         {% include table-scroll-help.html %}
         
-        {% for category in site.data.natura11yCustomProperties %}
-
-        {% assign title = category.type %}
-        {% assign scope = category.scope %}
-        {% assign customProperties = category.customProperties %}
-
         <div class="table-scroll__container theme-dark">
+
+            {% for category in site.data.natura11yCustomProperties %}
+
+            {% assign title = category.type %}
+            {% assign scope = category.scope %}
+            {% assign customProperties = category.customProperties %}
 
             <div class="cp-header box-shadow-1" id="cp_${id}">
                 <span class="cp-header__title">{{ title }}</span>
@@ -301,7 +301,7 @@ backdrop_credit_url: "https://unsplash.com/@bamin"
                 </thead>
                 <tbody>
 
-                {% for property in customProperties %}
+                    {% for property in customProperties %}
 
                     {% assign name = property.name %}
                     {% assign value = property.value %}
@@ -333,14 +333,7 @@ backdrop_credit_url: "https://unsplash.com/@bamin"
         </div>
 
     </div>
-</div>
-<!-- .container -->
 
-<div class="container medium margin-y-4" id="all-custom-properties">
-    <div class="table-scroll" role="region">
-        {% include table-scroll-help.html %}
-        <div class="table-scroll__container theme-dark"></div>
-    </div>
 </div>
 <!-- .container -->
 
