@@ -6,11 +6,14 @@ layout: default
     <h1 class="font-weight-normal">
         {{ page.title }}
     </h1>
-    <p class="font-size-md">
+    <p class="font-size-md margin-bottom-0">
         <strong>Tags:</strong> 
         {% for tag in page.tags %}
         {% if forloop.last == true %}{{ tag }}{% else %}{{ tag }}, {% endif %}
         {% endfor %}
+    </p>
+    <p class="font-size-sm">
+    <strong>Unicode:</strong> <em class="opacity-70">{{ page.unicode}}</em>
     </p>
 </div>
 <!-- .container -->

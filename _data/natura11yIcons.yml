@@ -2,6 +2,7 @@
 
 -  icon: Accessibility
    className: accessibility
+   unicode: f101
    codePoint: 61697
    tags:
       - accessibility
@@ -12,6 +13,7 @@
 
 -  icon: Arrow Down
    className: arrow-down
+   unicode: f102
    codePoint: 61698
    tags:
       - arrow
@@ -22,6 +24,7 @@
 
 -  icon: Arrow Left
    className: arrow-left
+   unicode: f103
    codePoint: 61699
    tags:
       - arrow
@@ -32,6 +35,7 @@
 
 -  icon: Arrow Right
    className: arrow-right
+   unicode: f104
    codePoint: 61700
    tags:
       - arrow
@@ -42,6 +46,7 @@
 
 -  icon: Arrow Up
    className: arrow-up
+   unicode: f105
    codePoint: 61701
    tags:
       - arrow
@@ -52,6 +57,7 @@
 
 -  icon: Bell
    className: bell
+   unicode: f106
    codePoint: 61702
    tags:
       - alert
@@ -63,6 +69,7 @@
 
 -  icon: Calendar
    className: calendar
+   unicode: f107
    codePoint: 61703
    tags:
       - date
@@ -73,6 +80,7 @@
 
 -  icon: Caret Down
    className: caret-down
+   unicode: f108
    codePoint: 61704
    tags:
       - arrow
@@ -82,6 +90,7 @@
 
 -  icon: Caret Left
    className: caret-left
+   unicode: f109
    codePoint: 61705
    tags:
       - arrow
@@ -91,6 +100,7 @@
 
 -  icon: Caret Right
    className: caret-right
+   unicode: f10a
    codePoint: 61706
    tags:
       - arrow
@@ -100,6 +110,7 @@
 
 -  icon: Caret Up
    className: caret-up
+   unicode: f10b
    codePoint: 61707
    tags:
       - arrow
@@ -109,6 +120,7 @@
 
 -  icon: Checkbox Checked
    className: checkbox-checked
+   unicode: f10c
    codePoint: 61708
    tags:
       - confirm
@@ -118,6 +130,7 @@
 
 -  icon: Checkbox Unchecked
    className: checkbox-unchecked
+   unicode: f10d
    codePoint: 61709
    tags:
       - no
@@ -126,6 +139,7 @@
 
 -  icon: Chevron Down
    className: chevron-down
+   unicode: f10e
    codePoint: 61710
    tags:
       - arrow
@@ -135,6 +149,7 @@
 
 -  icon: Chevron Left
    className: chevron-left
+   unicode: f10f
    codePoint: 61711
    tags:
       - arrow
@@ -144,6 +159,7 @@
 
 -  icon: Chevron Right
    className: chevron-right
+   unicode: f110
    codePoint: 61712
    tags:
       - arrow
@@ -153,6 +169,7 @@
 
 -  icon: Chevron Up
    className: chevron-up
+   unicode: f111
    codePoint: 61713
    tags:
       - arrow
@@ -164,6 +181,7 @@
 
 -  icon: Close
    className: close
+   unicode: f112
    codePoint: 61714
    tags:
       - exit
@@ -173,6 +191,7 @@
 
 -  icon: Confirm
    className: confirm
+   unicode: f113
    codePoint: 61715
    tags:
       - check
@@ -182,6 +201,7 @@
 
 -  icon: Delete
    className: delete
+   unicode: f114
    codePoint: 61716
    tags:
       - trash
@@ -192,6 +212,7 @@
 
 -  icon: Disabled
    className: disabled
+   unicode: f115
    codePoint: 61717
    tags:
       - off
@@ -200,6 +221,7 @@
 
 -  icon: Double Chevron Down
    className: double-chevron-down
+   unicode: f116
    codePoint: 61718
    tags:
       - arrow
@@ -210,6 +232,7 @@
 
 -  icon: Double Chevron Left
    className: double-chevron-left
+   unicode: f117
    codePoint: 61719
    tags:
       - arrow
@@ -220,6 +243,7 @@
 
 -  icon: Double Chevron Right
    className: double-chevron-right
+   unicode: f118
    codePoint: 61720
    tags:
       - arrow
@@ -230,6 +254,7 @@
 
 -  icon: Double Chevron Up
    className: double-chevron-up
+   unicode: f119
    codePoint: 61721
    tags:
       - arrow
@@ -240,6 +265,7 @@
 
 -  icon: Edit
    className: edit
+   unicode: f11a
    codePoint: 61722
    tags:
       - pencil
@@ -248,6 +274,7 @@
 
 -  icon: Facebook
    className: facebook
+   unicode: f11b
    codePoint: 61723
    tags:
       - social
@@ -258,6 +285,7 @@
 
 -  icon: Github
    className: github
+   unicode: f11c
    codePoint: 61724
    tags:
       - social
@@ -268,6 +296,7 @@
 
 -  icon: Grid
    className: grid
+   unicode: f11d
    codePoint: 61725
    tags:
       - view
@@ -279,6 +308,7 @@
 
 -  icon: Hashtag
    className: hashtag
+   unicode: f11e
    codePoint: 61726
    tags:
       - social
@@ -288,6 +318,7 @@
 
 -  icon: Heart
    className: heart
+   unicode: f11f
    codePoint: 61727
    tags:
       - favorite
@@ -298,6 +329,7 @@
 
 -  icon: Home
    className: home
+   unicode: f120
    codePoint: 61728
    tags:
       - house
@@ -307,6 +339,7 @@
 
 -  icon: Info
    className: info
+   unicode: f121
    codePoint: 61729
    tags:
       - more
@@ -315,6 +348,7 @@
 
 -  icon: Instagram
    className: instagram
+   unicode: f122
    codePoint: 61730
    tags:
       - brand
@@ -325,6 +359,7 @@
 
 -  icon: Language
    className: language
+   unicode: f123
    codePoint: 61731
    tags:
       - translate
@@ -334,6 +369,7 @@
 
 -  icon: Linkedin
    className: linkedin
+   unicode: f124
    codePoint: 61732
    tags:
       - brand
@@ -344,6 +380,7 @@
 
 -  icon: List
    className: list
+   unicode: f125
    codePoint: 61733
    tags:
       - view
@@ -357,6 +394,7 @@
 
 -  icon: Loading
    className: loading
+   unicode: f126
    codePoint: 61733
    tags:
       - spinner
@@ -371,6 +409,7 @@
 
 -  icon: Mail
    className: mail
+   unicode: f127
    codePoint: 61735
    tags:
       - envelope
@@ -379,6 +418,7 @@
 
 -  icon: Map Pin
    className: map-pin
+   unicode: f128
    codePoint: 61736
    tags:
       - location
@@ -387,6 +427,7 @@
 
 -  icon: Menu
    className: menu
+   unicode: f129
    codePoint: 61737
    tags:
       - bars
@@ -398,6 +439,7 @@
 
 -  icon: Minus
    className: minus
+   unicode: f12a
    codePoint: 61738
    tags:
       - location
@@ -407,6 +449,7 @@
 
 -  icon: Mobile
    className: mobile
+   unicode: f12b
    codePoint: 61739
    tags:
       - phone
@@ -415,6 +458,7 @@
 
 -  icon: More (Horizontal)
    className: more-horizontal
+   unicode: f12c
    codePoint: 61740
    tags:
       - dots
@@ -426,6 +470,7 @@
 
 -  icon: More (Vertical)
    className: more-vertical
+   unicode: f12d
    codePoint: 61741
    tags:
       - dots
@@ -437,6 +482,7 @@
 
 -  icon: NPM
    className: npm
+   unicode: f12e
    codePoint: 61742
    tags:
       - brand
@@ -446,6 +492,7 @@
 
 -  icon: Page End
    className: page-end
+   unicode: f12f
    codePoint: 61743
    tags:
       - pagination
@@ -456,6 +503,7 @@
 
 -  icon: Page Start
    className: page-start
+   unicode: f130
    codePoint: 61744
    tags:
       - pagination
@@ -466,6 +514,7 @@
 
 -  icon: Parking
    className: parking
+   unicode: f131
    codePoint: 61745
    tags:
       - transportation
@@ -475,6 +524,7 @@
 
 -  icon: People
    className: people
+   unicode: f132
    codePoint: 61746
    tags:
       - human
@@ -486,6 +536,7 @@
 
 -  icon: Person
    className: person
+   unicode: f133
    codePoint: 61747
    tags:
       - human
@@ -496,6 +547,7 @@
 
 -  icon: Plus
    className: plus
+   unicode: f134
    codePoint: 61748
    tags:
       - add
@@ -504,6 +556,7 @@
 
 -  icon: Print
    className: print
+   unicode: f135
    codePoint: 61749
    tags:
       - printer
@@ -513,6 +566,7 @@
 
 -  icon: Question Mark
    className: question-mark
+   unicode: f136
    codePoint: 61750
    tags:
       - info
@@ -521,6 +575,7 @@
 
 -  icon: Radio Checked
    className: radio-checked
+   unicode: f137
    codePoint: 61751
    tags:
       - selected
@@ -531,6 +586,7 @@
 
 -  icon: Radio Unchecked
    className: radio-unchecked
+   unicode: f138
    codePoint: 61752
    tags:
       - selected
@@ -540,6 +596,7 @@
 
 -  icon: Search
    className: search
+   unicode: f139
    codePoint: 61753
    tags:
       - find
@@ -549,6 +606,7 @@
 
 -  icon: Settings
    className: settings
+   unicode: f13a
    codePoint: 61754
    tags:
       - gear
@@ -557,6 +615,7 @@
 
 -  icon: Shopping Cart
    className: shopping-cart
+   unicode: f13b
    codePoint: 61755
    tags:
       - commerce
@@ -568,6 +627,7 @@
 
 -  icon: Shrink
    className: shrink
+   unicode: f13c
    codePoint: 61756
    tags:
       - close
@@ -580,6 +640,7 @@
 
 -  icon: Star (fill half)
    className: star-fill-half
+   unicode: f13d
    codePoint: 61757
    tags:
       - rate
@@ -589,6 +650,7 @@
 
 -  icon: Star (fill)
    className: star-fill
+   unicode: f13e
    codePoint: 61758
    tags:
       - rate
@@ -598,6 +660,7 @@
 
 -  icon: Switch Off 
    className: switch-off
+   unicode: f13f
    codePoint: 61759
    tags:
       - toggle
@@ -608,6 +671,7 @@
 
 -  icon: Switch On 
    className: switch-on
+   unicode: f140
    codePoint: 61760
    tags:
       - toggle
@@ -618,6 +682,7 @@
 
 -  icon: Twitter
    className: twitter
+   unicode: f141
    codePoint: 61761
    tags:
       - brand
@@ -628,6 +693,7 @@
 
 -  icon: Upload
    className: upload
+   unicode: f142
    codePoint: 61762
    tags:
       - file
@@ -638,6 +704,7 @@
 
 -  icon: Warn
    className: warn
+   unicode: f143
    codePoint: 61763
    tags:
       - error
@@ -646,6 +713,7 @@
 
 -  icon: Wheelchair
    className: wheelchair
+   unicode: f144
    codePoint: 61764
    tags:
       - accessibility
@@ -657,6 +725,7 @@
 
 -  icon: YouTube
    className: youtube
+   unicode: f145
    codePoint: 61765
    tags:
       - brand
