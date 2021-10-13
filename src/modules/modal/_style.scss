@@ -25,7 +25,8 @@ In this file:
   --modal-padding-x: var(--spacer-2);
   --modal-padding-y: var(--spacer-2);
 
-  --modal-overlay-opacity: 0.875;
+  --modal-overlay-color: black;
+  --modal-overlay-opacity: 0.75;
   
   --modal-z-index: 8000;
 }
@@ -62,6 +63,8 @@ In this file:
   &::before {
       content: "";
 
+      background-color: var(--modal-overlay-color);
+      
       opacity: var(--modal-overlay-opacity);
   }
 
