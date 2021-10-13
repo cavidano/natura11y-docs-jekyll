@@ -58,6 +58,8 @@ page_gen:
   title: 'icon'
 
 # Custom Global Vars
+release: '1.0.0-alpha'
+
 cdn_url_css: 'https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/css/natura11y.css'
 cdn_url_js: 'https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/js/natura11y.js'
 cdn_url_icons: 'https://cdn.jsdelivr.net/gh/cavidano/natura11y-icons@main/dist/natura11y-icons.min.css'
