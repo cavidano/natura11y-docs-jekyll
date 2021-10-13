@@ -247,7 +247,7 @@ backdrop_credit_url: "https://unsplash.com/@rachyhannahphoto"
 <div class="container narrow margin-y-4">
     <h2>Scroll Entire Modal</h2>
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veniam quia, voluptatum labore magnam consequuntur repellat praesentium odit.
+        If you wish for the entire modal to scroll, add the <code>.modal--scroll-all</code> modifier class to the <code>.modal</code> selector (Figure, 2, line <em>1</em>).
     </p>
 </div>
 <!-- .container -->
@@ -267,7 +267,7 @@ backdrop_credit_url: "https://unsplash.com/@rachyhannahphoto"
             </div>
 
         </div>
-        <pre data-line="3-7,11,13-15,17-24,26-47,49-58">
+        <pre data-line="1">
             <code class="language-html">
                 &lt;div class="modal modal--scroll-all" id="..." role="dialog"&gt;
                    ...
@@ -276,7 +276,7 @@ backdrop_credit_url: "https://unsplash.com/@rachyhannahphoto"
         </pre>
     </div>
     <figcaption>
-        Figure 1
+        Figure 2
     </figcaption>
 </figure>
 
@@ -285,12 +285,40 @@ backdrop_credit_url: "https://unsplash.com/@rachyhannahphoto"
 <div class="container narrow margin-y-4">
     <h2>Close Outside</h2>
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium veniam quia, voluptatum labore magnam consequuntur repellat praesentium odit.
+        With the <code>data-modal-close-outside</code> attribute preset, the modal closes when the user clicks outside of the modal content.
     </p>
 </div>
 <!-- .container -->
 
-{% include related-css-variables.html anchor="modal" figure="2" %}
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+            
+                <button
+                    class="button theme-primary border-radius width-100 margin-y-3"
+                    data-modal-open="modal-example-03">
+                        Open Modal (Close Outside)
+                </button>
+
+            </div>
+
+        </div>
+        <pre data-line="1">
+            <code class="language-html">
+                &lt;div class="modal modal--scroll-all" id="..." data-modal-close-outside role="dialog"&gt;
+                   ...
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 3
+    </figcaption>
+</figure>
+
+{% include related-css-variables.html anchor="modal" figure="4" %}
 
 <div class="modal padding-2" id="modal-example-01" role="dialog">
 	<div
@@ -355,6 +383,40 @@ backdrop_credit_url: "https://unsplash.com/@rachyhannahphoto"
             </p>
             <p>
                 Commonly found in arid, open habitats with little woody vegetation, meerkats occur in southwestern Botswana, western and southern Namibia, northern and western South Africa; the range barely extends into southwestern Angola. With no significant threats to the populations, the meerkat is listed as Least Concern on the IUCN Red List. Meerkats are widely depicted in television, movies and other media.
+            </p>
+		</main>
+
+		<footer class="modal__content__foot border-top text-color-link">
+			<ul class="nav nav--horizontal justify-content-between">
+				<li>
+					<a href="#1">Secondary Action</a>
+				</li>
+				<li>
+					<a class="button rounded-pill" href="#1">Primary Action</a>
+				</li>
+			</ul>
+		</footer>
+	</div>
+	<!-- .modal__content -->
+</div>
+
+<div class="modal padding-2" id="modal-example-03" role="dialog" data-modal-close-outside>
+	<div
+        class="modal__content narrow border-radius box-shadow-3"
+        aria-labelledby="modal-example-01-title">
+
+		<header class="modal__content__head border-bottom">
+            <h2 class="h5" id="modal-example-01-title">
+                Suricata Suricatta
+            </h2>
+            <button class="button button--icon-only" data-modal-close>
+                <span class="icon icon-close" aria-hidden="true"></span>
+            </button>
+        </header>
+
+		<main class="modal__content__body" id="modal-example-01-content">
+			<p>
+                The <strong>meerkat</strong> (Suricata suricatta) or suricate is a small <a href="#1">mongoose</a> found in southern Africa. It is characterised by a broad head, large eyes, a pointed snout, long legs, a thin tapering tail, and a brindled coat pattern. The head-and-body length is around 24–35 cm (9.4–13.8 in), and the weight is typically between 0.62 and 0.97 kg (1.4 and 2.1 lb). The coat is light grey to yellowish brown with alternate, poorly defined light and dark bands on the back. Meerkats have foreclaws adapted for digging and have the ability to thermoregulate to survive in their harsh, dry habitat. Three subspecies are recognised.
             </p>
 		</main>
 
