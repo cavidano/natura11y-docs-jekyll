@@ -20,12 +20,14 @@
         <ul class="nav font-size-md">
 
             {% for doc in site.docs-introduction %}
-            
-            <li data-title="{{ doc.title }}">
-                <a href="{{ site.url }}/docs/{{ doc.slug }}" {% if page.url contains {{ doc.slug }} %} aria-current="page" {% endif %}>
-                    {{ doc.title }}
-                </a>
-            </li>
+
+                {% assign currentLink = doc.slug %}
+
+                <li>
+                    <a href="{{ site.url }}/docs/{{ doc.slug }}" {% if page.url contains currentLink %} aria-current="page" {% endif %}>
+                        {{ doc.title }}
+                    </a>
+                </li>
             
             {% endfor %}
 
@@ -37,11 +39,13 @@
 
             {% for doc in site.docs-a-z %}
 
-            <li data-title="{{ doc.title }}">
-                <a href="{{ site.url }}/docs/{{ doc.slug }}" {% if page.url contains {{ doc.slug }} %} aria-current="page" {% endif %}>
-                    {{ doc.title }}
-                </a>
-            </li>
+                {% assign currentLink = doc.slug %}
+                
+                <li>
+                    <a href="{{ site.url }}/docs/{{ doc.slug }}" {% if page.url contains currentLink %} aria-current="page" {% endif %}>
+                        {{ doc.title }}
+                    </a>
+                </li>
 
             {% endfor %}
 
