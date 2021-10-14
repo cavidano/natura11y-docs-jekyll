@@ -31,26 +31,20 @@ tags:
                 <div class="grid grid--gap-2 grid--cell-fill align-items-baseline">
 
                     <div class="grid__cell">
-                        <div class="aspect-ratio aspect-ratio--16by9 border border-color-dark">
-                            <div class="aspect-ratio__content display-flex align-items-center justify-content-center">
-                                <p>16x9</p>
-                            </div>
+                        <div class="aspect-ratio-16x9 border border-color-dark display-flex align-items-center justify-content-center">
+                            <p>16x9</p>
                         </div> 
                     </div>
 
                     <div class="grid__cell">
-                        <div class="aspect-ratio aspect-ratio--4by3 border border-color-dark">
-                            <div class="aspect-ratio__content display-flex align-items-center justify-content-center">
-                                <p>4x3</p>
-                            </div>
+                        <div class="aspect-ratio-4x3 border border-color-dark display-flex align-items-center justify-content-center">
+                            <p>4x3</p>
                         </div>
                     </div>
 
                     <div class="grid__cell">
-                        <div class="aspect-ratio aspect-ratio--1by1 border border-color-dark">
-                            <div class="aspect-ratio__content display-flex align-items-center justify-content-center">
-                                <p>1x1</p>
-                            </div>
+                        <div class="aspect-ratio-1x1 border border-color-dark display-flex align-items-center justify-content-center">
+                            <p>1x1</p>
                         </div>
                     </div>
                 
@@ -59,16 +53,20 @@ tags:
         </div>
         <pre data-line="1,2">
             <code class="language-html">
-                &lt;div class="aspect-ratio aspect-ratio--16by9"&gt;
-                    &lt;div class="aspect-ratio__content"&gt;...&lt;/div&gt;
+                &lt;div class="aspect-ratio-16x9"&gt;
+                    ...
                 &lt;/div&gt;
 
-                &lt;div class="aspect-ratio aspect-ratio--4by3"&gt;
-                    &lt;div class="aspect-ratio__content"&gt;...&lt;/div&gt;
+                &lt;div class="aspect-ratio-4x3"&gt;
+                    ...
+                &lt;/div&gt;
+
+                &lt;div class="aspect-ratio-3x2"&gt;
+                    ...
                 &lt;/div&gt;
                 
-                &lt;div class="aspect-ratio aspect-ratio--1by1"&gt;
-                    &lt;div class="aspect-ratio__content"&gt;...&lt;/div&gt;
+                &lt;div class="aspect-ratio-1x1"&gt;
+                    ...
                 &lt;/div&gt;
             </code>
         </pre>
@@ -76,50 +74,6 @@ tags:
     <figcaption>
         Figure 1
     </figcaption>
-</figure>
-
-<figure class="container narrow margin-y-4">
-    <table class="table table--edge">
-        <thead>
-            <tr>
-                <th class="width-30" scope="col">Line #</th>
-                <th class="width-70" scope="col">Details</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <a href="#figure_1.1" data-line-anchor>
-                        1
-                    </a>
-                </td>
-                <td>
-                    <p>
-                        The <code>.aspect-ratio</code> class is required.
-                    </p>
-                    <p>
-                        The <code>.aspect-ratio--{x}by{y}</code> modifier class provides the aspect ratio's size, where
-                        <em>x</em> equals its <em>width</em>, and <em>y</em> equals its <em>height</em>. 
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#figure_1.2" data-line-anchor>
-                        2
-                    </a>
-                </td>
-                <td>
-                    <p>
-                        The <code>.aspect-ratio__content</code> is required.
-                    </p>
-                    <p>
-                        It contains the aspect ratio component's content.
-                    </p>
-                </td>
-            </tr>
-        </tbody>
-    </table>
 </figure>
 
 <hr class="section-start" id="embedding-video">
@@ -133,9 +87,9 @@ tags:
 <!-- .container -->
 
 <figure class="container narrow margin-y-4">
-    <div class="aspect-ratio aspect-ratio--16by9 background-color-dark">
+    <div class="aspect-ratio-16x9 background-color-dark">
         <iframe
-            class="aspect-ratio__content"
+            class="aspect-ratio-16x9"
             src="https://player.vimeo.com/video/261715638"
             title="Arches National Park (YouTube)"
             frameborder="0"
@@ -146,15 +100,13 @@ tags:
 <figure class="container narrow margin-y-4">
     <pre class="hide-toolbar">
         <code class="language-html">
-            &lt;div class="aspect-ratio aspect-ratio--16by9"&gt;
-                &lt;iframe
-                    class="aspect-ratio__content"
-                    src="..."
-                    frameborder="0"
-                    allow="autoplay;"
-                    allowfullscreen&gt;
-                &lt;/iframe&gt;
-            &lt;/div&gt;
+            &lt;iframe
+                class="aspect-ratio-16x9"
+                src="..."
+                frameborder="0"
+                allow="autoplay;"
+                allowfullscreen&gt;
+            &lt;/iframe&gt;
         </code>
     </pre>
     <figcaption>
