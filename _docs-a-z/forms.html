@@ -1296,82 +1296,70 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
         <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
             <div class="container narrow">
 
-                <div class="grid grid--gap-3">
+                <div class="grid gap-2">
 
-                    <div class="grid__cell grid__cell-6--lg">
+                    <div 
+                        class="form-entry"
+                        data-required="true"
+                        data-error-description="Username is required!" 
+                        data-error-instructions="Enter your username">
 
-                        <div 
-                            class="form-entry"
-                            data-required="true"
-                            data-error-description="Username is required!" 
-                            data-error-instructions="Enter your username">
+                        <label class="form-entry__field form-entry__field--float">
 
-                            <label class="form-entry__field form-entry__field--float">
+                            <span class="form-entry__field__label">
+                                Username
+                            </span>
+                            
+                            <span class="form-entry__field__input">
+                                <input type="text" id="accountUsername" name="username">
+                            </span>
 
-                                <span class="form-entry__field__label">
-                                    Username
-                                </span>
-                                
-                                <span class="form-entry__field__input">
-                                    <input type="text" id="accountUsername" name="username">
-                                </span>
-
-                            </label>
-
-                        </div>
-                        <!-- .form-entry -->
+                        </label>
 
                     </div>
+                    <!-- .form-entry -->
 
-                    <div class="grid__cell grid__cell-6--lg">
+                    <div 
+                        class="form-entry"
+                        data-required="true"
+                        data-error-description="Password is required!" 
+                        data-error-instructions="Enter your password">
 
-                        <div 
-                            class="form-entry"
-                            data-required="true"
-                            data-error-description="Password is required!" 
-                            data-error-instructions="Enter your password">
+                        <label class="form-entry__field form-entry__field--float">
 
-                            <label class="form-entry__field form-entry__field--float">
+                            <span class="form-entry__field__label">
+                                Password
+                            </span>
+                            
+                            <span class="form-entry__field__input">
+                                <input type="password" id="accountPassword" name="password">
+                            </span>
 
-                                <span class="form-entry__field__label">
-                                    Password
-                                </span>
-                                
-                                <span class="form-entry__field__input">
-                                    <input type="password" id="accountPassword" name="password">
-                                </span>
-
-                            </label>
-
-                        </div>
-                        <!-- .form-entry -->
-                        
-                    </div>
-
-                    <div class="grid__cell">
-
-                        <div 
-                            class="form-entry"
-                            data-required="true"
-                            data-error-description="Password is required!" 
-                            data-error-instructions="Enter your password">
-
-                            <label class="form-entry__field form-entry__field--float">
-
-                                <span class="form-entry__field__label">
-                                    Email
-                                </span>
-                                
-                                <span class="form-entry__field__input">
-                                    <input type="email" id="accountEmail" name="password">
-                                </span>
-
-                            </label>
-
-                        </div>
-                        <!-- .form-entry -->
+                        </label>
 
                     </div>
+                    <!-- .form-entry -->
+
+                    <div 
+                        class="form-entry grid__colspan-2"
+                        data-required="true"
+                        data-error-description="Password is required!" 
+                        data-error-instructions="Enter your password">
+
+                        <label class="form-entry__field form-entry__field--float">
+
+                            <span class="form-entry__field__label">
+                                Email
+                            </span>
+                            
+                            <span class="form-entry__field__input">
+                                <input type="email" id="accountEmail" name="password">
+                            </span>
+
+                        </label>
+
+                    </div>
+                    <!-- .form-entry -->
 
                 </div>
 

@@ -175,8 +175,11 @@ fieldset {
 }
 
 .form-entry ~ .form-entry {
-    margin-top: var(--spacer-4);
-    margin-bottom: var(--spacer-4);
+    margin-block: var(--spacer-4);
+}
+
+.grid > .form-entry {
+    margin: unset;
 }
 
 //////////////////////////////////////////////
