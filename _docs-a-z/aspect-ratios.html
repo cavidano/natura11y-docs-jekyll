@@ -59,26 +59,40 @@ tags:
         </div>
         <pre>
             <code class="language-html">
-                &lt;div class="aspect-ratio-16x9"&gt;
-                    ...
-                &lt;/div&gt;
+                &lt;div class="aspect-ratio-16x9"&gt;...&lt;/div&gt;
 
-                &lt;div class="aspect-ratio-4x3"&gt;
-                    ...
-                &lt;/div&gt;
+                &lt;div class="aspect-ratio-3x2"&gt;...&lt;/div&gt;
 
-                &lt;div class="aspect-ratio-3x2"&gt;
-                    ...
-                &lt;/div&gt;
+                &lt;div class="aspect-ratio-4x3"&gt;...&lt;/div&gt;
                 
-                &lt;div class="aspect-ratio-1x1"&gt;
-                    ...
-                &lt;/div&gt;
+                &lt;div class="aspect-ratio-1x1"&gt;...&lt;/div&gt;
             </code>
         </pre>
     </div>
     <figcaption>
         Figure 1
+    </figcaption>
+</figure>
+
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        Aspect ratio utilities accept <a href="{{ site.url }}/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <pre>
+        <code class="language-html">
+            &lt;!-- With breakpoint modifier --&gt;
+
+            &lt;div class="aspect-ratio-16x9--lg"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        Figure 2
     </figcaption>
 </figure>
 
