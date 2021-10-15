@@ -84,8 +84,6 @@
 			let svg = icon.svg
 
 			return (`
-			<div class="grid__cell">
-
 				<a href="{{ site.url }}/icons/${name}">
 
 					<div class="aspect-ratio-1x1 display-flex justify-content-center align-items-center border border-radius margin-bottom-1">
@@ -98,9 +96,7 @@
 						${name}
 					</p>
 
-				</a>
-
-			</div>`);
+				</a>`);
 
 		}).join('');
 
