@@ -50,9 +50,9 @@ tags:
 
 <figure class="container medium margin-y-4">
 
-    <div class="grid grid--gap-3 grid--cell-6--md font-size-md text-align-center" {{ site.custom-properties-example }}>
+    <div class="grid grid--column-2--md gap-3 font-size-md text-align-center" {{ site.custom-properties-example }}>
 
-        <div class="grid__cell">
+        
 
             <div class="backdrop">
                 <div class="backdrop__image gradient-veneer-top" style="--gradient-veneer-start: 25%;">
@@ -68,10 +68,6 @@ tags:
                     </div>
                 </div>
             </div>
-        
-        </div>
-
-        <div class="grid__cell">
 
             <div class="backdrop">
                 <div class="backdrop__image gradient-veneer-right" style="--gradient-veneer-start: 25%;">
@@ -88,9 +84,9 @@ tags:
                 </div>
             </div>
         
-        </div>
+        
 
-        <div class="grid__cell">
+        
 
             <div class="backdrop">
                 <div class="backdrop__image gradient-veneer-bottom" style="--gradient-veneer-start: 25%;">
@@ -107,9 +103,9 @@ tags:
                 </div>
             </div>
 
-        </div>
+        
 
-        <div class="grid__cell">
+        
 
             <div class="backdrop">
                 <div class="backdrop__image gradient-veneer-left" style="--gradient-veneer-start: 25%;">
@@ -126,7 +122,7 @@ tags:
                 </div>
             </div>
         
-        </div>
+        
     
     </div>
 
@@ -142,50 +138,42 @@ tags:
 
 <figure class="container medium margin-y-4">
 
-    <div class="grid grid--gap-3 grid--cell-6--md font-size-md text-align-center" {{ site.custom-properties-example }}>
+    <div class="grid grid--column-2--md gap-3 font-size-md text-align-center" {{ site.custom-properties-example }}>
 
-        <div class="grid__cell">
-
-            <div class="backdrop theme-primary border-radius">
-                <div class="backdrop__image gradient-veneer-bottom" style="--gradient-veneer-start: 25%;">
-                    <img class="opacity-50" src="{{ site.url }}/images/examples/gradient-veneer-bottom-primary.jpg" alt="Placeholder">
-                </div>
-                <div class="backdrop__cover">
-                    <div class="margin-top-auto padding-3">
-                        <p>
-                            <strong>
-                                .gradient-veneer-bottom
-                            </strong>
-                            <span class="display-block">
-                                Theme: Primary
-                            </span>
-                        </p> 
-                    </div>
+        <div class="backdrop theme-primary border-radius">
+            <div class="backdrop__image gradient-veneer-bottom" style="--gradient-veneer-start: 25%;">
+                <img class="opacity-50" src="{{ site.url }}/images/examples/gradient-veneer-bottom-primary.jpg" alt="Placeholder">
+            </div>
+            <div class="backdrop__cover">
+                <div class="margin-top-auto padding-3">
+                    <p>
+                        <strong>
+                            .gradient-veneer-bottom
+                        </strong>
+                        <span class="display-block">
+                            Theme: Primary
+                        </span>
+                    </p> 
                 </div>
             </div>
-        
-        </div>
+        </div>    
 
-        <div class="grid__cell">
-
-            <div class="backdrop theme-secondary border-radius">
-                <div class="backdrop__image gradient-veneer-bottom" style="--gradient-veneer-start: 25%;">
-                    <img class="opacity-50" src="{{ site.url }}/images/examples/gradient-veneer-bottom-secondary.jpg" alt="Placeholder">
-                </div>
-                <div class="backdrop__cover">
-                    <div class="margin-top-auto padding-3">
-                        <p>
-                            <strong>
-                                .gradient-veneer-bottom
-                            </strong>
-                            <span class="display-block">
-                                Theme: Secondary
-                            </span>
-                        </p> 
-                    </div>
+        <div class="backdrop theme-secondary border-radius">
+            <div class="backdrop__image gradient-veneer-bottom" style="--gradient-veneer-start: 25%;">
+                <img class="opacity-50" src="{{ site.url }}/images/examples/gradient-veneer-bottom-secondary.jpg" alt="Placeholder">
+            </div>
+            <div class="backdrop__cover">
+                <div class="margin-top-auto padding-3">
+                    <p>
+                        <strong>
+                            .gradient-veneer-bottom
+                        </strong>
+                        <span class="display-block">
+                            Theme: Secondary
+                        </span>
+                    </p> 
                 </div>
             </div>
-        
         </div>
     
     </div>
@@ -247,59 +235,53 @@ tags:
 
 <figure class="container medium margin-y-4">
 
-    <div class="grid grid--gap-3 grid--cell-fill--md" {{ site.custom-properties-example }}>
+    <div class="grid grid--column-2--md gap-3" {{ site.custom-properties-example }}>
 
-        <div class="grid__cell">
+        <div class="card border">
 
-            <div class="card border">
+            <div class="card__body">
+                <h3 class="h4">Card Title</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
+                    ex facilis labore reiciendis.
+                </p>
+            </div>
 
-                <div class="card__body">
-                    <h3 class="h4">Card Title</h3>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
-                        ex facilis labore reiciendis.
-                    </p>
-                </div>
-
-                <div class="card__foot font-size-md subtle-fill">
-                    <ul class="nav nav--horizontal justify-content-between">
-                        <li>
-                            <a href="#1">Secondary Action</a>
-                        </li>
-                        <li>
-                            <a class="button button--outline border-radius-pill" href="#1">Primary Action</a>
-                        </li>
-                    </ul>
-                </div>
-
+            <div class="card__foot font-size-md subtle-fill">
+                <ul class="nav nav--horizontal justify-content-between">
+                    <li>
+                        <a href="#1">Secondary Action</a>
+                    </li>
+                    <li>
+                        <a class="button button--outline border-radius-pill" href="#1">Primary Action</a>
+                    </li>
+                </ul>
             </div>
 
         </div>
-        <div class="grid__cell">
 
-            <div class="card theme-dark">
+        <div class="card theme-dark">
 
-                <div class="card__body">
-                    <h3 class="h4">Card Title</h3>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
-                        ex facilis labore reiciendis.
-                    </p>
-                </div>
-
-                <div class="card__foot font-size-md subtle-fill">
-                    <ul class="nav nav--horizontal justify-content-between">
-                        <li>
-                            <a href="#1">Secondary Action</a>
-                        </li>
-                        <li>
-                            <a class="button button--outline border-radius-pill" href="#1">Primary Action</a>
-                        </li>
-                    </ul>
-                </div>
-
+            <div class="card__body">
+                <h3 class="h4">Card Title</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
+                    ex facilis labore reiciendis.
+                </p>
             </div>
-        </div>
+
+            <div class="card__foot font-size-md subtle-fill">
+                <ul class="nav nav--horizontal justify-content-between">
+                    <li>
+                        <a href="#1">Secondary Action</a>
+                    </li>
+                    <li>
+                        <a class="button button--outline border-radius-pill" href="#1">Primary Action</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>        
 
     </div>
 
