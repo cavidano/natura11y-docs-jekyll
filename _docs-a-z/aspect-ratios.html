@@ -28,12 +28,18 @@ tags:
     <div class="example">
         <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
             <div class="container narrow">
-                <div class="grid grid--gap-2 grid--cell-fill align-items-baseline">
+                <div class="grid grid--gap-2 grid--cell-fill align-items-end">
 
                     <div class="grid__cell">
                         <div class="aspect-ratio-16x9 border border-color-dark display-flex align-items-center justify-content-center">
                             <p>16x9</p>
                         </div> 
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="aspect-ratio-3x2 border border-color-dark display-flex align-items-center justify-content-center">
+                            <p>3x2</p>
+                        </div>
                     </div>
 
                     <div class="grid__cell">
@@ -51,7 +57,7 @@ tags:
                 </div>
             </div>
         </div>
-        <pre data-line="1,2">
+        <pre>
             <code class="language-html">
                 &lt;div class="aspect-ratio-16x9"&gt;
                     ...
@@ -86,29 +92,35 @@ tags:
 </div>
 <!-- .container -->
 
-<figure class="container narrow margin-y-4">
-    <div class="aspect-ratio-16x9 background-color-dark">
-        <iframe
-            class="aspect-ratio-16x9"
-            src="https://player.vimeo.com/video/261715638"
-            title="Arches National Park (YouTube)"
-            frameborder="0"
-            allowfullscreen></iframe>
-    </div>
-</figure>
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
 
-<figure class="container narrow margin-y-4">
-    <pre class="hide-toolbar">
-        <code class="language-html">
-            &lt;iframe
-                class="aspect-ratio-16x9"
-                src="..."
-                frameborder="0"
-                allow="autoplay;"
-                allowfullscreen&gt;
-            &lt;/iframe&gt;
-        </code>
-    </pre>
+            <div class="container narrow">
+            
+                <iframe
+                    class="aspect-ratio-16x9 background-color-dark"
+                    src="https://player.vimeo.com/video/261715638"
+                    title="Arches National Park (YouTube)"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+    
+            </div>
+
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;iframe
+                    class="aspect-ratio-16x9"
+                    src="..."
+                    frameborder="0"
+                    allow="autoplay;"
+                    allowfullscreen&gt;
+                &lt;/iframe&gt;
+            </code>
+        </pre>
+    </div>
     <figcaption>
         Figure 2
     </figcaption>
