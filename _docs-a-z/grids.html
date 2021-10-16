@@ -629,7 +629,49 @@ backdrop_credit_url: "https://unsplash.com/@phienix_han"
 <div class="container narrow margin-y-4">
     <h2>CSS Grid</h2>
     <p>
-       Natura11y's CSS grid component provides some fundamental grid layout options (via utility classes). However, attempting to reproduce the limitless layout options available with CSS Grid Layout would be altogether misguided. You can and should create grid layouts yourself—writing your CSS—alongside the Natura11y framework. 
+       Natura11y's CSS grid component provides some fundamental grid layout options (via utility classes). 
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="grid grid--column-4 gap-border text-align-center font-size-md" {{ site.custom-properties-example }}>
+
+        <div class="theme-primary padding-2 flex-column justify-content-center grid__colspan-2 grid__rowspan-4 aspect-ratio-1x1">
+            <p>Item</p>
+        </div>
+
+        <div class="theme-primary padding-2 flex-column justify-content-center">
+            <p>Item</p>
+        </div>
+
+        <div class="theme-primary padding-2 flex-column justify-content-center grid__rowspan-2">
+            <p>Item</p>
+        </div>
+
+        <div class="theme-primary padding-2 flex-column justify-content-center">
+            <p>Item</p>
+        </div>
+
+        <div class="theme-primary padding-2 flex-column justify-content-center">
+            <p>Item</p>
+        </div>
+
+        <div class="theme-primary padding-2 flex-column justify-content-center grid__rowspan-2">
+            <p>Item</p>
+        </div>
+
+        <div class="theme-primary padding-2 flex-column justify-content-center">
+            <p>Item</p>
+        </div>
+        
+    </div>
+   
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+       However, attempting to reproduce the limitless layout options available with CSS Grid Layout would be altogether misguided. You <em>can</em> and <em>should</em> create grid layouts yourself—writing your CSS—alongside the Natura11y framework.  
     </p>
     <p>
         With that out of the way, let's look at the <code>.grid</code> component beginning with Figure 1.
