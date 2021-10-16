@@ -88,7 +88,7 @@ import "./modules/sizing";
 import "./modules/spacing";
 
 import Tabs from "./modules/tabs";
-new Tabs();
+new Tabs(); 
 
 import Tables from "./modules/tables";
 new Tables();
