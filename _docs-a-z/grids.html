@@ -1036,7 +1036,6 @@ backdrop_credit_url: "https://unsplash.com/@phienix_han"
 </div>
 <!-- .container -->
 
-
 <figure class="container medium margin-y-4">
     <div class="example">
         <div class="padding-y-5 box-shadow-1 font-size-md" {{ site.custom-properties-example }}>
@@ -1171,7 +1170,7 @@ backdrop_credit_url: "https://unsplash.com/@phienix_han"
 
                 <div class="grid grid--column-3--md theme-light border font-size-md text-align-center">
 
-                    <div class="padding-2 border order-6">
+                    <div class="padding-2 border order-3">
                         <p>01</p>
                     </div>
                     <div class="padding-2 border">
@@ -1180,28 +1179,43 @@ backdrop_credit_url: "https://unsplash.com/@phienix_han"
                     <div class="padding-2 border">
                         <p>03</p>
                     </div>
-                    <div class="padding-2 border">
-                        <p>04</p>
-                    </div>
-                    <div class="padding-2 border">
-                        <p>05</p>
-                    </div>
-                    <div class="padding-2 border">
-                        <p>06</p>
-                    </div>
 
                 </div>
-                <!-- .matrix -->
+                <!-- .grid -->
 
             </div>
         </div>
-        <pre data-line="1">
+        <pre data-line="3">
             <code class="language-html">
+
+                &lt;div class="grid grid--column-3--md theme-light border font-size-md text-align-center"&gt;
+
+                    &lt;div class="padding-2 border order-3"&gt;
+                        &lt;p&gt;01&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="padding-2 border"&gt;
+                        &lt;p&gt;02&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="padding-2 border"&gt;
+                        &lt;p&gt;03&lt;/p&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+
+                &lt;!-- All order utilities: --&gt;
+
                 &lt;div class="order-1"&gt;...&lt;/div&gt;
                 &lt;div class="order-2"&gt;...&lt;/div&gt;
                 &lt;div class="order-3"&gt;...&lt;/div&gt;
                 &lt;div class="order-4"&gt;...&lt;/div&gt;
                 &lt;div class="order-5"&gt;...&lt;/div&gt;
+                &lt;div class="order-6"&gt;...&lt;/div&gt;
+                &lt;div class="order-7"&gt;...&lt;/div&gt;
+                &lt;div class="order-8"&gt;...&lt;/div&gt;
+                &lt;div class="order-9"&gt;...&lt;/div&gt;
+                &lt;div class="order-10"&gt;...&lt;/div&gt;
+                &lt;div class="order-11"&gt;...&lt;/div&gt;
+                &lt;div class="order-12"&gt;...&lt;/div&gt;
             </code>
         </pre>
     </div>
@@ -1210,3 +1224,45 @@ backdrop_credit_url: "https://unsplash.com/@phienix_han"
     </figcaption>
 </figure>
 
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        <em>Order</em> utilites accept <a href="{{ site.url }}/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow">
+
+                <div class="grid grid--column-3--md theme-light border font-size-md text-align-center">
+
+                    <div class="padding-2 border order-3--lg">
+                        <p>01</p>
+                    </div>
+                    <div class="padding-2 border">
+                        <p>02</p>
+                    </div>
+                    <div class="padding-2 border">
+                        <p>03</p>
+                    </div>
+
+                </div>
+                <!-- .grid -->
+
+            </div>
+        </div>
+        <pre data-line="3">
+            <code class="language-html">
+                &lt;!-- With breakpoint modifier --&gt;
+
+                &lt;div class="order-3--lg"&gt;...&lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 13
+    </figcaption>
+</figure>
