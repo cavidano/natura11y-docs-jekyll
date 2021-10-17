@@ -3,7 +3,7 @@ layout: example-shell
 title: "Landing Page"
 ---
 
-<header id="global-header" role="banner">
+<header class="theme-dark" id="global-header" role="banner">
 
     <!-- Skip Navigation -->
     <a class="focusable-only" href="#skip-header-target">Skip Header</a>
@@ -27,24 +27,23 @@ title: "Landing Page"
                     <span class="icon icon-menu"></span>
             </button>
 
+            <ul class="nav nav--horizontal font-size-sm margin-right-2">
+                <li><a href="#1">Link</li>
+                <li><a href="#1">Link</li>
+                <li><a href="#1">Link</li>
+            </ul>
+
             <div class="button-group">
 
-                <a href="#1" class="button">
+                <a href="#1" class="button theme-secondary">
                     Sign In
                 </a>
-
-                <button class="button button--icon-only"
-                    aria-label="Language"
-                    data-toggle="collapse"
-                    data-target-toggle="#language-select">
-                    <span class="icon icon-language"></span>
-                </button>
 
             </div>
 
         </div>
         
-        <nav class="primary-nav__menu" aria-label="Main Menu" id="main-menu">
+        <nav class="primary-nav__menu font-weight-bold" aria-label="Main Menu" id="main-menu">
 
             <ul>
                 <li>
@@ -63,7 +62,6 @@ title: "Landing Page"
 
         </nav>
 
-
     </div>
     <!-- .primary navigation -->
 
@@ -73,7 +71,7 @@ title: "Landing Page"
 
 <main class="overflow-hidden" id="skip-header-target">
     
-    <section class="theme-dark backdrop backdrop--stack--lg">
+    <section class="theme-dark backdrop backdrop--fixed aspect-ratio-16x9">
 
         <div class="backdrop__credit">
             <p>
@@ -82,26 +80,76 @@ title: "Landing Page"
         </div>
 
         <div class="backdrop__image gradient-veneer-bottom">
-            {% if page.example == "NYC" %}
-                <img class="opacity-30" src="/images/examples/backdrop-example-nyc-01.jpg" alt="Placeholder">
-            {% else %}
                 <img class="opacity-30" src="/images/examples/backdrop-example-02.jpg" alt="Placeholder">
-            {% endif %}
         </div>
 
-        <div class="backdrop__cover">
+        <div class="backdrop__cover text-align-center padding-y-4">
 
-            <div class="container medium text-align-center margin-y-5">
+            <div class="container narrow margin-bottom-4">
 
-                <h1 class="banner-headline text-shadow margin-bottom-3">
-                    Banner Headline
+                <h1 class="banner-headline text-shadow">
+                    Conservation Begins at Home.
                 </h1>
 
-                <a href="#1">
-                    <a class="button theme-secondary box-shadow-1" href="#1">
-                        Primary Action
-                    </a>
-                </a>
+            </div>
+
+            <div class="container medium grid grid--column-3--lg gap-3">
+
+                <div class="card border" style="backdrop-filter: blur(10px);">
+
+                    <div class="card__body">
+                        <h2 class="h5">
+                            Turn off the lights
+                        </h2>
+                        <p>
+                            Gustavia superba is an understory tree that grows in <a href="#1">Central</a> and north-western <a href="#1">South America</a>.
+                        </p>
+                    </div>
+
+                    <div class="card__foot border-top font-size-sm">
+                        <a class="button button--outline width-100" href="#1">
+                            Primary Action
+                        </a>                        
+                    </div>
+
+                </div>
+
+                <div class="card border" style="backdrop-filter: blur(10px);">
+
+                    <div class="card__body">
+                        <h2 class="h5">
+                            Unplug Appliances
+                        </h2>
+                        <p>
+                            Gustavia superba is an understory tree that grows in <a href="#1">Central</a> and north-western <a href="#1">South America</a>.
+                        </p>
+                    </div>
+
+                    <div class="card__foot border-top font-size-sm">
+                        <a class="button button--outline width-100" href="#1">
+                            Primary Action
+                        </a>                        
+                    </div>
+
+                </div>
+                <div class="card border" style="backdrop-filter: blur(10px);">
+
+                    <div class="card__body">
+                        <h2 class="h5">
+                            Unplug Appliances
+                        </h2>
+                        <p>
+                            Gustavia superba is an understory tree that grows in <a href="#1">Central</a> and north-western <a href="#1">South America</a>.
+                        </p>
+                    </div>
+
+                    <div class="card__foot border-top font-size-sm">
+                        <a class="button button--outline width-100" href="#1">
+                            Primary Action
+                        </a>                        
+                    </div>
+
+                </div>
 
             </div>
 
