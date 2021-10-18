@@ -18,6 +18,12 @@ layout: default
 </div>
 <!-- .container -->
 
+<div class="container narrow">
+    <svg class="icon">
+        <use xlink:href="#{{ page.className }}"></use>
+    </svg>
+</div>
+
 <figure class="container medium margin-y-4">
     <div class="example">
         <div class="icon-preview box-shadow-1" {{ site.custom-properties-example }}>
@@ -47,11 +53,18 @@ layout: default
         
         <pre>
             <code class="language-html">
-                &lt;!-- Your choice of &lt;span&gt; or &lt;i&gt; tags --&gt;
+                &lt;!-- Icon Font: your choice of &lt;span&gt; or &lt;i&gt; tags --&gt;
 
                 &lt;span class="icon icon-{{ page.className }}"&gt;&lt;/span&gt;
 
                 &lt;i class="icon icon-{{ page.className }}"&gt;&lt;/i&gt;
+
+                &lt;!-- SVG Sprite: your choice of &lt;span&gt; or &lt;i&gt; tags --&gt;
+                
+                &lt;svg class="icon"&gt;
+                    &lt;use xlink:href="#{{ page.className }}"&gt;&lt;/use&gt;
+                &lt;/svg&gt;
+
                 {% if page.className == 'loading' %}
                 &lt;!-- The loading icon accepts an optional rotate modifier --&gt;
 
