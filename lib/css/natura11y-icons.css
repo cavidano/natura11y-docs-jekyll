@@ -1,8 +1,8 @@
 @font-face {
     font-family: "natura11y-icons";
-    src: url("./natura11y-icons.ttf?08733258974d802b7d2e5966317de8f2") format("truetype"),
-url("./natura11y-icons.woff2?08733258974d802b7d2e5966317de8f2") format("woff2"),
-url("./natura11y-icons.woff?08733258974d802b7d2e5966317de8f2") format("woff");
+    src: url("./natura11y-icons.ttf?a2f479764107074f730263cc99dcae09") format("truetype"),
+url("./natura11y-icons.woff2?a2f479764107074f730263cc99dcae09") format("woff2"),
+url("./natura11y-icons.woff?a2f479764107074f730263cc99dcae09") format("woff");
 }
 
 .icon:before {
@@ -33,9 +33,6 @@ url("./natura11y-icons.woff?08733258974d802b7d2e5966317de8f2") format("woff");
 }
 .icon.icon-bell:before {
     content: "\f106";
-}
-.icon.icon-bookmark:before {
-    content: "\f146";
 }
 .icon.icon-calendar:before {
     content: "\f107";
@@ -99,6 +96,12 @@ url("./natura11y-icons.woff?08733258974d802b7d2e5966317de8f2") format("woff");
 }
 .icon.icon-facebook:before {
     content: "\f11b";
+}
+.icon.icon-file-download:before {
+    content: "\f148";
+}
+.icon.icon-file-upload:before {
+    content: "\f149";
 }
 .icon.icon-github:before {
     content: "\f11c";
@@ -228,4 +231,7 @@ url("./natura11y-icons.woff?08733258974d802b7d2e5966317de8f2") format("woff");
 }
 .icon.icon-youtube:before {
     content: "\f145";
+}
+.icon.icon-bookmark:before {
+    content: "\f146";
 }
