@@ -18,12 +18,6 @@ layout: default
 </div>
 <!-- .container -->
 
-<div class="container narrow">
-    <svg class="icon">
-        <use xlink:href="#{{ page.className }}"></use>
-    </svg>
-</div>
-
 <figure class="container medium margin-y-4">
     <div class="example">
         <div class="icon-preview box-shadow-1" {{ site.custom-properties-example }}>
@@ -62,7 +56,7 @@ layout: default
                 &lt;!-- SVG Sprite: your choice of &lt;span&gt; or &lt;i&gt; tags --&gt;
                 
                 &lt;svg class="icon"&gt;
-                    &lt;use xlink:href="#{{ page.className }}"&gt;&lt;/use&gt;
+                    &lt;use href="#{{ page.className }}"&gt;&lt;/use&gt;
                 &lt;/svg&gt;
 
                 {% if page.className == 'loading' %}
@@ -79,7 +73,15 @@ layout: default
 </figure>
 
 <hr class="margin-y-4">
-        
+
+<div class="text-align-center">
+
+    <svg class="icon margin-x-auto">
+        <use href="#checkbox-checked"></use>
+    </svg>
+            
+</div>
+
 <div class="container narrow text-align-center margin-y-4">
     <div class="margin-y-3">
         <a
