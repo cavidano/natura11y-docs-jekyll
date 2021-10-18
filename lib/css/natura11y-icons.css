@@ -34,6 +34,9 @@ url("./natura11y-icons.woff?08733258974d802b7d2e5966317de8f2") format("woff");
 .icon.icon-bell:before {
     content: "\f106";
 }
+.icon.icon-bookmark:before {
+    content: "\f146";
+}
 .icon.icon-calendar:before {
     content: "\f107";
 }
@@ -120,6 +123,9 @@ url("./natura11y-icons.woff?08733258974d802b7d2e5966317de8f2") format("woff");
 }
 .icon.icon-language:before {
     content: "\f123";
+}
+.icon.icon-lightbulb:before {
+    content: "\f147";
 }
 .icon.icon-linkedin:before {
     content: "\f124";
@@ -222,10 +228,4 @@ url("./natura11y-icons.woff?08733258974d802b7d2e5966317de8f2") format("woff");
 }
 .icon.icon-youtube:before {
     content: "\f145";
-}
-.icon.icon-bookmark:before {
-    content: "\f146";
-}
-.icon.icon-lightbulb:before {
-    content: "\f147";
 }
