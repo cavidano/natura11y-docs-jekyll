@@ -529,7 +529,7 @@ backdrop_credit_url: "https://unsplash.com/@brock222"
 <div class="container narrow margin-y-4">
     <h2>Generic Navigation</h2>
     <p>
-        Create a simple vertical navigation with the <code>.nav</code> component class added to a <code>ul</code> tag (Figure 2).
+        Create a simple vertical navigation with the <code>.nav</code> component class added to a <code>&lt;ul&gt;</code> tag (Figure 3).
     </p>
 </div>
 <!-- .container -->
@@ -572,14 +572,14 @@ backdrop_credit_url: "https://unsplash.com/@brock222"
         </pre>
     </div>
     <figcaption>
-        Figure 2
+        Figure 3
     </figcaption>
 </figure>
 
 
 <div class="container narrow margin-y-4">
     <p>
-        For a horizontal menu, apply the <code>.nav--horizontal</code> modifier class (Figure 3).
+        For a horizontal menu, apply the <code>.nav--horizontal</code> modifier class (Figure 4).
     </p>
 </div>
 <!-- .container -->
@@ -622,7 +622,7 @@ backdrop_credit_url: "https://unsplash.com/@brock222"
         </pre>
     </div>
     <figcaption>
-        Figure 3
+        Figure 4
     </figcaption>
 </figure>
 
@@ -632,7 +632,7 @@ backdrop_credit_url: "https://unsplash.com/@brock222"
         The <code>.nav--horizontal</code> modifier accepts <a href="{{ site.url }}/docs/breakpoints/#breakpointModifiers">breakpoint modifiers</a>.
     </p>
     <p>
-        With the HTML in Figure 4, the nav starts in the <em>vertical</em> direction. It then changes to the <em>horizontal</em> direction at the large breakpoint.
+        With the HTML in Figure 5, the nav starts in the <em>vertical</em> direction. It then changes to the <em>horizontal</em> direction at the large breakpoint.
     </p>
 </div>
 <!-- .container -->
@@ -667,14 +667,14 @@ backdrop_credit_url: "https://unsplash.com/@brock222"
         </pre>
     </div>
     <figcaption>
-        Figure 4
+        Figure 5
     </figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
     <h3>Justification</h3>
     <p>
-        Use the flex <a href="{{ site.url }}/docs/flex/#justifyContentUtilites">justify content utilities</a> for centered or right-justified navigation (Figure 5).
+        Use the flex <a href="{{ site.url }}/docs/flex/#justifyContentUtilites">justify content utilities</a> for centered or right-justified navigation (Figure 6).
     </p>
 </div>
 <!-- .container -->
@@ -724,7 +724,7 @@ backdrop_credit_url: "https://unsplash.com/@brock222"
         </pre>
     </div>
     <figcaption>
-        Figure 5
+        Figure 6
     </figcaption>
 </figure>
 
@@ -732,7 +732,7 @@ backdrop_credit_url: "https://unsplash.com/@brock222"
 
 <div class="container narrow margin-y-4">
     <h2>Bordered Navigation</h2>
-    <p>Add the <code>.nav--divider</code> modifier class to a <code>.nav</code> selector for a vertical, bordered navigation (Figure 6).</p>
+    <p>Add the <code>.nav--divider</code> modifier class to a <code>.nav</code> selector for a vertical, bordered navigation (Figure 7).</p>
 </div>
 <!-- .container -->
 
@@ -774,14 +774,14 @@ backdrop_credit_url: "https://unsplash.com/@brock222"
         </pre>
     </div>
     <figcaption>
-        Figure 6
+        Figure 7
     </figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
     <p>
         Include the aformentioned <code>.nav--horizontal</code> and
-        <code>.nav--horizontal--{bp}</code> modifier classes to <code>.nav-divider</code> selectors. This produces a horizontal (and responsive) bordered menu.
+        <code>.nav--horizontal--{bp}</code> modifier classes to <code>.nav-divider</code> selectors. This produces a horizontal (and responsive) bordered menu (Figure 8).
     </p>
 </div>
 
@@ -815,7 +815,7 @@ backdrop_credit_url: "https://unsplash.com/@brock222"
         </pre>
     </div>
     <figcaption>
-        Figure 7
+        Figure 8
     </figcaption>
 </figure>
 
@@ -827,7 +827,7 @@ backdrop_credit_url: "https://unsplash.com/@brock222"
         Generic navigation can include icons. Add the <code>.nav--has-icons</code> modifier class to a <code>.nav</code> selector. Nav items with icons (<code>&lt;a&gt;</code> or <code>&lt;button&gt;</code>) require two child selectors.
     </p>
     <p>
-        The first child is is a <code>&lt;span&gt;</code> with its combined <a href="#1">icon</a> classes. The second child is a <code>&lt;span&gt;</code> with a <code>.nav__text</code> class. This holds the nav items's text. Further, the <code>.nav__text</code> selector is our target for underlining the text on <code>:hover</code> and <code>:focus</code> states. It also provides a small margin to separate the text from the icon.
+        The first child is is a <code>&lt;span&gt;</code> with its combined <a href="{{ site.url }}/icons">icon</a> classes. The second child is a <code>&lt;span&gt;</code> with a <code>.nav__text</code> class. This holds the nav items's text. Further, the <code>.nav__text</code> selector is our target for underlining the text on <code>:hover</code> and <code>:focus</code> states. It also provides a small margin to separate the text from the icon. See Figure 9.
     </p>
 </div>
 <!-- .container -->
@@ -914,7 +914,7 @@ backdrop_credit_url: "https://unsplash.com/@brock222"
         </pre>
     </div>
     <figcaption>
-        Figure 6
+        Figure 9
     </figcaption>
 </figure>
 
@@ -927,7 +927,7 @@ backdrop_credit_url: "https://unsplash.com/@brock222"
         Include dropdown items within <code>.nav</code>, and <code>.nav--divider</code> selectors. As well as within the <code>.primary-nav__menu</code> selector inside the <em>primary navigation</em> component.
     </p>
     <p>
-        To create a dropdown, include the <code>data-toggle="dropdown"</code> attribute on a <code>&lt;button&gt;</code> (Figure 8, line 3). Add a sibling <code>&lt;ul&gt;</code> with the <code>.nav__dropdown</code> class (Figure 8, line 4).
+        To create a dropdown, include the <code>data-toggle="dropdown"</code> attribute on a <code>&lt;button&gt;</code> (Figure 8, line 3). Add a sibling <code>&lt;ul&gt;</code> with the <code>.nav__dropdown</code> class (Figure 10, line 4).
     </p>
 </div>
 <!-- .container -->
@@ -996,7 +996,7 @@ backdrop_credit_url: "https://unsplash.com/@brock222"
         </pre>
     </div>
     <figcaption>
-        Figure 8
+        Figure 10
     </figcaption>
 </figure>
 
@@ -1049,4 +1049,4 @@ backdrop_credit_url: "https://unsplash.com/@brock222"
     </div>
 </figure>
 
-{% include related-css-variables.html anchor="navigation" figure="9" %}
+{% include related-css-variables.html anchor="navigation" figure="11" %}
