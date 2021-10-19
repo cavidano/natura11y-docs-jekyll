@@ -74,21 +74,42 @@ backdrop_credit_url: "https://unsplash.com/@zmachacek"
 
             <div class="container narrow margin-y-4">
                 <h2>Icon Font (CDN)</h2>
-                <p>The easiest way to use Natura11y Icons. Place Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>
+                    Place the Natura11y icon font <code>link</code> tag in the <code>&lt;head&gt;</code> your document. Create icons with <code>&lt;span&gt;</code> or <code>&lt;i&gt;</code> tags. The first <code>.icon</code> class is required for general styling. The second <code>.icon-{x}</code> class specifies which icon to use. Here <strong><em>x</em></strong> equals the icon name (Figure 1). 
+                </p>
             </div>
             <!-- .container -->
 
             <figure class="container medium margin-y-4">
-                <pre>
-                    <code class="language-html">
-                        &lt;head&gt;
-                            ...
-                            &lt;!-- Natura11y Icons (place before Natura11y stylesheet) --&gt;
-                            &lt;link rel="stylesheet" href="{{ site.cdn_url_icons }}"&gt;
+                <div class="example">
+                    <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
 
-                        &lt;/head&gt;
-                    </code>
-                </pre>
+                        <div class="container narrow">
+                            <ul class="ul nav nav--horizontal font-size-lg">
+                                <li>
+                                    <span class="icon icon-home"></span>
+                                </li>
+                                <li>
+                                    <span class="icon icon-heart"></span>
+                                </li>
+                                <li>
+                                    <span class="icon icon-info"></span>
+                                </li>
+                            </ul>
+                
+                        </div>
+
+                    </div>
+                    <pre>
+                        <code class="language-html">
+                            &lt;!-- Natura11y Icon CSS --&gt;
+                            &lt;link href="{{ site.cdn_url_icons }}" rel="stylesheet"&gt;
+
+                            &lt;!-- Icon HTML: your choice of &lt;span&gt; or &lt;i&gt; tags --&gt;
+                            &lt;span class="icon icon-home"&gt;&lt;/span&gt;
+                        </code>
+                    </pre>
+                </div>
                 <figcaption>
                     Figure 1
                 </figcaption>
@@ -98,17 +119,19 @@ backdrop_credit_url: "https://unsplash.com/@zmachacek"
 
             <div class="container narrow margin-y-4">
                 <h2>SVG Sprites</h2>
-                <p>The easiest way to use Natura11y Icons. Place Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>
+                    Include Natura11y Icons with the svg sprite and the <code>use</code> element. Because of cross-origin issues, it's best to host the svg sprite file locally. 
+                </p>
             </div>
             <!-- .container -->
 
             <div class="container narrow margin-y-4">
                 <h3 class="h4">Step 1: Get the sprite file</h3>
                 <p>
-                    Because of cross-origin issues, it's best to host the svg sprite file locally. Download the sprite and place it somewhere in your project.
+                    With the button below, download the <strong>natura11y-icons-sprite.svg</strong> file and place it somewhere within your project's directory.
                 </p>
                 <a
-                    class="button button--has-icon button--outline font-size-md"
+                    class="button button--has-icon button--outline font-size-md text-color-link"
                     href="{{ site.url }}lib/css/natura11y-icons-sprite.svg"
                     download>
                     <span class="icon icon-file-download"></span>
@@ -122,36 +145,8 @@ backdrop_credit_url: "https://unsplash.com/@zmachacek"
 
             <div class="container narrow margin-y-4">
                 <h3 class="h4">Step 2: Include the Javascript</h3>
-                <p>
-                    Because of cross-origin issues, it's best to host the svg sprite file locally. Download the sprite and place it somewhere in your project.
-                </p>
-            </div>
-            <!-- .container -->
-
-
-            <figure class="container medium margin-y-4">
-                <pre>
-                    <code class="language-javascript">
-                        const ajax = new XMLHttpRequest();
-                        
-                        ajax.open('GET', './path/to/natura11y-icons-sprite.svg', true);
-                        ajax.send();
-                        ajax.onload = () => {
-                            const div = document.createElement('div');
-                            div.className = 'natura11y-icons-sprite';
-                            div.innerHTML = ajax.responseText;
-                            document.body.insertBefore(div, document.body.childNodes[0]);
-                        };
-                    </code>
-                </pre>
-                <figcaption>
-                    Figure 2
-                </figcaption>
-            </figure>
-            <div class="container narrow margin-y-4">
-                <h3 class="h4">Step 3: Enjoy using the icons</h3>
-                <p>
-                    Because of cross-origin issues, it's best to host the svg sprite file locally. Download the sprite and place it somewhere in your project.
+                 <p>
+                    For sake of example, include the script tag from Figure 2 in your document's footer. Preferably, just before the closing <code>&lt;/body&gt;</code> tag.
                 </p>
             </div>
             <!-- .container -->
@@ -159,11 +154,61 @@ backdrop_credit_url: "https://unsplash.com/@zmachacek"
             <figure class="container medium margin-y-4">
                 <pre>
                     <code class="language-html">
-                        &lt;svg class="icon"&gt;
-                            &lt;use href="#heart"&gt;&lt;/use&gt;
-                        &lt;/svg&gt;
+                        &lt;script&gt;
+                            const ajax = new XMLHttpRequest();
+                            
+                            ajax.open('GET', './path/to/natura11y-icons-sprite.svg', true);
+                            ajax.send();
+                            ajax.onload = () => {
+                                const div = document.createElement('div');
+                                div.className = 'natura11y-icons-sprite';
+                                div.innerHTML = ajax.responseText;
+                                document.body.insertBefore(div, document.body.childNodes[0]);
+                            };
+                        &lt;/script&gt;
                     </code>
                 </pre>
+                <figcaption>
+                    Figure 2
+                </figcaption>
+            </figure>
+            <div class="container narrow margin-y-4">
+                <h3 class="h4">Step 3: Reference the icons</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, corrupti quo. Nulla iusto totam obcaecati, ab atque provident illum ducimus.
+                </p>
+            </div>
+            <!-- .container -->
+
+
+            <figure class="container medium margin-y-4">
+                <div class="example">
+                    <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+                        <div class="container narrow">
+                            <ul class="ul nav nav--horizontal font-size-lg">
+                                <li>
+                                    <span class="icon icon-home"></span>
+                                </li>
+                                <li>
+                                    <span class="icon icon-heart"></span>
+                                </li>
+                                <li>
+                                    <span class="icon icon-info"></span>
+                                </li>
+                            </ul>
+                
+                        </div>
+
+                    </div>
+                    <pre>
+                        <code class="language-html">
+                            &lt;svg class="icon"&gt;
+                                &lt;use href="#home"&gt;&lt;/use&gt;
+                            &lt;/svg&gt;
+                        </code>
+                    </pre>
+                </div>
                 <figcaption>
                     Figure 3
                 </figcaption>
