@@ -11,22 +11,21 @@ backdrop_credit_url: "https://unsplash.com/@zmachacek"
         Natura11y's own icon library.
     </h2>
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique excepturi laudantium eius est vero ipsam
-        amet, ullam voluptatum expedita dolores, accusantium delectus cupiditate aliquam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique excepturi laudantium eius est vero.
     </p>
 </div>
 <!-- .container -->
 
 <div class="container medium tabs" role="tablist" style="min-height:600px;">
 
-    <ul class="tabs-nav tabs-nav--horizontal--md">
+    <ul class="tabs-nav tabs-nav--horizontal">
         <li>
             <button
                 id="tab-button-example-01"
                 aria-controls="the-icons"
                 aria-selected="true"
                 role="tab">
-                    The Icons
+                    Icons
             </button>
         </li>
         <li>
@@ -73,30 +72,103 @@ backdrop_credit_url: "https://unsplash.com/@zmachacek"
         aria-labelledby="tab-button-example-02"
         role="tabpanel">
 
-        <div class="container narrow margin-y-4">
-            <h2>CDN</h2>
-            <p>The easiest way to use Natura11y Icons. Place Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </div>
-        <!-- container -->
+            <div class="container narrow margin-y-4">
+                <h2>Icon Font (CDN)</h2>
+                <p>The easiest way to use Natura11y Icons. Place Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <!-- .container -->
 
-        <figure class="container medium margin-y-4">
-            <pre>
-                <code class="language-html">
-                    &lt;head&gt;
-                        ...
-                        &lt;!-- Natura11y Icons --&gt;
-                        &lt;link rel="stylesheet" href="{{ site.cdn_url_icons }}"&gt;
+            <figure class="container medium margin-y-4">
+                <pre>
+                    <code class="language-html">
+                        &lt;head&gt;
+                            ...
+                            &lt;!-- Natura11y Icons (place before Natura11y stylesheet) --&gt;
+                            &lt;link rel="stylesheet" href="{{ site.cdn_url_icons }}"&gt;
 
-                        &lt;!-- Natura11y Stylesheet --&gt;
-                        &lt;link rel="stylesheet" href="{{ site.cdn_url_css }}"&gt;
+                        &lt;/head&gt;
+                    </code>
+                </pre>
+                <figcaption>
+                    Figure 1
+                </figcaption>
+            </figure>
 
-                    &lt;/head&gt;
-                </code>
-            </pre>
-            <figcaption>
-                Figure 1
-            </figcaption>
-        </figure>
+            <hr class="margin-y-5">
+
+            <div class="container narrow margin-y-4">
+                <h2>SVG Sprites</h2>
+                <p>The easiest way to use Natura11y Icons. Place Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <!-- .container -->
+
+            <div class="container narrow margin-y-4">
+                <h3 class="h4">Step 1: Get the sprite file</h3>
+                <p>
+                    Because of cross-origin issues, it's best to host the svg sprite file locally. Download the sprite and place it somewhere in your project.
+                </p>
+                <a
+                    class="button button--has-icon button--outline font-size-md"
+                    href="{{ site.url }}lib/css/natura11y-icons-sprite.svg"
+                    download>
+                    <span class="icon icon-file-download"></span>
+                    <span class="button__text">
+                        <span class="Download"></span>
+                        <span>Download SVG Sprite</span>
+                    </span>
+                </a>  
+            </div>
+            <!-- .container -->
+
+            <div class="container narrow margin-y-4">
+                <h3 class="h4">Step 2: Include the Javascript</h3>
+                <p>
+                    Because of cross-origin issues, it's best to host the svg sprite file locally. Download the sprite and place it somewhere in your project.
+                </p>
+            </div>
+            <!-- .container -->
+
+
+            <figure class="container medium margin-y-4">
+                <pre>
+                    <code class="language-javascript">
+                        const ajax = new XMLHttpRequest();
+                        
+                        ajax.open('GET', './path/to/natura11y-icons-sprite.svg', true);
+                        ajax.send();
+                        ajax.onload = () => {
+                            const div = document.createElement('div');
+                            div.className = 'natura11y-icons-sprite';
+                            div.innerHTML = ajax.responseText;
+                            document.body.insertBefore(div, document.body.childNodes[0]);
+                        };
+                    </code>
+                </pre>
+                <figcaption>
+                    Figure 2
+                </figcaption>
+            </figure>
+            <div class="container narrow margin-y-4">
+                <h3 class="h4">Step 3: Enjoy using the icons</h3>
+                <p>
+                    Because of cross-origin issues, it's best to host the svg sprite file locally. Download the sprite and place it somewhere in your project.
+                </p>
+            </div>
+            <!-- .container -->
+
+            <figure class="container medium margin-y-4">
+                <pre>
+                    <code class="language-html">
+                        &lt;svg class="icon"&gt;
+                            &lt;use href="#heart"&gt;&lt;/use&gt;
+                        &lt;/svg&gt;
+                    </code>
+                </pre>
+                <figcaption>
+                    Figure 3
+                </figcaption>
+            </figure>
     </div>
+    <!-- .tabs__panel -->
 
 </div>
