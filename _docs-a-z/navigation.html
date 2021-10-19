@@ -819,6 +819,107 @@ backdrop_credit_url: "https://unsplash.com/@brock222"
     </figcaption>
 </figure>
 
+<hr class="section-start" id="iconsInNavigation">
+
+<div class="container narrow margin-y-4">
+    <h2>Icons in Navigation</h2>
+    <p>
+        Generic navigation can include icons. Add the <code>.nav--has-icons</code> modifier class to a <code>.nav</code> selector. Nav items with icons (<code>&lt;a&gt;</code> or <code>&lt;button&gt;</code>) require two child selectors.
+    </p>
+    <p>
+        The first child is is a <code>&lt;span&gt;</code> with its combined <a href="#1">icon</a> classes. The second child is a <code>&lt;span&gt;</code> with a <code>.nav__text</code> class. This holds the nav items's text. Further, the <code>.nav__text</code> selector is our target for underlining the text on <code>:hover</code> and <code>:focus</code> states. It also provides a small margin to separate the text from the icon.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+
+            <div class="container narrow">
+
+            
+            <ul class="nav nav--has-icons nav--horizontal justify-content-center margin-bottom-4" role="menu">
+                <li>
+                    <a href="#1">
+                        <span class="icon icon-home"></span>
+                        <span class="nav__text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#1">
+                        <span class="icon icon-calendar"></span>
+                        <span class="nav__text">Calendar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#1">
+                        <span class="icon icon-bell"></span>
+                        <span class="nav__text">Notifications</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="nav nav--divider nav--has-icons border" role="menu">
+                <li>
+                    <a href="#1">
+                        <span class="icon icon-home"></span>
+                        <span class="nav__text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#1">
+                        <span class="icon icon-calendar"></span>
+                        <span class="nav__text">Calendar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#1">
+                        <span class="icon icon-bell"></span>
+                        <span class="nav__text">Notifications</span>
+                    </a>
+                </li>
+            </ul>
+    
+            </div>
+
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;ul class="nav nav--has-icons" role="menu"&gt;
+                    &lt;li&gt;
+                        &lt;a href="#1"&gt;
+                            &lt;span class="icon icon-home"&gt;&lt;/span&gt;
+                            &lt;span class="nav__text"&gt;Home&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="#1"&gt;
+                            &lt;span class="icon icon-calendar"&gt;&lt;/span&gt;
+                            &lt;span class="nav__text"&gt;Calendar&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href="#1"&gt;
+                            &lt;span class="icon icon-bell"&gt;&lt;/span&gt;
+                            &lt;span class="nav__text"&gt;Notifications&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+
+                &lt;ul class="nav nav--divider nav--has-icons" role="menu"&gt;
+                    ...
+                &lt;/ul&gt;
+                
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 6
+    </figcaption>
+</figure>
+
+
 <hr class="section-start" id="dropdowns">
 
 <div class="container narrow margin-y-4">
