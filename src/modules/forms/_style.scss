@@ -21,7 +21,6 @@ In this file:
 @use "sass:map";
 @use "../accents/style" as accents;
 @use "../breakpoints/style" as breakpoints;
-@use "../caret/style" as caret;
 @use "../icons/style" as icons;
 
 //////////////////////////////////////////////
@@ -175,11 +174,8 @@ fieldset {
 }
 
 .form-entry ~ .form-entry {
-    margin-block: var(--spacer-4);
-}
-
-.grid > .form-entry {
-    margin: unset;
+    margin-top: var(--spacer-4);
+    margin-bottom: var(--spacer-4);
 }
 
 //////////////////////////////////////////////
@@ -382,7 +378,7 @@ fieldset {
     position: relative;
 
     &::before {
-        @extend .caret;
+        @extend %caret;
 
         position: absolute;
         content: "";

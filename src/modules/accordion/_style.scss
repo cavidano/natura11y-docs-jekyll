@@ -14,7 +14,6 @@ In this file:
 //////////////////////////////////////////////
 
 @use "../accents/style" as accents;
-@use "../caret/style" as caret;
 
 //////////////////////////////////////////////
 // B. Variables
@@ -60,7 +59,7 @@ In this file:
 
     cursor: pointer;
 
-    @extend .caret;
+    @extend %caret;
 
     &:not(:first-child){
         border-top-width: var(--default-border-width);
