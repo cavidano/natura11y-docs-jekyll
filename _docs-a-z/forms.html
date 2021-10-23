@@ -7,17 +7,17 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 
 <div class="container narrow margin-y-4">
     <p>
-        Forms are notoriously challenging to style and make accessible. Natura11y provides basic style and behavior for building accessible and usable forms. 
+        Forms are notoriously challenging to style and make accessible. Natura11y provides basic style and behavior for building user friendly, accessible and forms. 
     </p>
 </div>
 <!-- .container -->
 
 {% capture as_body %}
 <p>
-    Most form input labels can be included <a href="https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-implicitly" target="_blank">implicitly</a> or <a href="https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-explicitly" target="_blank">explicitly</a> depending on your preference.
+    All form elements include a consistent visible focus for keyboard users.
 </p>
 <p>
-    All form elements include a consistent visible focus for keyboard users.
+    Most form input labels can be included <a href="https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-implicitly" target="_blank">implicitly</a> or <a href="https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-explicitly" target="_blank">explicitly</a> depending on your preference.
 </p>
 {% endcapture %}
 
@@ -31,7 +31,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
         The form entry parent selector (<code>.form-entry</code>) wraps each entry within a form. Child elements within form entries vary depending on their input types. Such types include <em>text inputs</em>, <em>textareas</em>, <em>selects</em>, <em>checkboxes</em>, and <em>radios</em>.
     </p>
     <p>
-        In Figure 1, a <code>.form-entry</code> parent selector contains an <code>&lt;input&gt;</code> with the <code>type="text"</code> attribute. 
+        In Figure 1, the <code>.form-entry</code> parent selector contains an <code>&lt;input&gt;</code> field with the <code>type="text"</code> attribute. 
     </p>
 </div>
 <!-- .container -->
@@ -64,14 +64,16 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 
             </div>
         </div>
-        <pre data-line="1,3-14,16-18">
+        <pre data-line="1,3-17,19-21">
             <code class="language-html">
                 &lt;div class="form-entry"&gt;
 
                     &lt;label class="form-entry__field"&gt;
+
                         &lt;span class="form-entry__field__label"&gt;
                             Form Entry Label
                         &lt;/span&gt;
+                    
                         &lt;span class="form-entry__field__input"&gt;
                             &lt;input
                                 type="text"
@@ -79,6 +81,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                                 id="text-input-example" 
                                 aria-describedby="help-text-input-example"&gt;
                         &lt;/span&gt;
+                    
                     &lt;/label&gt;
                     
                     &lt;small class="form-entry__help" id="help-text-input-example"&gt;
@@ -123,8 +126,8 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
             </tr>
             <tr>
                 <td>
-                    <a href="#figure_1.3-14" data-line-anchor>
-                        3-14
+                    <a href="#figure_1.3-17" data-line-anchor>
+                        3-17
                     </a>
                 </td>
                 <td>
@@ -153,8 +156,8 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
             </tr>
             <tr>
                 <td>
-                    <a href="#figure_1.16-18" data-line-anchor>
-                        16-18
+                    <a href="#figure_1.19-21" data-line-anchor>
+                        19-21
                     </a>
                 </td>
                 <td>
@@ -176,7 +179,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 <div class="container narrow margin-y-4">
     <h2>Select Element</h2>
     <p>
-        In Figure 2, the form entry container holds a select element. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, vel tenetur aliquam molestias libero quasi officia.
+        With the example in Figure 2, the same <code>.form-entry</code> container holds a <code>&lt;select&gt;</code> element.
     </p>
 </div>
 <!-- .container -->
@@ -189,9 +192,11 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                 <div class="form-entry">
 
                     <label class="form-entry__field">
-                        <label class="form-entry__field__label" for="select-example">
+
+                        <span class="form-entry__field__label" for="select-example">
                             Form Entry Label
-                        </label>
+                        </span>
+                    
                         <span class="form-entry__field__select">
                             <select
                                 id="select-example" 
@@ -205,6 +210,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                                     <option value="Option Five">Option Five</option>
                             </select>
                         </span>
+                    
                     </label>
                     
                     <small class="form-entry__help" id="help-select-example">
@@ -221,9 +227,9 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 
                     &lt;label class="form-entry__field"&gt;
 
-                        &lt;label class="form-entry__field__label" for="select-example"&gt;
+                        &lt;span class="form-entry__field__label" for="select-example"&gt;
                             Form Entry Label
-                        &lt;/label&gt;
+                        &lt;/span&gt;
                     
                         &lt;span class="form-entry__field__select"&gt;
                             &lt;select
@@ -306,7 +312,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 <div class="container narrow margin-y-4">
     <h2>Text Area</h2>
     <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus, corrupti tempore sint quos.
+        Following the previous example's pattern, Figure 3 shows the <code>.form-entry</code> parent selector with a <code>&lt;textarea&gt;</code> element.
     </p>
 </div>
 <!-- .container -->
@@ -420,7 +426,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 <div class="container narrow margin-y-4">
     <h2>File Upload</h2>
     <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus, corrupti tempore sint quos.
+        Natura11y offers a simple file upload component, as shown in Figure 4 below.
     </p>
 </div>
 <!-- .container -->
@@ -466,7 +472,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 
             </div>
         </div>
-        <pre>
+        <pre data-line="11,13-15,17-22,24-27">
             <code class="language-html">
                 &lt;div class="form-entry"&gt;
 
@@ -502,7 +508,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 
                     &lt;/div&gt;
 
-                    &lt;small class="form-entry__help" id="help-textarea-example"&gt;
+                    &lt;small class="form-entry__help" id="file-upload-example"&gt;
                         Form entry help text
                     &lt;/small&gt;
 
@@ -532,22 +538,55 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                 </td>
                 <td>
                     <p>
-                        The <code>.form-entry__field__label</code> grandchild selector is required.
+                        The <code>.file-upload</code> selector is required.
+                    </p>
+                    <p>
+                        It holds the drop area and actual <code>&lt;input&gt;</code> tag.
                     </p>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <a href="#figure_2.9-18" data-line-anchor>
-                        9-18
+                    <a href="#figure_2.13-15" data-line-anchor>
+                        13-15
                     </a>
                 </td>
                 <td>
                     <p>
-                        The <code>.form-entry__field__input</code> grandchild selector is required.
+                        The <code>.file-upload__drop</code> child selector is required.
                     </p>
                     <p>
-                        It holds the actual <code>&lt;textarea&gt;</code> tag.
+                        It holds the <code>.file-upload__drop__text</code> selector.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_2.17-22" data-line-anchor>
+                        17-22
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.file-upload__input</code> child selector is required.
+                    </p>
+                    <p>
+                        It includes the <code>type="file"</code> attribute.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_2.24-27" data-line-anchor>
+                        24-27
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.button</code> selector is required.
+                    </p>
+                    <p>
+                        It can be styled with any of the <a href="{{ site.url }}/docs/buttons">button</a> utilities.
                     </p>
                 </td>
             </tr>
