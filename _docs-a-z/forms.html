@@ -193,7 +193,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 
                     <label class="form-entry__field">
 
-                        <span class="form-entry__field__label" for="select-example">
+                        <span class="form-entry__field__label">
                             Form Entry Label
                         </span>
                     
@@ -201,7 +201,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                             <select
                                 id="select-example" 
                                 name="selectExample"
-                                aria-describedby="help-select-example"&gt;>
+                                aria-describedby="help-select-example">
                                     <option value="">Select</option>
                                     <option value="Option One">Option One</option>
                                     <option value="Option Two">Option Two</option>
@@ -227,7 +227,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 
                     &lt;label class="form-entry__field"&gt;
 
-                        &lt;span class="form-entry__field__label" for="select-example"&gt;
+                        &lt;span class="form-entry__field__label"&gt;
                             Form Entry Label
                         &lt;/span&gt;
                     
@@ -235,7 +235,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                             &lt;select
                                 id="select-example" 
                                 name="selectExample"
-                                aria-describedby="help-select-example"&gt;&gt;
+                                aria-describedby="help-select-example"&gt;
                                     &lt;option value=""&gt;Select&lt;/option&gt;
                                     &lt;option value="Option One"&gt;Option One&lt;/option&gt;
                                     &lt;option value="Option Two"&gt;Option Two&lt;/option&gt;
@@ -332,7 +332,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                             <textarea
                                 rows="8"
                                 name="textInputExample"
-                                id="text-input-example"
+                                id="text-textarea-example"
                                 aria-describedby="help-textarea-example"
                             ></textarea>
                         </span>
@@ -464,7 +464,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 
                     </div>
 
-                    <small class="form-entry__help" id="help-textarea-example">
+                    <small class="form-entry__help" id="help-file-upload-example">
                         Form entry help text
                     </small>
 
@@ -508,7 +508,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 
                     &lt;/div&gt;
 
-                    &lt;small class="form-entry__help" id="file-upload-example"&gt;
+                    &lt;small class="form-entry__help" id="help-file-upload-example"&gt;
                         Form entry help text
                     &lt;/small&gt;
 
@@ -670,7 +670,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 
             </div>
         </div>
-        <pre data-line="9,11">
+        <pre data-line="9,11,18-20">
             <code class="language-html">
                 &lt;div class="form-entry"&gt;
 
@@ -778,31 +778,16 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
             </tr>
             <tr>
                 <td>
-                    <a href="#figure_2.17-22" data-line-anchor>
-                        17-22
+                    <a href="#figure_2.18-20" data-line-anchor>
+                        18-20
                     </a>
                 </td>
                 <td>
                     <p>
-                        The <code>.file-upload__input</code> child selector is required.
+                        The <code>.check__label</code> child selector is required.
                     </p>
                     <p>
-                        It includes the <code>type="file"</code> attribute.
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#figure_2.24-27" data-line-anchor>
-                        24-27
-                    </a>
-                </td>
-                <td>
-                    <p>
-                        The <code>.button</code> selector is required.
-                    </p>
-                    <p>
-                        It can be styled with any of the <a href="{{ site.url }}/docs/buttons">button</a> utilities.
+                        It holds the actual text label for the checkbox.
                     </p>
                 </td>
             </tr>
@@ -814,7 +799,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 <div class="container narrow margin-y-4">
     <h3>Single Checkbox</h3>
     <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus, corrupti tempore sint quos.
+        For a single checkbox, do not use a <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code>. Instead, provide an <code>id</code> on the <code>.form-entry__field__label</code> selector (Figure 6, line 5). Then associate it with <code>aria-labeledby</code> placed on the surrounding <code>&lt;label&gt;</code> tag (Figure 6, lines 13).  
     </p>
 </div>
 <!-- .container -->
@@ -826,63 +811,67 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 
                 <div class="form-entry">
 
-                    <fieldset class="form-entry__field">
+                    <div class="form-entry__field">
 
-                        <legend class="form-entry__field__label">
+                        <span class="form-entry__field__label" id="single-option-label">
                             Form Entry Label
-                        </legend>
+                        </span>
 
                         <div class="form-entry__option">
 
                             <div class="form-entry__option__check">
-                                <label>
+
+                                <label aria-labeledby="single-option-label">
                                     <input
                                         type="checkbox"
-                                        name="checkboxGroupExample"
-                                        id="option-one"
-                                        value="optionOne">
-                                    <span class="check__label">
-                                        Option One
-                                    </span>
+                                        name="singleOption"
+                                        id="single-option"
+                                        value="option">
+                                        <span class="check__label">
+                                            Option
+                                        </span>
                                 </label>
+
                             </div>
 
                         </div>
 
-                    </fieldset>
+                    </div>
 
                 </div>
 
             </div>
         </div>
-        <pre>
+        <pre data-line="5,13">
             <code class="language-html">
                 &lt;div class="form-entry"&gt;
 
-                    &lt;fieldset class="form-entry__field"&gt;
+                    &lt;div class="form-entry__field"&gt;
 
-                        &lt;legend class="form-entry__field__label"&gt;
+                        &lt;span class="form-entry__field__label" id="single-option-label"&gt;
                             Form Entry Label
-                        &lt;/legend&gt;
+                        &lt;/span&gt;
 
                         &lt;div class="form-entry__option"&gt;
 
                             &lt;div class="form-entry__option__check"&gt;
-                                &lt;label&gt;
+
+                                &lt;label aria-labeledby="single-option-label"&gt;
                                     &lt;input
                                         type="checkbox"
-                                        name="checkboxGroupExample"
-                                        id="option-one"
-                                        value="optionOne"&gt;
-                                    &lt;span class="check__label"&gt;
-                                        Option One
-                                    &lt;/span&gt;
+                                        name="singleOption"
+                                        id="single-option"
+                                        value="option"&gt;
+                                        &lt;span class="check__label"&gt;
+                                            Option
+                                        &lt;/span&gt;
                                 &lt;/label&gt;
+
                             &lt;/div&gt;
 
                         &lt;/div&gt;
 
-                    &lt;/fieldset&gt;
+                    &lt;/div&gt;
 
                 &lt;/div&gt;
             </code>
@@ -896,7 +885,10 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 <div class="container narrow margin-y-4">
     <h3>Checkbox Switch</h3>
     <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus, corrupti tempore sint quos.
+        Checkboxes can transform into switches with just a couple of of tweaks to the markup.
+    </p>
+    <p>
+        First, change the <code>.form-entry__option__check</code> to  <code>.form-entry__option__switch</code> (Figure 7, line 11). Then, change <code>.check__label</code> to <code>.switch__label</code> (line 20). Above the switch label, add an empty <code>&lt;span&gt;</code> with a <code>.switch__slider</code> class (Figure 7, line 19).
     </p>
 </div>
 <!-- .container -->
@@ -908,65 +900,69 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 
                 <div class="form-entry">
 
-                    <fieldset class="form-entry__field">
+                    <div class="form-entry__field">
 
-                        <legend class="form-entry__field__label">
+                        <span class="form-entry__field__label" id="switch-option-label">
                             Form Entry Label
-                        </legend>
+                        </span>
 
                         <div class="form-entry__option">
 
                             <div class="form-entry__option__switch">
-                                <label>
+
+                                <label aria-labeledby="switch-option-label">
                                     <input
                                         type="checkbox"
-                                        name="checkboxSwitchExample"
-                                        id="checkbox-switch-example"
-                                        value="optionOne">
-                                    <span class="switch__slider"></span>
-                                    <span class="switch__label">
-                                        Recieve Notifications
-                                    </span>
+                                        name="singleOption"
+                                        id="switch-option"
+                                        value="option">
+                                        <span class="switch__slider"></span>
+                                        <span class="check__label">
+                                            Recieve Notifications
+                                        </span>
                                 </label>
+
                             </div>
 
                         </div>
 
-                    </fieldset>
+                    </div>
 
                 </div>
 
             </div>
         </div>
-        <pre>
+        <pre data-line="11,19,20">
             <code class="language-html">
                 &lt;div class="form-entry"&gt;
 
-                    &lt;fieldset class="form-entry__field"&gt;
+                    &lt;div class="form-entry__field"&gt;
 
-                        &lt;legend class="form-entry__field__label"&gt;
+                        &lt;span class="form-entry__field__label" id="switch-option-label"&gt;
                             Form Entry Label
-                        &lt;/legend&gt;
+                        &lt;/span&gt;
 
                         &lt;div class="form-entry__option"&gt;
 
                             &lt;div class="form-entry__option__switch"&gt;
-                                &lt;label&gt;
+
+                                &lt;label aria-labeledby="switch-option-label"&gt;
                                     &lt;input
                                         type="checkbox"
-                                        name="checkboxSwitchExample"
-                                        id="checkbox-switch-example"
-                                        value="optionOne"&gt;
-                                    &lt;span class="switch__slider"&gt;&lt;/span&gt;
-                                    &lt;span class="check__label"&gt;
-                                        Recieve Notifications
-                                    &lt;/span&gt;
+                                        name="singleOption"
+                                        id="switch-option"
+                                        value="option"&gt;
+                                        &lt;span class="switch__slider"&gt;&lt;/span&gt;
+                                        &lt;span class="check__label"&gt;
+                                            Recieve Notifications
+                                        &lt;/span&gt;
                                 &lt;/label&gt;
+
                             &lt;/div&gt;
 
                         &lt;/div&gt;
 
-                    &lt;/fieldset&gt;
+                    &lt;/div&gt;
 
                 &lt;/div&gt;
             </code>
