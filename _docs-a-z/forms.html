@@ -7,17 +7,17 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 
 <div class="container narrow margin-y-4">
     <p>
-        Forms are notoriously difficult to style and make accessible. Natura11y provides some basic form elements that satisfy most form needs. 
+        Forms are notoriously challenging to style and make accessible. Natura11y provides basic style and behavior for building accessible and usable forms. 
     </p>
 </div>
 <!-- .container -->
 
 {% capture as_body %}
 <p>
-    Most form input labels can be included <em>implicitly</em> or <em>explicitly</em>, depending on your preference.
+    Most form input labels can be included <a href="https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-implicitly" target="_blank">implicitly</a> or <a href="https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-explicitly" target="_blank">explicitly</a> depending on your preference.
 </p>
 <p>
-    All form elements include custom visible focus for keyboard users.
+    All form elements include a consistent visible focus for keyboard users.
 </p>
 {% endcapture %}
 
@@ -28,10 +28,10 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 <div class="container narrow margin-y-4">
     <h2>Form Entries</h2>
     <p>
-        The form entry parent selector (<code>.form-entry</code>) wraps each entry within a form. Child elements within form entries vary depending on its input type. Such as <em>text inputs</em>, <em>textareas</em>, <em>selects</em>, <em>checkboxes</em>, and <em>radios</em>.  
+        The form entry parent selector (<code>.form-entry</code>) wraps each entry within a form. Child elements within form entries vary depending on their input types. Such types include <em>text inputs</em>, <em>textareas</em>, <em>selects</em>, <em>checkboxes</em>, and <em>radios</em>.
     </p>
     <p>
-        Figure 1 provides an example of a form entry containing an input with the <code>type="text"</code> attribute. 
+        In Figure 1, a <code>.form-entry</code> parent selector contains an <code>&lt;input&gt;</code> with the <code>type="text"</code> attribute. 
     </p>
 </div>
 <!-- .container -->
@@ -111,7 +111,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                 </td>
                 <td>
                     <p>
-                        The <code>.form-entry</code> selector is required.
+                        The <code>.form-entry</code> parent selector is required.
                     </p>
                     <p>
                         It contains each entries elements, including help text and feedback messages.
