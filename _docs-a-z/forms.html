@@ -532,7 +532,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
         <tbody>
             <tr>
                 <td>
-                    <a href="#figure_2.5-7" data-line-anchor>
+                    <a href="#figure_4.5-7" data-line-anchor>
                         5-7
                     </a>
                 </td>
@@ -547,7 +547,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
             </tr>
             <tr>
                 <td>
-                    <a href="#figure_2.13-15" data-line-anchor>
+                    <a href="#figure_4.13-15" data-line-anchor>
                         13-15
                     </a>
                 </td>
@@ -557,6 +557,222 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                     </p>
                     <p>
                         It holds the <code>.file-upload__drop__text</code> selector.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_4.17-22" data-line-anchor>
+                        17-22
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.file-upload__input</code> child selector is required.
+                    </p>
+                    <p>
+                        It includes the <code>type="file"</code> attribute.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_4.24-27" data-line-anchor>
+                        24-27
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.button</code> selector is required.
+                    </p>
+                    <p>
+                        It can be styled with any of the <a href="{{ site.url }}/docs/buttons">button</a> utilities.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</figure>
+
+<hr class="section-start" id="checkboxes">
+
+<div class="container narrow margin-y-4">
+    <h2>Checkboxes</h2>
+    <p>
+        Checkbox (and radio) groups use semantic <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> tags. They stack vertically, with a healthy amount of padding. This helps to ensure an accessible <em>target</em> size.
+    </p>
+    <p>
+        Figure 5 provides the markup required to create a checkbox group.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow">
+
+                <div class="form-entry">
+
+                    <fieldset class="form-entry__field">
+
+                        <legend class="form-entry__field__label">
+                            Form Entry Label
+                        </legend>
+
+                        <div class="form-entry__option">
+
+                            <div class="form-entry__option__check">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="checkboxGroupExample"
+                                        id="check-option-one"
+                                        value="optionOne">
+                                        <span class="check__label">
+                                            Option One
+                                        </span>
+                                </label>
+                            </div>
+
+                            <div class="form-entry__option__check">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="checkboxGroupExample"
+                                        id="check-option-two"
+                                        value="optionTwo">
+                                        <span class="check__label">
+                                            Option Two
+                                        </span>
+                                </label>
+                            </div>
+
+                            <div class="form-entry__option__check">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="checkboxGroupExample"
+                                        id="check-option-three"
+                                        value="optionThree">
+                                        <span class="check__label">
+                                            Option Three
+                                        </span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+                </div>
+
+            </div>
+        </div>
+        <pre data-line="9,11">
+            <code class="language-html">
+                &lt;div class="form-entry"&gt;
+
+                    &lt;fieldset class="form-entry__field"&gt;
+
+                        &lt;legend class="form-entry__field__label"&gt;
+                            Form Entry Label
+                        &lt;/legend&gt;
+
+                        &lt;div class="form-entry__option"&gt;
+
+                            &lt;div class="form-entry__option__check"&gt;
+                                &lt;label&gt;
+                                    &lt;input
+                                        type="checkbox"
+                                        name="checkboxGroupExample"
+                                        id="check-option-one"
+                                        value="optionOne"&gt;
+                                        &lt;span class="check__label"&gt;
+                                            Option One
+                                        &lt;/span&gt;
+                                &lt;/label&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class="form-entry__option__check"&gt;
+                                &lt;label&gt;
+                                    &lt;input
+                                        type="checkbox"
+                                        name="checkboxGroupExample"
+                                        id="check-option-two"
+                                        value="optionTwo"&gt;
+                                        &lt;span class="check__label"&gt;
+                                            Option Two
+                                        &lt;/span&gt;
+                                &lt;/label&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class="form-entry__option__check"&gt;
+                                &lt;label&gt;
+                                    &lt;input
+                                        type="checkbox"
+                                        name="checkboxGroupExample"
+                                        id="check-option-three"
+                                        value="optionThree"&gt;
+                                        &lt;span class="check__label"&gt;
+                                            Option Three
+                                        &lt;/span&gt;
+                                &lt;/label&gt;
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+
+                    &lt;/fieldset&gt;
+
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        Figure 5
+    </figcaption>
+</figure>
+
+<figure class="container narrow margin-y-4">
+    <table class="table table--edge">
+        <thead>
+            <tr>
+                <th class="width-30" scope="col">Line #</th>
+                <th class="width-70" scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="#figure_5.9" data-line-anchor>
+                        9
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.form-entry__option</code> child selector is required.
+                    </p>
+                    <p>
+                        It holds the options markup for the <code>&lt;fieldset&gt;</code>.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#figure_5.11" data-line-anchor>
+                        11
+                    </a>
+                </td>
+                <td>
+                    <p>
+                        The <code>.form-entry__option__check</code> grandchild selector is required.
+                    </p>
+                    <p>
+                        It holds the actual <code>&lt;label&gt;</code> and <code>&lt;input&gt;</code> tags.
+                    </p>
+                    <p>
+                        The <code>.form-entry__option__check</code> selector is repeatable for multiple options.
                     </p>
                 </td>
             </tr>
@@ -593,142 +809,6 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
         </tbody>
 
     </table>
-</figure>
-
-<hr class="section-start" id="checkboxes">
-
-<div class="container narrow margin-y-4">
-    <h2>Checkboxes</h2>
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus, corrupti tempore sint quos.
-    </p>
-</div>
-<!-- .container -->
-
-<figure class="container medium margin-y-4">
-    <div class="example">
-        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
-            <div class="container narrow">
-
-                <div class="form-entry">
-
-                    <fieldset class="form-entry__field">
-
-                        <legend class="form-entry__field__label">
-                            Form Entry Label
-                        </legend>
-
-                        <div class="form-entry__option">
-
-                            <div class="form-entry__option__check">
-                                <label>
-                                    <input
-                                        type="checkbox"
-                                        name="checkboxGroupExample"
-                                        id="check-option-one"
-                                        value="optionOne">
-                                    <span class="check__label">
-                                        Option One
-                                    </span>
-                                </label>
-                            </div>
-
-                            <div class="form-entry__option__check">
-                                <label>
-                                    <input
-                                        type="checkbox"
-                                        name="checkboxGroupExample"
-                                        id="check-option-two"
-                                        value="optionTwo">
-                                    <span class="check__label">
-                                        Option Two
-                                    </span>
-                                </label>
-                            </div>
-
-                            <div class="form-entry__option__check">
-                                <label>
-                                    <input
-                                        type="checkbox"
-                                        name="checkboxGroupExample"
-                                        id="check-option-three"
-                                        value="optionThree">
-                                    <span class="check__label">
-                                        Option Three
-                                    </span>
-                                </label>
-                            </div>
-
-                        </div>
-
-                    </fieldset>
-
-                </div>
-
-            </div>
-        </div>
-        <pre>
-            <code class="language-html">
-                &lt;div class="form-entry"&gt;
-
-                    &lt;fieldset class="form-entry__field"&gt;
-
-                        &lt;legend class="form-entry__field__label"&gt;
-                            Form Entry Label
-                        &lt;/legend&gt;
-
-                        &lt;div class="form-entry__option"&gt;
-
-                            &lt;div class="form-entry__option__check"&gt;
-                                &lt;label&gt;
-                                    &lt;input
-                                        type="checkbox"
-                                        name="checkboxGroupExample"
-                                        id="check-option-one"
-                                        value="optionOne"&gt;
-                                    &lt;span class="check__label"&gt;
-                                        Option One
-                                    &lt;/span&gt;
-                                &lt;/label&gt;
-                            &lt;/div&gt;
-
-                            &lt;div class="form-entry__option__check"&gt;
-                                &lt;label&gt;
-                                    &lt;input
-                                        type="checkbox"
-                                        name="checkboxGroupExample"
-                                        id="check-option-two"
-                                        value="optionTwo"&gt;
-                                    &lt;span class="check__label"&gt;
-                                        Option Two
-                                    &lt;/span&gt;
-                                &lt;/label&gt;
-                            &lt;/div&gt;
-
-                            &lt;div class="form-entry__option__check"&gt;
-                                &lt;label&gt;
-                                    &lt;input
-                                        type="checkbox"
-                                        name="checkboxGroupExample"
-                                        id="check-option-three"
-                                        value="optionThree"&gt;
-                                    &lt;span class="check__label"&gt;
-                                        Option Three
-                                    &lt;/span&gt;
-                                &lt;/label&gt;
-                            &lt;/div&gt;
-
-                        &lt;/div&gt;
-
-                    &lt;/fieldset&gt;
-
-                &lt;/div&gt;
-            </code>
-        </pre>
-    </div>
-    <figcaption>
-        Figure 5
-    </figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
