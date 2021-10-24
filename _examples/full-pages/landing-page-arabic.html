@@ -1,0 +1,521 @@
+---
+title: "Landing Page"
+---
+
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{{ page.title }} • Natura11y</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Natura11y CSS and Icons -->
+    <link rel="stylesheet" href="{{ site.cdn_url_css }}">
+    <link rel="stylesheet" href="{{ site.cdn_url_icons }}">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+
+    :root {
+        --body-font-family: 'Scheherazade New', serif;
+        --body-font-size: 0.875em;
+    }
+        html {
+            --body-max-width: 2000px;
+            --html-background-color: var(--dark);
+
+        }
+
+        .aspect-ratio-custom {
+            --aspect-ratio-custom: 4 / 2
+        }
+    </style>
+
+</head>
+
+<body class="theme-dark">
+
+<header id="global-header" role="banner">
+
+    <!-- Skip Navigation -->
+    <a class="focusable-only" href="#skip-header-target">Skip Header</a>
+
+    <div class="primary-nav--below--lg box-shadow-1 z-index-1500">
+
+        <div class="primary-nav__logo">
+
+            <a href="#1" title="Home" data-logo="brand">
+                {% include logo-svg-placeholder.html %}
+            </a>
+
+        </div>
+
+        <div class="primary-nav__actions">
+
+            <button class="button button--icon-only mobile-menu-toggle"
+                aria-label="Menu"
+                data-toggle="collapse"
+                data-target-toggle="#main-menu">
+                    <span class="icon icon-menu"></span>
+            </button>
+
+            <ul class="nav nav--horizontal font-size-sm margin-right-2">
+                <li><a href="#1">Link</li>
+                <li><a href="#1">Link</li>
+                <li><a href="#1">Link</li>
+            </ul>
+
+            <div class="button-group">
+
+                <a href="#1" class="button theme-secondary">
+                    دخول
+                </a>
+
+            </div>
+
+        </div>
+        
+        <nav class="primary-nav__menu font-weight-bold" aria-label="Main Menu" id="main-menu">
+
+            <ul>
+                <li>
+                    <a href="#1">وصلة</a>
+                </li>
+                <li>
+                    <a href="#1">وصلة</a>
+                </li>
+                <li>
+                    <a href="#1">وصلة</a>
+                </li>
+                <li>
+                    <a href="#1">وصلة</a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </div>
+    <!-- .primary navigation -->
+
+    {% include language-select.html %}
+
+</header>
+
+<main class="overflow-hidden" id="skip-header-target">
+    
+    <section class="theme-dark backdrop backdrop--fixed aspect-ratio-custom">
+
+        <div class="backdrop__credit position-top-right">
+            <p>
+                Photo by <a href="#1">Jane Doe</a> on Unsplash
+            </p>
+        </div>
+
+        <div class="backdrop__image gradient-veneer-bottom">
+                <img class="opacity-30" src="/images/examples/backdrop-example-02.jpg" alt="Placeholder">
+        </div>
+
+        <div class="backdrop__cover text-align-center padding-y-4">
+
+            <div class="container narrow margin-bottom-4">
+
+                <h1 class="banner-headline text-shadow">القشريات
+
+                </h1>
+
+            </div>
+
+            <div class="container medium grid grid--column-3--lg gap-3">
+
+                <div class="card border" style="backdrop-filter: blur(10px);">
+
+                    <div class="card__body">
+
+                        <svg class="icon margin-x-auto margin-bottom-2 text-color-secondary">
+                            <use href="#lightbulb"></use>
+                        </svg>
+                    
+                        <h2 class="h5">
+                            Turn off the lights
+                        </h2>
+                        <p>
+                            Gustavia superba is an understory tree that grows in <a href="#1">Central</a> and north-western <a href="#1">South America</a>.
+                        </p>
+                    </div>
+
+                    <div class="card__foot border-top font-size-sm">
+                        <a class="button button--outline width-100" href="#1">
+                            Primary Action
+                        </a>                        
+                    </div>
+
+                </div>
+
+                <div class="card border" style="backdrop-filter: blur(10px);">
+
+                    <div class="card__body">
+                        <svg class="icon margin-x-auto margin-bottom-2 text-color-secondary">
+                            <use href="#print"></use>
+                        </svg>
+                        <h2 class="h5">
+                            Unplug Electronics
+                        </h2>
+                        <p>
+                            Gustavia superba is an understory tree that grows in <a href="#1">Central</a> and north-western <a href="#1">South America</a>.
+                        </p>
+                    </div>
+
+                    <div class="card__foot border-top font-size-sm">
+                        <a class="button button--outline width-100" href="#1">
+                            Primary Action
+                        </a>                        
+                    </div>
+
+                </div>
+                <div class="card border" style="backdrop-filter: blur(10px);">
+
+                    <div class="card__body">
+                        <h2 class="h5">
+                            Unplug Appliances
+                        </h2>
+                        <p>
+                            Gustavia superba is an understory tree that grows in <a href="#1">Central</a> and north-western <a href="#1">South America</a>.
+                        </p>
+                    </div>
+
+                    <div class="card__foot border-top font-size-sm">
+                        <a class="button button--outline width-100" href="#1">
+                            Primary Action
+                        </a>                        
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- .backdrop -->  
+
+    <section class="container medium margin-y-5">
+
+        <div class="grid grid--gap-3 grid--cell-6--md">
+
+            <div class="grid__cell">
+
+                <div class="card theme-primary">
+
+                    <div class="card__body">
+                        <h2 class="h4">Card Title</h2>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit obcaecati autem.
+                        </p>
+                    </div>
+
+                    <div class="card__foot border-top font-size-md">
+                        <a class="button button--outline button--has-icon--disperse " href="#1">
+                            <span class="button__text">Button</span>
+                            <span class="icon icon-arrow-right button__icon"></span>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- .card -->
+
+            </div>
+            <!-- col -->
+
+            <div class="grid__cell">
+
+                <div class="card theme-primary">
+
+                    <div class="card__body">
+                        <h2 class="h4">Card Title</h2>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit obcaecati autem.
+                        </p>
+                    </div>
+
+                    <div class="card__foot border-top font-size-md">
+                        <a class="button button--outline button--has-icon--disperse " href="#1">
+                            <span class="button__text">Button</span>
+                            <span class="icon icon-arrow-right button__icon"></span>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- .card -->
+
+            </div>
+            <!-- col -->
+
+        </div>
+        <!-- .grid -->
+
+    </section>
+    <!-- .container -->
+
+    <section class="theme-light overflow-hidden">
+
+        <div class="container medium margin-y-5">
+        
+            <h2 class="h5 margin-y-3">Programmes and Initiatives</h2>
+        
+            <div class="grid grid--gap-3 grid--cell-4--md">
+
+                <div class="grid__cell">
+
+                    <div class="card theme-white box-shadow-1">
+
+                        <img src="https://via.placeholder.com/400x200" alt="Placeholder">
+
+                        <div class="card__body">
+                            <h3 class="h6">Card Title</h3>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit obcaecati autem.
+                            </p>
+                        </div>
+
+                        <div class="card__foot font-size-sm text-color-link padding-y-0">
+                            <a class="button width-100 button--outline" href="#1">Primary Action</a>
+                        </div>
+
+                    </div>
+                    <!-- .card -->
+
+                </div>
+                <!-- col -->
+
+                <div class="grid__cell">
+
+                    <div class="card theme-white box-shadow-1">
+
+                        <img src="https://via.placeholder.com/400x200" alt="Placeholder">
+
+                        <div class="card__body">
+                            <h3 class="h6">Card Title</h3>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit obcaecati autem.
+                            </p>
+                        </div>
+
+                        <div class="card__foot font-size-sm text-color-link padding-y-0">
+                            <a class="button width-100 button--outline" href="#1">Primary Action</a>
+                        </div>
+
+                    </div>
+                    <!-- .card -->
+
+                </div>
+                <!-- col -->
+
+                <div class="grid__cell">
+
+                    <div class="card theme-white box-shadow-1">
+
+                        <img src="https://via.placeholder.com/400x200" alt="Placeholder">
+
+                        <div class="card__body">
+                            <h3 class="h6">Card Title</h3>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit obcaecati autem.
+                            </p>
+                        </div>
+
+                        <div class="card__foot font-size-sm text-color-link padding-y-0">
+                            <a class="button width-100 button--outline" href="#1">Primary Action</a>
+                        </div>
+
+                    </div>
+                    <!-- .card -->
+
+                </div>
+                <!-- col -->
+
+                <div class="grid__cell">
+
+                    <div class="card theme-white box-shadow-1">
+
+                        <img src="https://via.placeholder.com/400x200" alt="Placeholder">
+
+                        <div class="card__body">
+                            <h3 class="h6">Card Title</h3>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit obcaecati autem.
+                            </p>
+                        </div>
+
+                        <div class="card__foot font-size-sm text-color-link padding-y-0">
+                            <a class="button width-100 button--outline" href="#1">Primary Action</a>
+                        </div>
+
+                    </div>
+                    <!-- .card -->
+
+                </div>
+                <!-- col -->
+
+                <div class="grid__cell">
+
+                    <div class="card theme-white box-shadow-1">
+
+                        <img src="https://via.placeholder.com/400x200" alt="Placeholder">
+
+                        <div class="card__body">
+                            <h3 class="h6">Card Title</h3>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit obcaecati autem.
+                            </p>
+                        </div>
+
+                        <div class="card__foot font-size-sm text-color-link padding-y-0">
+                            <a class="button width-100 button--outline" href="#1">Primary Action</a>
+                        </div>
+
+                    </div>
+                    <!-- .card -->
+
+                </div>
+                <!-- col -->
+
+                <div class="grid__cell">
+
+                    <div class="card theme-white box-shadow-1">
+
+                        <img src="https://via.placeholder.com/400x200" alt="Placeholder">
+
+                        <div class="card__body">
+                            <h3 class="h6">Card Title</h3>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit obcaecati autem.
+                            </p>
+                        </div>
+
+                        <div class="card__foot font-size-sm text-color-link padding-y-0">
+                            <a class="button width-100 button--outline" href="#1">Primary Action</a>
+                        </div>
+
+                    </div>
+                    <!-- .card -->
+
+                </div>
+                <!-- col -->
+
+            </div>
+            <!-- .grid -->
+        </div>
+
+    </section>
+
+    <div class="container wide margin-y-5">
+
+        <div class="container medium">
+            <div class="grid grid--gap-3 grid--cell-6--lg justify-content-between ai-baseline">
+                <div class="grid__cell">
+                    <h2>Lorem ipsum dolor sit amet consectetur</h2>
+                </div>
+                <div class="grid__cell">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus obcaecati repellendus tempora maxime architecto sint atque inventore, repellat animi reprehenderit non aperiam eligendi.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, illo dolorem laborum, corporis suscipit eveniet <a href="#1">dicta nam itaque omnis</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- .container -->
+
+    </div>
+    <!-- .theme-light -->
+
+    <hr>
+
+    <section class="container medium margin-y-5">
+
+        <div class="grid grid--gap-1 grid--cell-6--md grid--cell-4--lg">
+
+            <div class="grid__cell">
+                <a class="button button--has-icon--disperse theme-primary" href="#1">
+                    <span class="button__title">Action</span>
+                    <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                </a>
+            </div>
+            <!-- .grid__cell -->
+
+            <div class="grid__cell">
+                <a class="button button--has-icon--disperse theme-primary" href="#1">
+                    <span class="button__title">Action</span>
+                    <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                </a>
+            </div>
+            <!-- .grid__cell -->
+            
+            <div class="grid__cell">
+                <a class="button button--has-icon--disperse theme-primary" href="#1">
+                    <span class="button__title">Action</span>
+                    <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                </a>
+            </div>
+            <!-- .grid__cell -->
+
+            <div class="grid__cell">
+                <a class="button button--has-icon--disperse theme-primary" href="#1">
+                    <span class="button__title">Action</span>
+                    <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                </a>
+            </div>
+            <!-- .grid__cell -->
+
+            <div class="grid__cell">
+                <a class="button button--has-icon--disperse theme-primary" href="#1">
+                    <span class="button__title">Action</span>
+                    <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                </a>
+            </div>
+            <!-- .grid__cell -->
+
+            <div class="grid__cell">
+                <a class="button button--has-icon--disperse theme-primary" href="#1">
+                    <span class="button__title">Action</span>
+                    <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                </a>
+            </div>
+            <!-- .grid__cell -->
+
+        </div>
+        <!-- .grid -->
+
+    </section>
+
+</main>
+
+    <!-- Natura11y Javascript -->
+    <script src="{{ site.cdn_url_js }}"></script>
+
+    <script>
+        const ajax = new XMLHttpRequest();
+
+        ajax.open('GET', '{{ site.url }}/lib/css/natura11y-icons-sprite.svg', true);
+        ajax.send();
+        ajax.onload = () => {
+            const div = document.createElement('div');
+            div.className = 'natura11y-icons-sprite';
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+        };
+    </script>
+
+</body>
+
+</html>
