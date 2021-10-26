@@ -1176,7 +1176,11 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 <div class="container narrow margin-y-4">
     <h2>Required Fields</h2>
     <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus, corrupti tempore sint quos.
+        Naturally makes it easy to mark required fields. Add <code>data-required="true"</code> to the parent <code>.form-group</code> element of the required field. On the same <code>.form-group</code> element, include a custom error message using the <code>data-error-message={x}</code> attribute. Here <strong><em>x</em></strong> equals the message displayed to the user during the validation process. 
+    </p>
+
+    <p>
+        The two data attributes mentioned above are shown in  Figure 9, lines 3 and 4. When present on the <code>.form group selector</code>, Naturally's Javascript adds the <code>required</code> attribute to the form entry's child <code>&lt;input&gt;</code> element automatically.
     </p>
 </div>
 <!-- .container -->
@@ -1220,13 +1224,12 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 
             </div>
         </div>
-        <pre data-line="3-5">
+        <pre data-line="3-4">
             <code class="language-html">
                 &lt;div
                     class="form-entry"
                     data-required="true"
-                    data-error-description="Error description" 
-                    data-error-instructions="Error fix instructions"&gt;
+                    data-error-message="Error description"&gt;
 
                     &lt;div class="form-entry__field"&gt;
                         ...
