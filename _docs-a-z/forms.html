@@ -1178,10 +1178,6 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
     <p>
         Naturally makes it easy to mark required fields. Add <code>data-required="true"</code> to the parent <code>.form-group</code> element of the required field. On the same <code>.form-group</code> element, include a custom error message using the <code>data-error-message={x}</code> attribute. Here <strong><em>x</em></strong> equals the message displayed to the user during the validation process. 
     </p>
-
-    <p>
-        The two data attributes mentioned above are shown in  Figure 9, lines 3 and 4. When present on the <code>.form group selector</code>, Naturally's Javascript adds the <code>required</code> attribute to the form entry's child <code>&lt;input&gt;</code> element automatically.
-    </p>
 </div>
 <!-- .container -->
 
@@ -1193,8 +1189,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                 <div
                     class="form-entry is-invalid"
                     data-required="true"
-                    data-error-description="Error description" 
-                    data-error-instructions="Error fix instructions">
+                    data-error-message="Error description">
 
                     <label class="form-entry__field">
                         <span class="form-entry__field__label">
@@ -1244,37 +1239,15 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
     </figcaption>
 </figure>
 
-<figure class="container narrow margin-y-4">
-    <table class="table table--edge">
-        <thead>
-            <tr>
-                <th class="width-30" scope="col">Line #</th>
-                <th class="width-70" scope="col">Details</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <a href="#figure_9.3-5" data-line-anchor>
-                        3-5
-                    </a>
-                </td>
-                <td>
-                    <p>
-                        The <code>data-required="true"</code> attribute uses javascript to update the actual input field's <code>required</code> and <code>data-required</code> attributes.
-                    </p>
-                    <p>
-                        The <code>data-error-description</code> attribute provides the first part of the custom error message (the error that has occured).
-                    </p>
-                    <p>
-                        The <code>data-error-instructions</code> attribute provides the second part of the custom error message (how to fix the error).
-                    </p>
-                </td>
-            </tr>
-        </tbody>
-
-    </table>
-</figure>
+<div class="container narrow margin-y-4">
+    <p>
+        The two data attributes mentioned above are shown in Figure 9, lines 3 and 4. When present on the <code>.form group</code> selector, Naturally's Javascript adds the necessary <code>required</code> and <code>data-required</code> attributes to the form entry's child <code>&lt;input&gt;</code> element automatically.
+    </p>
+    <p>
+        With the previous example, notice the red asterisk placed <em>before</em> the label. This too, is added automatically to required fields (via Natura11y's CSS file). The asterisk has become the standard identifier for required fields.  
+    </p>
+</div>
+<!-- .container -->
 
 <hr class="section-start" id="formValidation">
 
