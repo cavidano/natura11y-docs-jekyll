@@ -17,7 +17,13 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
     Form elements include a consistent visible focus for keyboard users.
 </p>
 <p>
-    Labels within forms can be included <a href="https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-implicitly" target="_blank">implicitly</a> or <a href="https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-explicitly" target="_blank">explicitly</a>—it's up to you.
+    Include accessible field labels <a href="https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-implicitly" target="_blank">implicitly</a> or <a href="https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-explicitly" target="_blank">explicitly</a>—it's up to you.
+</p>
+<p>
+    Intuitivly mark <em>required</em> fields. When doing so, Natura11y adds <em>required</em> and <em>data-required</em> attributes automatically.
+</p>
+<p>
+    Checkbox and radio groups use semantic <em>fieldset</em> and <em>legend</em> tags. 
 </p>
 {% endcapture %}
 
@@ -31,7 +37,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
         The form entry parent selector (<code>.form-entry</code>) wraps each entry within a form. Child elements within form entries vary depending on their input types. Such types include <em>text inputs</em>, <em>textareas</em>, <em>selects</em>, <em>checkboxes</em>, and <em>radios</em>.
     </p>
     <p>
-        In Figure 1, the <code>.form-entry</code> parent selector contains an <code>&lt;input&gt;</code> field with the <code>type="text"</code> attribute. 
+        In Figure 1, the <code>.form-entry</code> selector contains an <code>&lt;input&gt;</code> field with the <code>type="text"</code> attribute. 
     </p>
 </div>
 <!-- .container -->
@@ -1198,8 +1204,9 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                         <div class="form-entry__feedback">
                             <small>
                                 <span class="icon icon-warn" aria-hidden="true"></span>
-                                <strong>Borough is required!</strong>
-                                <span>Select a Borough</span>
+                                <span class="message">
+                                    <strong>Custom Error Message</strong>
+                                </span>
                             </small>
                         </div>
                         <span class="form-entry__field__input">
@@ -1224,7 +1231,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                 &lt;div
                     class="form-entry"
                     data-required="true"
-                    data-error-message="Error description"&gt;
+                    data-error-message="Custom Error Message"&gt;
 
                     &lt;div class="form-entry__field"&gt;
                         ...
@@ -1260,6 +1267,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 <!-- .container -->
 
 <figure class="container narrow margin-y-4">
+
     <form novalidate {{ site.custom-properties-example }}>
 
         <p class="required-indicator" aria-hidden="true">
@@ -1272,12 +1280,11 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
         <div
             class="form-entry"
             data-required="true"
-            data-error-description="Your first and last name is required" 
-            data-error-instructions="Enter your full name">
+            data-error-message="Your first and last name is required!">
 
             <label class="form-entry__field">
                 <span class="form-entry__field__label">
-                    First and Last Name
+                    Name
                 </span>
                 <span class="form-entry__field__input">
                     <input
@@ -1289,7 +1296,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
             </label>
 
             <small class="form-entry__help" id="help-first-and-last-name">
-                Please do not include your middle initial
+                Include first and last name
             </small>
 
         </div>
@@ -1298,88 +1305,78 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
         <div
             class="form-entry"
             data-required="true"
-            data-error-description="Your first and last name is required" 
-            data-error-instructions="Enter your full name">
+            data-error-message="Your email is required!">
 
             <label class="form-entry__field">
                 <span class="form-entry__field__label">
-                    Email Address
+                    Email
                 </span>
                 <span class="form-entry__field__input">
                     <input
                         type="email"
-                        name="textInputExample"
-                        id="first-and-last-name"
-                        aria-describedby="help-first-and-last-name">
+                        name="emailAddress"
+                        id="email-address"
+                        aria-describedby="help-email-address">
                 </span>
             </label>
 
-            <small class="form-entry__help" id="help-first-and-last-name">
+            <small class="form-entry__help" id="help-email-address">
                 Example: janeDoe@email.com
             </small>
 
         </div>
         <!-- .form-entry -->
+        <div class="form-entry">
+
+            <label class="form-entry__field">
+                <span class="form-entry__field__label">
+                    Phone
+                </span>
+                <span class="form-entry__field__input">
+
+                <input
+                    type="tel"
+                    name="phoneNumber"
+                    id="phone-number"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    aria-describedby="help-phone-number"
+                    required>
+                </span>
+            </label>
+
+            <small class="form-entry__help" id="help-phone-number">
+                Example: 999-999-9999
+            </small>
+
+        </div>
+        <!-- .form-entry -->
 
         <div
             class="form-entry"
             data-required="true"
-            data-error-description="Borough is required!" 
-            data-error-instructions="Select a Borough">
+            data-error-message="Describe the reason for contacting us!">
 
-            <div class="form-entry__field">
-                
-                <label class="form-entry__field__label" for="select-borough">
-                    Borough of Residence
-                </label>
-                
-                <span class="form-entry__field__select">
-                    <select id="select-borough" name="Boroughs">
-                        <option value="">Select One</option>
-                        <option value="Bronx">Bronx</option>
-                        <option value="Brooklyn">Brooklyn</option>
-                        <option value="Manhattan">Manhattan</option>
-                        <option value="Staten Island">Staten Island</option>
-                        <option value="Queens">Queens</option>
-                    </select>
+            <label class="form-entry__field">
+
+                <span class="form-entry__field__label">
+                    Leave a short message
                 </span>
 
-            </div>
+                <span class="form-entry__field__input">
+                    <textarea rows="6"></textarea>
+                </span>
+
+            </label>
 
         </div>
         <!-- .form-entry -->
 
         <div class="form-entry">
 
-            <label class="form-entry__field">
-
-                <span class="form-entry__field__label">
-                    Request Details
-                </span>
-
-                <span class="form-entry__field__input">
-                    <textarea rows="8"></textarea>
-                </span>
-                
-                <small class="form-entry__help">
-                    This is help text
-                </small>
-
-            </label>
-
-        </div>
-        <!-- .form-entry -->
-
-        <div
-            class="form-entry"
-            data-required="true"
-            data-error-description="Priority is required!" 
-            data-error-instructions="Select your priority rating">
-
             <fieldset class="form-entry__field">
 
                 <legend class="form-entry__field__label">
-                    What is the priority of this request?
+                    Contact Preferences
                 </legend>
 
                 <div class="form-entry__option">
@@ -1388,11 +1385,12 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                         <label>
                             <input
                                 type="radio"
-                                id="priority-of-request-high"
-                                name="priority-of-request">
-                            <span class="option__label">
-                                High
-                            </span>
+                                name="contactPreferences"
+                                id="contact-email"
+                                value="optionOne">
+                                <span class="option__label">
+                                    Contact me by email
+                                </span>
                         </label>
                     </div>
 
@@ -1400,23 +1398,25 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                         <label>
                             <input
                                 type="radio"
-                                id="priority-of-request-medium"
-                                name="priority-of-request">
-                            <span class="option__label">
-                                Medium
-                            </span>
-                        </label> 
+                                name="contactPreferences"
+                                id="contact-phone"
+                                value="optionTwo">
+                                <span class="option__label">
+                                    Contact me by phone
+                                </span>
+                        </label>
                     </div>
 
                     <div class="form-entry__option__radio">
                         <label>
                             <input
                                 type="radio"
-                                id="priority-of-request-low"
-                                name="priority-of-request">
-                            <span class="option__label">
-                                Low
-                            </span>
+                                name="contactPreferences"
+                                id="contact-none"
+                                value="optionThree">
+                                <span class="option__label">
+                                    Do not contact me
+                                </span>
                         </label>
                     </div>
 
@@ -1425,15 +1425,15 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
             </fieldset>
 
         </div>
-        <!-- .form-entry -->
-        
+
         <button 
             class="button theme-primary width-100 rounded-pill"
             type="submit">
-                Submit
+                Send
         </button>
 
     </form>
+
 </figure>
 
 <hr class="section-start" id="floatingLabels">
@@ -1441,7 +1441,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
 <div class="container narrow margin-y-4">
     <h2>Floating Labels</h2>
     <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia voluptatibus quas minima eos necessitatibus, corrupti tempore sint quos exercitationem cum rerum porro.
+        For short forms (such as a sign in form) floating labels would be fine to use. Add the <code>.form-entry__field--float</code> modifier class to the <code>.form-entry__field</code> selector (see Figure 11, line 6).   
     </p>
 </div>
 <!-- .container -->
@@ -1451,13 +1451,12 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
         <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
             <div class="container narrow">
 
-                <div class="grid gap-2">
+                <div class="grid grid__columns-2 gap-2">
 
                     <div 
                         class="form-entry"
                         data-required="true"
-                        data-error-description="Username is required!" 
-                        data-error-instructions="Enter your username">
+                        data-error-message="Username is required!">
 
                         <label class="form-entry__field form-entry__field--float">
 
@@ -1466,7 +1465,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                             </span>
                             
                             <span class="form-entry__field__input">
-                                <input type="text" id="accountUsername" name="username">
+                                <input type="text" id="account-username" name="accountUsername">
                             </span>
 
                         </label>
@@ -1477,8 +1476,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                     <div 
                         class="form-entry"
                         data-required="true"
-                        data-error-description="Password is required!" 
-                        data-error-instructions="Enter your password">
+                        data-error-message="Password is required!">
 
                         <label class="form-entry__field form-entry__field--float">
 
@@ -1487,7 +1485,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                             </span>
                             
                             <span class="form-entry__field__input">
-                                <input type="password" id="accountPassword" name="password">
+                                <input type="password" id="account-password" name="accountPassword">
                             </span>
 
                         </label>
@@ -1498,8 +1496,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                     <div 
                         class="form-entry grid__colspan-2"
                         data-required="true"
-                        data-error-description="Password is required!" 
-                        data-error-instructions="Enter your password">
+                        data-error-message="Password is required!">
 
                         <label class="form-entry__field form-entry__field--float">
 
@@ -1508,7 +1505,7 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                             </span>
                             
                             <span class="form-entry__field__input">
-                                <input type="email" id="accountEmail" name="password">
+                                <input type="email" id="account-email" name="accountEmail">
                             </span>
 
                         </label>
@@ -1516,14 +1513,42 @@ backdrop_credit_url: "https://unsplash.com/@vikceo"
                     </div>
                     <!-- .form-entry -->
 
+                    <hr class=" grid__colspan-2">
+
+                    <button 
+                        class="button theme-primary width-100 rounded-pill"
+                        type="submit">
+                            Sign In
+                    </button>
+
+                    <div class="sign-up display-flex justify-content-end align-items-center">
+                        <a class="text-color-link" href="#1">Sign Up</a>
+                    </div>
+
+
                 </div>
 
             </div>
         </div>
-        <pre>
+        <pre data-line="6">
             <code class="language-html">
-                &lt;div class="form-entry"&gt;
-                    ...
+                &lt;div 
+                    class="form-entry"
+                    data-required="true"
+                    data-error-message="Username is required!"&gt;
+
+                    &lt;label class="form-entry__field form-entry__field--float"&gt;
+
+                        &lt;span class="form-entry__field__label"&gt;
+                            Username
+                        &lt;/span&gt;
+                        
+                        &lt;span class="form-entry__field__input"&gt;
+                            &lt;input type="text" id="account-username" name="accountUsername"&gt;
+                        &lt;/span&gt;
+
+                    &lt;/label&gt;
+
                 &lt;/div&gt;
             </code>
         </pre>

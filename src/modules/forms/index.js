@@ -55,7 +55,7 @@ export default class Forms {
                     <small>
                         <span class="icon icon-warn" aria-hidden="true"></span>
                         <span class="message">
-                            <strong>${desc}</strong> ${inst ? `${inst}` : ''}
+                            <strong>${desc}</strong> ${inst && inst}
                         </span>
                     </small>
                 </div>
@@ -90,20 +90,20 @@ export default class Forms {
                     // Form Entry Feedback
                     const formEntryHelp = formErrorEntry.querySelector('.form-entry__help');
 
-                    let errorInstructions;
+                    let entryHelpText;
 
                     if(formEntryHelp) {
-                        errorInstructions = formEntryHelp.innerHTML.toString();
+                        entryHelpText = formEntryHelp.innerHTML.toString();
                     }
 
-                    let errorDescription = formErrorEntry.getAttribute('data-error-description');
-                    let errorFeedback = [errorDescription, errorInstructions];
+                    let errorMessage = formErrorEntry.getAttribute('data-error-message');
+                    let errorFeedback = [errorMessage, entryHelpText];
 
                     // Send errors to errorArray
                     errorsArray.push(errorFeedback);
 
                     if (formEntryFeedback === null) {
-                        formErrorEntryLabel.insertAdjacentHTML('afterend', createErrorMessage(errorDescription, errorInstructions));
+                        formErrorEntryLabel.insertAdjacentHTML('afterend', createErrorMessage(errorMessage, entryHelpText));
                     }
                 });
 
@@ -243,13 +243,13 @@ export default class Forms {
                 const { name: fileName, size } = file;
                 const fileSize = (size / 1000).toFixed(2);
 
-                const dataHTML = `
-                <span class="file-upload__data">
-                    <span class="file-name">${fileName}</span>
-                    <span class="file-size">${fileSize} kb</span>
-                </span>
-                `;
-
+                const dataHTML = (`
+                    <span class="file-upload__data">
+                        <span class="file-name">${fileName}</span>
+                        <span class="file-size">${fileSize} kb</span>
+                    </span>
+                `);
+                
                 const fileUploadData = fileUpload.querySelector(".file-upload__data");
 
                 if (fileUploadData) {
