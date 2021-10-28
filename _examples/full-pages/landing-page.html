@@ -23,9 +23,14 @@ title: "Landing Page"
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style>
+
         html {
             --body-max-width: 2000px;
             --html-background-color: var(--dark);
+        }
+
+        :root{
+            --dark: black;
         }
 
         .aspect-ratio-custom {
@@ -55,23 +60,22 @@ title: "Landing Page"
 
         <div class="primary-nav__actions">
 
-            <button class="button button--icon-only mobile-menu-toggle"
+            <button
+                class="button button--icon-only mobile-menu-toggle"
                 aria-label="Menu"
                 data-toggle="collapse"
                 data-target-toggle="#main-menu">
                     <span class="icon icon-menu"></span>
             </button>
 
-            <ul class="nav nav--horizontal font-size-sm margin-right-2">
-                <li><a href="#1">Link</li>
-                <li><a href="#1">Link</li>
-                <li><a href="#1">Link</li>
-            </ul>
-
             <div class="button-group">
 
-                <a href="#1" class="button theme-secondary">
-                    Sign In
+                <a href="#1" class="button theme-primary">
+                    Donate
+                </a>
+
+                <a class="button button--icon-only" href="#1" aria-label="Search">
+                    <span class="icon icon-search" aria-hidden="true"></span>
                 </a>
 
             </div>
@@ -115,7 +119,7 @@ title: "Landing Page"
         </div>
 
         <div class="backdrop__image gradient-veneer-bottom">
-                <img class="opacity-30" src="/images/examples/backdrop-example-02.jpg" alt="Placeholder">
+            <img class="opacity-50" src="/images/examples/backdrop-example-06.jpg" alt="Placeholder">
         </div>
 
         <div class="backdrop__cover text-align-center padding-y-4">
@@ -128,9 +132,9 @@ title: "Landing Page"
 
             </div>
 
-            <div class="container medium grid grid--column-3--lg gap-3">
+            <div class="container medium grid grid--column-3--lg gap-2">
 
-                <div class="card border" style="backdrop-filter: blur(10px);">
+                <div class="card" style="background-color: rgba(0,0,0,0.6)">
 
                     <div class="card__body">
 
@@ -138,23 +142,23 @@ title: "Landing Page"
                             <use href="#lightbulb"></use>
                         </svg>
                     
-                        <h2 class="h5">
+                        <h2 class="h5 text-shadow">
                             Turn off the lights
                         </h2>
                         <p>
                             Gustavia superba is an understory tree that grows in <a href="#1">Central</a> and north-western <a href="#1">South America</a>.
                         </p>
                     </div>
-
-                    <div class="card__foot border-top font-size-sm">
-                        <a class="button button--outline width-100" href="#1">
+                    <div class="card__foot border-top font-size-sm text-color-secondary">
+                        <a class="button width-100" href="#1">
                             Primary Action
                         </a>                        
                     </div>
 
+
                 </div>
 
-                <div class="card border" style="backdrop-filter: blur(10px);">
+                <div class="card border" style="background-color: rgba(0,0,0,0.6)">
 
                     <div class="card__body">
                         <svg class="icon margin-x-auto margin-bottom-2 text-color-secondary">
@@ -168,14 +172,15 @@ title: "Landing Page"
                         </p>
                     </div>
 
-                    <div class="card__foot border-top font-size-sm">
-                        <a class="button button--outline width-100" href="#1">
+                    <div class="card__foot border-top font-size-sm text-color-secondary">
+                        <a class="button width-100" href="#1">
                             Primary Action
                         </a>                        
                     </div>
 
+
                 </div>
-                <div class="card border" style="backdrop-filter: blur(10px);">
+                <div class="card border" style="background-color: rgba(0,0,0,0.6)">
 
                     <div class="card__body">
                         <h2 class="h5">
@@ -186,11 +191,12 @@ title: "Landing Page"
                         </p>
                     </div>
 
-                    <div class="card__foot border-top font-size-sm">
-                        <a class="button button--outline width-100" href="#1">
+                    <div class="card__foot border-top font-size-sm text-color-secondary">
+                        <a class="button width-100" href="#1">
                             Primary Action
                         </a>                        
                     </div>
+
 
                 </div>
 
