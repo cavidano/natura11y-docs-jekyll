@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     for (const iframe of iframeList) {
 
-        const iframeWindow = iframe.contentWindow;
+        const iframeWindow = iframe.contentDocument;
 
         const getIframeDocHeight = () => {
 
