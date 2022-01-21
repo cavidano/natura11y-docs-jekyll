@@ -1943,9 +1943,10 @@ Prism.languages.scss['atrule'].inside.rest = Prism.languages.scss;
 
 		// Remove pre-existing temporary lines
 		$$('.temporary.line-highlight').forEach(function (line) {
-			// line.parentNode.removeChild(line);
 			
 			// Carl Edit
+			
+			// line.parentNode.removeChild(line);
 			
 			line.classList.remove('temporary');
 		});
